@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC16C9282A598E89003FD891 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FC16C9272A598E89003FD891 /* FirebaseAnalytics */; };
+		FC16C92A2A598E89003FD891 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FC16C9292A598E89003FD891 /* FirebaseCrashlytics */; };
 		FCD981552A589CF8001FC643 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD981542A589CF8001FC643 /* AppDelegate.swift */; };
 		FCD981572A589CF8001FC643 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD981562A589CF8001FC643 /* SceneDelegate.swift */; };
 		FCD981592A589CF8001FC643 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD981582A589CF8001FC643 /* ViewController.swift */; };
@@ -31,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC16C9282A598E89003FD891 /* FirebaseAnalytics in Frameworks */,
+				FC16C92A2A598E89003FD891 /* FirebaseCrashlytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +87,10 @@
 			dependencies = (
 			);
 			name = Futboly;
+			packageProductDependencies = (
+				FC16C9272A598E89003FD891 /* FirebaseAnalytics */,
+				FC16C9292A598E89003FD891 /* FirebaseCrashlytics */,
+			);
 			productName = Futboly;
 			productReference = FCD981512A589CF8001FC643 /* Futboly.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = FCD981482A589CF8001FC643;
+			packageReferences = (
+				FC16C9262A598E89003FD891 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = FCD981522A589CF8001FC643 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -358,6 +369,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FC16C9262A598E89003FD891 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FC16C9272A598E89003FD891 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC16C9262A598E89003FD891 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		FC16C9292A598E89003FD891 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC16C9262A598E89003FD891 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FCD981492A589CF8001FC643 /* Project object */;
 }
