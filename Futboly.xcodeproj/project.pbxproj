@@ -14,7 +14,6 @@
 		FC4526E42A59993B004567D1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E32A59993B004567D1 /* LoginView.swift */; };
 		FCD981552A589CF8001FC643 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD981542A589CF8001FC643 /* AppDelegate.swift */; };
 		FCD981572A589CF8001FC643 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD981562A589CF8001FC643 /* SceneDelegate.swift */; };
-		FCD981592A589CF8001FC643 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD981582A589CF8001FC643 /* ViewController.swift */; };
 		FCD9815E2A589CF9001FC643 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCD9815D2A589CF9001FC643 /* Assets.xcassets */; };
 		FCD981612A589CF9001FC643 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCD9815F2A589CF9001FC643 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -26,7 +25,6 @@
 		FCD981512A589CF8001FC643 /* Futboly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Futboly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD981542A589CF8001FC643 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCD981562A589CF8001FC643 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FCD981582A589CF8001FC643 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FCD9815D2A589CF9001FC643 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCD981602A589CF9001FC643 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCD981622A589CFA001FC643 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,7 +64,6 @@
 			children = (
 				FCD981542A589CF8001FC643 /* AppDelegate.swift */,
 				FCD981562A589CF8001FC643 /* SceneDelegate.swift */,
-				FCD981582A589CF8001FC643 /* ViewController.swift */,
 				FC4526E12A5998DB004567D1 /* Router.swift */,
 				FC4526E32A59993B004567D1 /* LoginView.swift */,
 				FCD9815D2A589CF9001FC643 /* Assets.xcassets */,
@@ -156,7 +153,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC4526E22A5998DB004567D1 /* Router.swift in Sources */,
-				FCD981592A589CF8001FC643 /* ViewController.swift in Sources */,
 				FCD981552A589CF8001FC643 /* AppDelegate.swift in Sources */,
 				FC4526E42A59993B004567D1 /* LoginView.swift in Sources */,
 				FCD981572A589CF8001FC643 /* SceneDelegate.swift in Sources */,
