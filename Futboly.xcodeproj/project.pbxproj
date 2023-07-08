@@ -10,6 +10,8 @@
 		FC16C9282A598E89003FD891 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FC16C9272A598E89003FD891 /* FirebaseAnalytics */; };
 		FC16C92A2A598E89003FD891 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FC16C9292A598E89003FD891 /* FirebaseCrashlytics */; };
 		FC4526E02A599610004567D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC4526DF2A599610004567D1 /* GoogleService-Info.plist */; };
+		FC4526E22A5998DB004567D1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E12A5998DB004567D1 /* Router.swift */; };
+		FC4526E42A59993B004567D1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E32A59993B004567D1 /* LoginView.swift */; };
 		FCD981552A589CF8001FC643 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD981542A589CF8001FC643 /* AppDelegate.swift */; };
 		FCD981572A589CF8001FC643 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD981562A589CF8001FC643 /* SceneDelegate.swift */; };
 		FCD981592A589CF8001FC643 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD981582A589CF8001FC643 /* ViewController.swift */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		FC4526DF2A599610004567D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FC4526E12A5998DB004567D1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		FC4526E32A59993B004567D1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		FCD981512A589CF8001FC643 /* Futboly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Futboly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD981542A589CF8001FC643 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCD981562A589CF8001FC643 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				FCD981542A589CF8001FC643 /* AppDelegate.swift */,
 				FCD981562A589CF8001FC643 /* SceneDelegate.swift */,
 				FCD981582A589CF8001FC643 /* ViewController.swift */,
+				FC4526E12A5998DB004567D1 /* Router.swift */,
+				FC4526E32A59993B004567D1 /* LoginView.swift */,
 				FCD9815D2A589CF9001FC643 /* Assets.xcassets */,
 				FCD9815F2A589CF9001FC643 /* LaunchScreen.storyboard */,
 				FCD981622A589CFA001FC643 /* Info.plist */,
@@ -149,8 +155,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC4526E22A5998DB004567D1 /* Router.swift in Sources */,
 				FCD981592A589CF8001FC643 /* ViewController.swift in Sources */,
 				FCD981552A589CF8001FC643 /* AppDelegate.swift in Sources */,
+				FC4526E42A59993B004567D1 /* LoginView.swift in Sources */,
 				FCD981572A589CF8001FC643 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
