@@ -1,0 +1,95 @@
+only_rules:
+  - block_based_kvo                            # Prefer the new block based KVO API with keypaths when using Swift 3.2 or later.
+  - class_delegate_protocol                    # Delegate protocols should be class-only so they can be weakly referenced.
+  - closing_brace                              # Closing brace with closing parenthesis should not have any whitespaces in the middle.
+  - closure_parameter_position                 # Closure parameters should be on the same line as opening brace.
+  - colon                                      # Colons should be next to the identifier when specifying a type and next to the key in dictionary literals.
+  - comma                                      # There should be no space before and one after any comma.
+  - comment_spacing                            # Prefer at least one space after slashes for comments.
+  - computed_accessors_order                   # Getter and setters in computed properties and subscripts should be in a consistent order.
+  - control_statement                          # if, for, guard, switch, while, and catch statements shouldn’t unnecessarily wrap their conditionals or arguments in parentheses.
+  - discouraged_direct_init                    # Discouraged direct initialization of types that can be harmful.
+  - duplicate_imports                          # Imports should be unique.
+  - duplicated_key_in_dictionary_literal       # Dictionary literals with duplicated keys will crash in runtime.  
+  - empty_parameters                           # Prefer () -> over Void ->.
+  - empty_parentheses_with_trailing_closure    # When using trailing closures, empty parentheses should be avoided after the method call.
+  - file_length                                # Files should not span too many lines. warning: 400, error: 1000
+  - for_where                                  # where clauses are preferred over a single if inside a for.
+  - force_cast                                 # Force casts should be avoided.
+  - force_try                                  # Force tries should be avoided.
+  - function_body_length                       # Functions bodies should not span too many lines. warning: 40, error: 100
+  - generic_type_name                          # Generic type name should only contain alphanumeric characters, start with an uppercase character and span between 1 and 20 characters in length.
+  - implicit_getter                            # Implicit Getter
+  - leading_whitespace                         # Files should not contain leading whitespace.
+  - legacy_cggeometry_functions                # Struct extension properties and methods are preferred over legacy functions
+  - legacy_constant                            # Struct-scoped constants are preferred over legacy global constants.
+  - legacy_constructor                         # Swift constructors are preferred over legacy convenience functions.
+  - legacy_hashing                             # Prefer using the hash(into:) function instead of overriding hashValue
+  - legacy_random                              # Prefer using type.random(in:) over legacy functions.
+  - mark                                       # MARK comment should be in valid format. e.g. ‘// MARK: …’ or ‘// MARK: - …’
+  - multiple_closures_with_trailing_closure    # Trailing closure syntax should not be used when passing more than one closure argument.
+  - no_space_in_method_call                    # Don’t add a space between the method name and the parentheses.
+  - opening_brace                              # Opening braces should be preceded by a single space and on the same line as the declaration.
+  - operator_whitespace                        # Operators should be surrounded by a single whitespace when defining them.
+  - orphaned_doc_comment                       # A doc comment should be attached to a declaration.
+  - protocol_property_accessors_order          # When declaring properties in protocols, the order of accessors should be get set.
+  - redundant_optional_initialization          # Initializing an optional variable with nil is redundant.
+  - redundant_string_enum_value                # String enum values can be omitted when they are equal to the enumcase name.
+  - redundant_void_return                      # Returning Void in a function declaration is redundant.
+  - return_arrow_whitespace                    # Return arrow and return type should be separated by a single space or on a separate line.
+  - self_in_property_initialization            # self refers to the unapplied NSObject.self() method, which is likely not expected. Make the variable lazy to be able to refer to the current instance or use ClassName.self.
+  - shorthand_operator                         # Prefer shorthand operators (+=, -=, *=, /=) over doing the operation and assigning.
+  - statement_position                         # Else and catch should be on the same line, one space after the previous declaration.
+  - switch_case_alignment                      # Case statements should vertically align with their enclosing switch statement, or indented if configured otherwise.
+  - syntactic_sugar                            # Shorthand syntactic sugar should be used, i.e. [Int] instead of Array.
+  - todo                                       # TODOs and FIXMEs should be resolved.
+  - trailing_comma                             # Trailing commas in arrays and dictionaries should be avoided/enforced.
+  - trailing_newline                           # Files should have a single trailing newline.
+  - trailing_semicolon                         # Lines should not have trailing semicolons.
+  - trailing_whitespace                        # Lines should not have trailing whitespace.
+  - unneeded_break_in_switch                   # Avoid using unneeded break statements.
+  - unused_capture_list                        # Unused reference in a capture list should be removed.
+  - unused_closure_parameter                   # Unused parameter in a closure should be replaced with _.
+  - unused_optional_binding                    # Prefer != nil over let _ =
+  - unused_setter_value                        # Setter value is not used.
+  - vertical_parameter_alignment               # Function parameters should be aligned vertically if they’re in multiple lines in a declaration.
+  - vertical_whitespace                        # Limit vertical whitespace to a single empty line.
+  - void_return                                # Prefer -> Void over -> ().
+  - closure_body_length                        # Closure bodies should not span too many lines.
+  - closure_end_indentation                    # Closure end should have the same indentation as the line that started it.
+  - closure_spacing                            # Closure expressions should have a single space inside each brace.
+  - collection_alignment                       # All elements in a collection literal should be vertically aligned
+  - empty_collection_literal                   # Prefer checking isEmpty over comparing collection to an empty array or dictionary literal.
+  - empty_count                                # Prefer checking isEmpty over comparing count to zero.
+  - empty_string                               # Prefer checking isEmpty over comparing string to an empty string literal.
+  # maybe too much? # - explicit_acl                               # All declarations should specify Access Control Level keywords explicitly.
+  # maybe too much? # - explicit_top_level_acl                     # Top-level declarations should specify Access Control Level keywords explicitly.
+  # maybe too much? # - file_types_order                           # maybe too drastic - Specifies how the types within a file should be ordered.
+  - force_unwrapping                           # Force unwrapping should be avoided.
+  - function_default_parameter_at_end          #  Prefer to locate parameters with defaults toward the end of the parameter list.
+  - identical_operands                         # Comparing two identical operands is likely a mistake.
+  - implicit_return                            # Prefer implicit returns in closures, functions and getters.
+  # rule is broken # - indentation_width                          # Indent code using either one tab or the configured amount of spaces, unindent to match previous indentations. Don’t indent the first line.
+  - legacy_multiple                            # Prefer using the isMultiple(of:) function instead of using the remainder operator (%).
+  - legacy_objc_type                           # Prefer Swift value types to bridged Objective-C reference types
+  - literal_expression_end_indentation         # Array and dictionary literal end should have the same indentation as the line that started it.
+  # maybe too much? # - modifier_order                             # Modifier order should be consistent.  warning, preferred_modifier_order: [override, acl, setterACL, dynamic, mutators, lazy, final, required, convenience, typeMethods, owned]
+  - multiline_function_chains                  # Chained function calls should be either on the same line, or one per line.
+  - multiline_parameters                       # Functions and methods parameters should be either on the same line, or one per line.
+  - multiline_parameters_brackets              # Multiline parameters should have their surrounding brackets in a new line.
+  - operator_usage_whitespace                  # Operators should be surrounded by a single whitespace when they are being used.
+  - overridden_super_call                      # Some overridden methods should always call super
+  - prohibited_super_call                      # Some methods should not call super
+  - toggle_bool                                # Prefer someBool.toggle() over someBool = !someBool.
+  # maybe too much? # - type_contents_order                       # #Specifies the order of subtypes, properties, methods & more within a type.
+  - unneeded_parentheses_in_closure_argument   # Parentheses are not needed when declaring closure arguments.
+  - unused_declaration                         # Declarations should be referenced at least once within all files linted.
+  - unused_import                              # All imported modules should be required to make the file compile.
+  - vertical_whitespace_closing_braces         # Don’t include vertical whitespace (empty line) before closing braces.
+  - vertical_whitespace_opening_braces         # Don’t include vertical whitespace (empty line) after opening braces.
+  - weak_delegate                              # Delegates should be weak to avoid reference cycles.
+
+force_cast: warning
+force_try: warning
+shorthand_operator: warning
+empty_count: warning
