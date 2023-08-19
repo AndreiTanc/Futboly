@@ -43,6 +43,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FCA7C3C92A90BC10006DC9F4 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FCA7C3CA2A90BC3C006DC9F4 /* Onboarding */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		FCA7C3CA2A90BC3C006DC9F4 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				FCA7C3CB2A90BC70006DC9F4 /* Login */,
+				FCA7C3CC2A90BC89006DC9F4 /* Signup */,
+				FCA7C3CD2A90BC9E006DC9F4 /* ForgotPassword */,
+				FCA7C3CE2A90BCF8006DC9F4 /* Tutorial */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		FCA7C3CB2A90BC70006DC9F4 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FC4526E32A59993B004567D1 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		FCA7C3CC2A90BC89006DC9F4 /* Signup */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Signup;
+			sourceTree = "<group>";
+		};
+		FCA7C3CD2A90BC9E006DC9F4 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ForgotPassword;
+			sourceTree = "<group>";
+		};
+		FCA7C3CE2A90BCF8006DC9F4 /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
 		FCD981482A589CF8001FC643 = {
 			isa = PBXGroup;
 			children = (
@@ -65,7 +113,7 @@
 				FCD981542A589CF8001FC643 /* AppDelegate.swift */,
 				FCD981562A589CF8001FC643 /* SceneDelegate.swift */,
 				FC4526E12A5998DB004567D1 /* Router.swift */,
-				FC4526E32A59993B004567D1 /* LoginView.swift */,
+				FCA7C3C92A90BC10006DC9F4 /* Core */,
 				FCD9815D2A589CF9001FC643 /* Assets.xcassets */,
 				FCD9815F2A589CF9001FC643 /* LaunchScreen.storyboard */,
 				FCD981622A589CFA001FC643 /* Info.plist */,
