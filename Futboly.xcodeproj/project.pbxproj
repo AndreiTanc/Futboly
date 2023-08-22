@@ -13,6 +13,7 @@
 		FC4526E22A5998DB004567D1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E12A5998DB004567D1 /* Router.swift */; };
 		FC4526E42A59993B004567D1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E32A59993B004567D1 /* LoginView.swift */; };
 		FCA7C3D02A90BDD3006DC9F4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7C3CF2A90BDD3006DC9F4 /* LoginViewModel.swift */; };
+		FCBC494E2A93AABE0027A4D9 /* Color+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBC494D2A93AABE0027A4D9 /* Color+Colors.swift */; };
 		FCD981552A589CF8001FC643 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD981542A589CF8001FC643 /* AppDelegate.swift */; };
 		FCD981572A589CF8001FC643 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD981562A589CF8001FC643 /* SceneDelegate.swift */; };
 		FCD9815E2A589CF9001FC643 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCD9815D2A589CF9001FC643 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 		FC4526E12A5998DB004567D1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		FC4526E32A59993B004567D1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		FCA7C3CF2A90BDD3006DC9F4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		FCBC494D2A93AABE0027A4D9 /* Color+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Colors.swift"; sourceTree = "<group>"; };
 		FCD981512A589CF8001FC643 /* Futboly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Futboly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD981542A589CF8001FC643 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCD981562A589CF8001FC643 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			children = (
 				FC4526E32A59993B004567D1 /* LoginView.swift */,
 				FCA7C3CF2A90BDD3006DC9F4 /* LoginViewModel.swift */,
+				FCA7C3D12A9359BD006DC9F4 /* Views */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -94,6 +97,28 @@
 			path = Tutorial;
 			sourceTree = "<group>";
 		};
+		FCA7C3D12A9359BD006DC9F4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FCBC49492A93AA470027A4D9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FCBC494C2A93AAA30027A4D9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FCBC494D2A93AABE0027A4D9 /* Color+Colors.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		FCD981482A589CF8001FC643 = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +141,8 @@
 				FCD981542A589CF8001FC643 /* AppDelegate.swift */,
 				FCD981562A589CF8001FC643 /* SceneDelegate.swift */,
 				FC4526E12A5998DB004567D1 /* Router.swift */,
+				FCBC494C2A93AAA30027A4D9 /* Extensions */,
+				FCBC49492A93AA470027A4D9 /* Helpers */,
 				FCA7C3C92A90BC10006DC9F4 /* Core */,
 				FCD9815D2A589CF9001FC643 /* Assets.xcassets */,
 				FCD9815F2A589CF9001FC643 /* LaunchScreen.storyboard */,
@@ -226,6 +253,7 @@
 			files = (
 				FC4526E22A5998DB004567D1 /* Router.swift in Sources */,
 				FCD981552A589CF8001FC643 /* AppDelegate.swift in Sources */,
+				FCBC494E2A93AABE0027A4D9 /* Color+Colors.swift in Sources */,
 				FC4526E42A59993B004567D1 /* LoginView.swift in Sources */,
 				FCA7C3D02A90BDD3006DC9F4 /* LoginViewModel.swift in Sources */,
 				FCD981572A589CF8001FC643 /* SceneDelegate.swift in Sources */,
