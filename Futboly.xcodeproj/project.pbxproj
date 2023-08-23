@@ -14,10 +14,13 @@
 		FC4526E42A59993B004567D1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E32A59993B004567D1 /* LoginView.swift */; };
 		FCA7C3D02A90BDD3006DC9F4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7C3CF2A90BDD3006DC9F4 /* LoginViewModel.swift */; };
 		FCBC494E2A93AABE0027A4D9 /* Color+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBC494D2A93AABE0027A4D9 /* Color+Colors.swift */; };
+		FCBC49502A948BDF0027A4D9 /* ImageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBC494F2A948BDF0027A4D9 /* ImageTextField.swift */; };
 		FCD981552A589CF8001FC643 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD981542A589CF8001FC643 /* AppDelegate.swift */; };
 		FCD981572A589CF8001FC643 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD981562A589CF8001FC643 /* SceneDelegate.swift */; };
 		FCD9815E2A589CF9001FC643 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCD9815D2A589CF9001FC643 /* Assets.xcassets */; };
 		FCD981612A589CF9001FC643 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCD9815F2A589CF9001FC643 /* LaunchScreen.storyboard */; };
+		FCDE37F12A95F5A70047B19B /* Constants+ColorName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE37F02A95F5A70047B19B /* Constants+ColorName.swift */; };
+		FCDE37F32A95F5C00047B19B /* Constants+ImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE37F22A95F5C00047B19B /* Constants+ImageName.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,12 +29,15 @@
 		FC4526E32A59993B004567D1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		FCA7C3CF2A90BDD3006DC9F4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		FCBC494D2A93AABE0027A4D9 /* Color+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Colors.swift"; sourceTree = "<group>"; };
+		FCBC494F2A948BDF0027A4D9 /* ImageTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextField.swift; sourceTree = "<group>"; };
 		FCD981512A589CF8001FC643 /* Futboly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Futboly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD981542A589CF8001FC643 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCD981562A589CF8001FC643 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FCD9815D2A589CF9001FC643 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCD981602A589CF9001FC643 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCD981622A589CFA001FC643 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCDE37F02A95F5A70047B19B /* Constants+ColorName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+ColorName.swift"; sourceTree = "<group>"; };
+		FCDE37F22A95F5C00047B19B /* Constants+ImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+ImageName.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,7 @@
 		FCA7C3D12A9359BD006DC9F4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FCBC494F2A948BDF0027A4D9 /* ImageTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -107,6 +114,8 @@
 		FCBC49492A93AA470027A4D9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				FCDE37F02A95F5A70047B19B /* Constants+ColorName.swift */,
+				FCDE37F22A95F5C00047B19B /* Constants+ImageName.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -162,7 +171,6 @@
 				FCD9814D2A589CF8001FC643 /* Sources */,
 				FCD9814E2A589CF8001FC643 /* Frameworks */,
 				FCD9814F2A589CF8001FC643 /* Resources */,
-				FCF368532A65811D00D0AE69 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -226,34 +234,17 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		FCF368532A65811D00D0AE69 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, install via 'brew install swiftlint'\"\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		FCD9814D2A589CF8001FC643 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCBC49502A948BDF0027A4D9 /* ImageTextField.swift in Sources */,
 				FC4526E22A5998DB004567D1 /* Router.swift in Sources */,
 				FCD981552A589CF8001FC643 /* AppDelegate.swift in Sources */,
 				FCBC494E2A93AABE0027A4D9 /* Color+Colors.swift in Sources */,
+				FCDE37F12A95F5A70047B19B /* Constants+ColorName.swift in Sources */,
+				FCDE37F32A95F5C00047B19B /* Constants+ImageName.swift in Sources */,
 				FC4526E42A59993B004567D1 /* LoginView.swift in Sources */,
 				FCA7C3D02A90BDD3006DC9F4 /* LoginViewModel.swift in Sources */,
 				FCD981572A589CF8001FC643 /* SceneDelegate.swift in Sources */,
