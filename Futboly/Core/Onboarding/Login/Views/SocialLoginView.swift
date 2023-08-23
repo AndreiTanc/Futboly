@@ -10,10 +10,10 @@ import SwiftUI
 struct SocialLoginView: View {
     var body: some View {
         VStack(spacing: 30) {
-            HStack {
-                Rectangle().frame(height: 2)
-                Text("or connect with").layoutPriority(1).fontWeight(.semibold)
-                Rectangle().frame(height: 2)
+            HStack(spacing: 20) {
+                Rectangle().frame(height: 2).foregroundColor(.white)
+                Text("or connect with").layoutPriority(1).fontWeight(.semibold).foregroundColor(.white)
+                Rectangle().frame(height: 2).foregroundColor(.white)
             }
             
             HStack(spacing: 35) {

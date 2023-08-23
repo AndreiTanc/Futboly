@@ -13,6 +13,8 @@ struct RoundedBlueButton: ButtonStyle {
             .padding()
             .background(Color.futbolyBlue)
             .foregroundStyle(.white)
+            .fontWeight(.bold)
+            .font(.system(size: 20))
             .clipShape(Capsule())
     }
 }

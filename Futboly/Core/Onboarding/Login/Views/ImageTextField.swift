@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ImageTextField: View {
     var type: TextFieldType
-    @State var text: String = ""
+    @Binding var text: String
     
     var body: some View {
         HStack(spacing: 15) {
@@ -17,13 +17,14 @@ struct ImageTextField: View {
             TextField(type.placeholder, text: $text)
         }
         .padding()
-        .overlay(RoundedRectangle(cornerRadius: 25).stroke(lineWidth: 0))
+        .background(Color.white)
+        .cornerRadius(25)
     }
 }
 
 struct ImageTextField_Previews: PreviewProvider {
     static var previews: some View {
-        ImageTextField(type: .password)
+        ImageTextField(type: .password, text: .constant(""))
     }
 }
 
