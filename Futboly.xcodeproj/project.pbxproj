@@ -23,6 +23,7 @@
 		FCDE37F32A95F5C00047B19B /* Constants+ImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE37F22A95F5C00047B19B /* Constants+ImageName.swift */; };
 		FCDE37F52A9624A10047B19B /* SocialLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE37F42A9624A10047B19B /* SocialLoginView.swift */; };
 		FCDE37F72A96270F0047B19B /* SocialLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE37F62A96270F0047B19B /* SocialLoginButton.swift */; };
+		FCDE37FA2A962A080047B19B /* FutbolyButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE37F92A962A080047B19B /* FutbolyButtons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		FCDE37F22A95F5C00047B19B /* Constants+ImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+ImageName.swift"; sourceTree = "<group>"; };
 		FCDE37F42A9624A10047B19B /* SocialLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginView.swift; sourceTree = "<group>"; };
 		FCDE37F62A96270F0047B19B /* SocialLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginButton.swift; sourceTree = "<group>"; };
+		FCDE37F92A962A080047B19B /* FutbolyButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutbolyButtons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		FCA7C3C92A90BC10006DC9F4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				FCDE37F82A9629F60047B19B /* Views */,
 				FCA7C3CA2A90BC3C006DC9F4 /* Onboarding */,
 			);
 			path = Core;
@@ -167,6 +170,14 @@
 			path = Futboly;
 			sourceTree = "<group>";
 		};
+		FCDE37F82A9629F60047B19B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FCDE37F92A962A080047B19B /* FutbolyButtons.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -248,6 +259,7 @@
 				FCBC49502A948BDF0027A4D9 /* ImageTextField.swift in Sources */,
 				FCDE37F52A9624A10047B19B /* SocialLoginView.swift in Sources */,
 				FC4526E22A5998DB004567D1 /* Router.swift in Sources */,
+				FCDE37FA2A962A080047B19B /* FutbolyButtons.swift in Sources */,
 				FCD981552A589CF8001FC643 /* AppDelegate.swift in Sources */,
 				FCBC494E2A93AABE0027A4D9 /* Color+Colors.swift in Sources */,
 				FCDE37F72A96270F0047B19B /* SocialLoginButton.swift in Sources */,

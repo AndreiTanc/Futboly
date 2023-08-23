@@ -10,4 +10,5 @@ import Foundation
 enum ColorName: String {
     case lowerBackgroundGradient = "lower_background_gradient"
     case upperBackgroundGradient = "upper_background_gradient"
+    case futbolyBlue = "futboly_blue"
 }
