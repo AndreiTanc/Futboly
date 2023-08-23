@@ -21,6 +21,8 @@
 		FCD981612A589CF9001FC643 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCD9815F2A589CF9001FC643 /* LaunchScreen.storyboard */; };
 		FCDE37F12A95F5A70047B19B /* Constants+ColorName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE37F02A95F5A70047B19B /* Constants+ColorName.swift */; };
 		FCDE37F32A95F5C00047B19B /* Constants+ImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE37F22A95F5C00047B19B /* Constants+ImageName.swift */; };
+		FCDE37F52A9624A10047B19B /* SocialLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE37F42A9624A10047B19B /* SocialLoginView.swift */; };
+		FCDE37F72A96270F0047B19B /* SocialLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE37F62A96270F0047B19B /* SocialLoginButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		FCD981622A589CFA001FC643 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCDE37F02A95F5A70047B19B /* Constants+ColorName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+ColorName.swift"; sourceTree = "<group>"; };
 		FCDE37F22A95F5C00047B19B /* Constants+ImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+ImageName.swift"; sourceTree = "<group>"; };
+		FCDE37F42A9624A10047B19B /* SocialLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginView.swift; sourceTree = "<group>"; };
+		FCDE37F62A96270F0047B19B /* SocialLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 			isa = PBXGroup;
 			children = (
 				FCBC494F2A948BDF0027A4D9 /* ImageTextField.swift */,
+				FCDE37F42A9624A10047B19B /* SocialLoginView.swift */,
+				FCDE37F62A96270F0047B19B /* SocialLoginButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -240,9 +246,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCBC49502A948BDF0027A4D9 /* ImageTextField.swift in Sources */,
+				FCDE37F52A9624A10047B19B /* SocialLoginView.swift in Sources */,
 				FC4526E22A5998DB004567D1 /* Router.swift in Sources */,
 				FCD981552A589CF8001FC643 /* AppDelegate.swift in Sources */,
 				FCBC494E2A93AABE0027A4D9 /* Color+Colors.swift in Sources */,
+				FCDE37F72A96270F0047B19B /* SocialLoginButton.swift in Sources */,
 				FCDE37F12A95F5A70047B19B /* Constants+ColorName.swift in Sources */,
 				FCDE37F32A95F5C00047B19B /* Constants+ImageName.swift in Sources */,
 				FC4526E42A59993B004567D1 /* LoginView.swift in Sources */,

@@ -10,4 +10,8 @@ import Foundation
 enum ImageName: String {
     case password = "password"
     case email = "email"
+    
+    case appleLogo = "apple_logo"
+    case facebookLogo = "facebook_logo"
+    case googleLogo = "google_logo"
 }
