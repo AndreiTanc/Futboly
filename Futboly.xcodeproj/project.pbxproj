@@ -81,6 +81,7 @@
 				FCA7C3CC2A90BC89006DC9F4 /* Signup */,
 				FCA7C3CD2A90BC9E006DC9F4 /* ForgotPassword */,
 				FCA7C3CE2A90BCF8006DC9F4 /* Tutorial */,
+				FCA7C3D12A9359BD006DC9F4 /* Views */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -90,7 +91,6 @@
 			children = (
 				FC4526E32A59993B004567D1 /* LoginView.swift */,
 				FCA7C3CF2A90BDD3006DC9F4 /* LoginViewModel.swift */,
-				FCA7C3D12A9359BD006DC9F4 /* Views */,
 			);
 			path = Login;
 			sourceTree = "<group>";
