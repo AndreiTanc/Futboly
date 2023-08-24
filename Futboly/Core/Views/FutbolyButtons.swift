@@ -11,6 +11,7 @@ struct RoundedBlueButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding()
+            .frame(height: 50)
             .background(Color.futbolyBlue)
             .foregroundStyle(.white)
             .fontWeight(.bold)

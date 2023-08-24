@@ -18,6 +18,7 @@ struct ImageTextField: View {
         }
         .padding()
         .background(Color.white)
+        .frame(height: 50)
         .cornerRadius(25)
     }
 }
@@ -32,6 +33,8 @@ extension ImageTextField {
     enum TextFieldType {
         case email
         case password
+        case confirmPassword
+        case teamName
         
         var placeholder: String {
             switch self {
@@ -39,6 +42,10 @@ extension ImageTextField {
                 return "Email"
             case .password:
                 return "Password"
+            case .confirmPassword:
+                return "Confirm password"
+            case .teamName:
+                return "Team name"
             }
         }
         
@@ -46,8 +53,10 @@ extension ImageTextField {
             switch self {
             case .email:
                 return ImageName.email.rawValue
-            case .password:
+            case .password, .confirmPassword:
                 return ImageName.password.rawValue
+            case .teamName:
+                return ImageName.profile.rawValue
             }
         }
     }

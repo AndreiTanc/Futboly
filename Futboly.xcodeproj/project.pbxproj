@@ -24,6 +24,9 @@
 		FCDE37F52A9624A10047B19B /* SocialLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE37F42A9624A10047B19B /* SocialLoginView.swift */; };
 		FCDE37F72A96270F0047B19B /* SocialLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE37F62A96270F0047B19B /* SocialLoginButton.swift */; };
 		FCDE37FA2A962A080047B19B /* FutbolyButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE37F92A962A080047B19B /* FutbolyButtons.swift */; };
+		FCDE37FC2A9698720047B19B /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE37FB2A9698720047B19B /* SignupView.swift */; };
+		FCDE37FE2A96987D0047B19B /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE37FD2A96987D0047B19B /* SignupViewModel.swift */; };
+		FCDE38002A9698A20047B19B /* FutbolyGreenBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE37FF2A9698A20047B19B /* FutbolyGreenBackground.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		FCDE37F42A9624A10047B19B /* SocialLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginView.swift; sourceTree = "<group>"; };
 		FCDE37F62A96270F0047B19B /* SocialLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginButton.swift; sourceTree = "<group>"; };
 		FCDE37F92A962A080047B19B /* FutbolyButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutbolyButtons.swift; sourceTree = "<group>"; };
+		FCDE37FB2A9698720047B19B /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		FCDE37FD2A96987D0047B19B /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		FCDE37FF2A9698A20047B19B /* FutbolyGreenBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutbolyGreenBackground.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,8 @@
 		FCA7C3CC2A90BC89006DC9F4 /* Signup */ = {
 			isa = PBXGroup;
 			children = (
+				FCDE37FB2A9698720047B19B /* SignupView.swift */,
+				FCDE37FD2A96987D0047B19B /* SignupViewModel.swift */,
 			);
 			path = Signup;
 			sourceTree = "<group>";
@@ -116,6 +124,7 @@
 				FCBC494F2A948BDF0027A4D9 /* ImageTextField.swift */,
 				FCDE37F42A9624A10047B19B /* SocialLoginView.swift */,
 				FCDE37F62A96270F0047B19B /* SocialLoginButton.swift */,
+				FCDE37FF2A9698A20047B19B /* FutbolyGreenBackground.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -257,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCBC49502A948BDF0027A4D9 /* ImageTextField.swift in Sources */,
+				FCDE38002A9698A20047B19B /* FutbolyGreenBackground.swift in Sources */,
 				FCDE37F52A9624A10047B19B /* SocialLoginView.swift in Sources */,
 				FC4526E22A5998DB004567D1 /* Router.swift in Sources */,
 				FCDE37FA2A962A080047B19B /* FutbolyButtons.swift in Sources */,
@@ -266,7 +276,9 @@
 				FCDE37F12A95F5A70047B19B /* Constants+ColorName.swift in Sources */,
 				FCDE37F32A95F5C00047B19B /* Constants+ImageName.swift in Sources */,
 				FC4526E42A59993B004567D1 /* LoginView.swift in Sources */,
+				FCDE37FE2A96987D0047B19B /* SignupViewModel.swift in Sources */,
 				FCA7C3D02A90BDD3006DC9F4 /* LoginViewModel.swift in Sources */,
+				FCDE37FC2A9698720047B19B /* SignupView.swift in Sources */,
 				FCD981572A589CF8001FC643 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

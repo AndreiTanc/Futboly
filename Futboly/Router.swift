@@ -11,11 +11,14 @@ import SwiftUI
 
 enum RouterRoutes {
     case login
+    case signup
     
     var view: any View {
         switch self {
         case .login:
             return LoginView()
+        case .signup:
+            return SignupView()
         }
     }
 }

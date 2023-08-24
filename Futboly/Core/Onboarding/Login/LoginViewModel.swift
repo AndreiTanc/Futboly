@@ -19,7 +19,7 @@ class LoginViewModel: ObservableObject {
         
     }
     
-    func goToRegister() {
-        
+    func goToSignup() {
+        Router.shared.goToScreen(withRoute: .signup)
     }
 }

@@ -12,9 +12,9 @@ struct LoginView: View {
     
     var body: some View {
         ZStack {
-            background
+            FutbolyGreenBackground()
             content
-        }
+        }.navigationBarHidden(true)
     }
     
     var content: some View {
@@ -29,7 +29,7 @@ struct LoginView: View {
             SocialLoginView()
             
             Button {
-                viewModel.goToRegister()
+                viewModel.goToSignup()
             } label: {
                 Text("Don't have an account? Signup here!").foregroundColor(.white)
             }.padding(.top, 15)
@@ -55,14 +55,6 @@ struct LoginView: View {
                 Text("Forgot password?").foregroundColor(.white)
             }
         }
-    }
-    
-    var background: some View {
-        LinearGradient(
-            gradient: Gradient(colors: [.upperBackgroundGradient, .lowerBackgroundGradient]),
-            startPoint: .top,
-            endPoint: .bottom
-        ).ignoresSafeArea()
     }
 }
 
