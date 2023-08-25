@@ -27,6 +27,8 @@
 		FCDE37FC2A9698720047B19B /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE37FB2A9698720047B19B /* SignupView.swift */; };
 		FCDE37FE2A96987D0047B19B /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE37FD2A96987D0047B19B /* SignupViewModel.swift */; };
 		FCDE38002A9698A20047B19B /* FutbolyGreenBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE37FF2A9698A20047B19B /* FutbolyGreenBackground.swift */; };
+		FCDE38022A9764010047B19B /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE38012A9764010047B19B /* TutorialView.swift */; };
+		FCDE38052A97655D0047B19B /* TutorialStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE38042A97655D0047B19B /* TutorialStepView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		FCDE37FB2A9698720047B19B /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		FCDE37FD2A96987D0047B19B /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		FCDE37FF2A9698A20047B19B /* FutbolyGreenBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutbolyGreenBackground.swift; sourceTree = "<group>"; };
+		FCDE38012A9764010047B19B /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
+		FCDE38042A97655D0047B19B /* TutorialStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialStepView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,8 @@
 		FCA7C3CE2A90BCF8006DC9F4 /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				FCDE38012A9764010047B19B /* TutorialView.swift */,
+				FCDE38032A97654E0047B19B /* Views */,
 			);
 			path = Tutorial;
 			sourceTree = "<group>";
@@ -183,6 +189,14 @@
 			isa = PBXGroup;
 			children = (
 				FCDE37F92A962A080047B19B /* FutbolyButtons.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FCDE38032A97654E0047B19B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FCDE38042A97655D0047B19B /* TutorialStepView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -275,8 +289,10 @@
 				FCDE37F72A96270F0047B19B /* SocialLoginButton.swift in Sources */,
 				FCDE37F12A95F5A70047B19B /* Constants+ColorName.swift in Sources */,
 				FCDE37F32A95F5C00047B19B /* Constants+ImageName.swift in Sources */,
+				FCDE38052A97655D0047B19B /* TutorialStepView.swift in Sources */,
 				FC4526E42A59993B004567D1 /* LoginView.swift in Sources */,
 				FCDE37FE2A96987D0047B19B /* SignupViewModel.swift in Sources */,
+				FCDE38022A9764010047B19B /* TutorialView.swift in Sources */,
 				FCA7C3D02A90BDD3006DC9F4 /* LoginViewModel.swift in Sources */,
 				FCDE37FC2A9698720047B19B /* SignupView.swift in Sources */,
 				FCD981572A589CF8001FC643 /* SceneDelegate.swift in Sources */,

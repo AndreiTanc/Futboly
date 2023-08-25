@@ -19,3 +19,16 @@ struct RoundedBlueButton: ButtonStyle {
             .clipShape(Capsule())
     }
 }
+
+struct RoundedDarkBlueButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding()
+            .frame(height: 50)
+            .background(Color.futbolyDarkBlue)
+            .foregroundStyle(.white)
+            .fontWeight(.bold)
+            .font(.system(size: 20))
+            .clipShape(Capsule())
+    }
+}

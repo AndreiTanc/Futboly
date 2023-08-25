@@ -12,4 +12,5 @@ extension Color {
     static var lowerBackgroundGradient: Color { return .init(ColorName.lowerBackgroundGradient.rawValue) }
     static var upperBackgroundGradient: Color { return .init(ColorName.upperBackgroundGradient.rawValue) }
     static var futbolyBlue: Color { return .init(ColorName.futbolyBlue.rawValue) }
+    static var futbolyDarkBlue: Color { return .init(ColorName.futbolyDarkBlue.rawValue) }
 }
