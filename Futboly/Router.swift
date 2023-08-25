@@ -12,6 +12,7 @@ import SwiftUI
 enum RouterRoutes {
     case login
     case signup
+    case tutorial
     
     var view: any View {
         switch self {
@@ -19,6 +20,8 @@ enum RouterRoutes {
             return LoginView()
         case .signup:
             return SignupView()
+        case .tutorial:
+            return TutorialView()
         }
     }
 }
@@ -41,7 +44,16 @@ final class Router {
     }
     
     func instantiateFirstScreen() -> UIViewController {
-        navigationController = .init(rootViewController: instantiateScreen(withRoute: .login))
+        var firstScreen: UIViewController
+        
+        if FutbolyVault.shared.isFirstRun ?? true {
+            firstScreen = instantiateScreen(withRoute: .tutorial)
+            FutbolyVault.shared.isFirstRun = false
+        } else {
+            firstScreen = instantiateScreen(withRoute: .login)
+        }
+        
+        navigationController = .init(rootViewController: firstScreen)
         return navigationController
     }
     

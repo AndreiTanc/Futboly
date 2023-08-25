@@ -10,6 +10,7 @@
 		FC16C9282A598E89003FD891 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FC16C9272A598E89003FD891 /* FirebaseAnalytics */; };
 		FC16C92A2A598E89003FD891 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FC16C9292A598E89003FD891 /* FirebaseCrashlytics */; };
 		FC18AB7F2A98A9E300ACFE75 /* UserDefaultPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC18AB7E2A98A9E300ACFE75 /* UserDefaultPropertyWrapper.swift */; };
+		FC18AB812A98AA3700ACFE75 /* FutbolyVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC18AB802A98AA3700ACFE75 /* FutbolyVault.swift */; };
 		FC4526E02A599610004567D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC4526DF2A599610004567D1 /* GoogleService-Info.plist */; };
 		FC4526E22A5998DB004567D1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E12A5998DB004567D1 /* Router.swift */; };
 		FC4526E42A59993B004567D1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E32A59993B004567D1 /* LoginView.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		FC18AB7E2A98A9E300ACFE75 /* UserDefaultPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultPropertyWrapper.swift; sourceTree = "<group>"; };
+		FC18AB802A98AA3700ACFE75 /* FutbolyVault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutbolyVault.swift; sourceTree = "<group>"; };
 		FC4526DF2A599610004567D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FC4526E12A5998DB004567D1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		FC4526E32A59993B004567D1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 				FCDE37F02A95F5A70047B19B /* Constants+ColorName.swift */,
 				FCDE37F22A95F5C00047B19B /* Constants+ImageName.swift */,
 				FC18AB7E2A98A9E300ACFE75 /* UserDefaultPropertyWrapper.swift */,
+				FC18AB802A98AA3700ACFE75 /* FutbolyVault.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				FCA7C3D02A90BDD3006DC9F4 /* LoginViewModel.swift in Sources */,
 				FCDE37FC2A9698720047B19B /* SignupView.swift in Sources */,
 				FCD981572A589CF8001FC643 /* SceneDelegate.swift in Sources */,
+				FC18AB812A98AA3700ACFE75 /* FutbolyVault.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
