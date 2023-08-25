@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FC16C9282A598E89003FD891 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FC16C9272A598E89003FD891 /* FirebaseAnalytics */; };
 		FC16C92A2A598E89003FD891 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FC16C9292A598E89003FD891 /* FirebaseCrashlytics */; };
+		FC18AB7F2A98A9E300ACFE75 /* UserDefaultPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC18AB7E2A98A9E300ACFE75 /* UserDefaultPropertyWrapper.swift */; };
 		FC4526E02A599610004567D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC4526DF2A599610004567D1 /* GoogleService-Info.plist */; };
 		FC4526E22A5998DB004567D1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E12A5998DB004567D1 /* Router.swift */; };
 		FC4526E42A59993B004567D1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E32A59993B004567D1 /* LoginView.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC18AB7E2A98A9E300ACFE75 /* UserDefaultPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultPropertyWrapper.swift; sourceTree = "<group>"; };
 		FC4526DF2A599610004567D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FC4526E12A5998DB004567D1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		FC4526E32A59993B004567D1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			children = (
 				FCDE37F02A95F5A70047B19B /* Constants+ColorName.swift */,
 				FCDE37F22A95F5C00047B19B /* Constants+ImageName.swift */,
+				FC18AB7E2A98A9E300ACFE75 /* UserDefaultPropertyWrapper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 				FCDE38002A9698A20047B19B /* FutbolyGreenBackground.swift in Sources */,
 				FCDE37F52A9624A10047B19B /* SocialLoginView.swift in Sources */,
 				FC4526E22A5998DB004567D1 /* Router.swift in Sources */,
+				FC18AB7F2A98A9E300ACFE75 /* UserDefaultPropertyWrapper.swift in Sources */,
 				FCDE37FA2A962A080047B19B /* FutbolyButtons.swift in Sources */,
 				FCD981552A589CF8001FC643 /* AppDelegate.swift in Sources */,
 				FCBC494E2A93AABE0027A4D9 /* Color+Colors.swift in Sources */,
