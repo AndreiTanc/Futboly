@@ -13,6 +13,7 @@ enum RouterRoutes {
     case login
     case signup
     case tutorial
+    case forgotPassword
     
     var view: any View {
         switch self {
@@ -22,6 +23,8 @@ enum RouterRoutes {
             return SignupView()
         case .tutorial:
             return TutorialView()
+        case .forgotPassword:
+            return ForgotPasswordView()
         }
     }
 }

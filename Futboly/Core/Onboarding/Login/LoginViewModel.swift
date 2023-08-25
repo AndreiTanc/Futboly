@@ -16,7 +16,7 @@ class LoginViewModel: ObservableObject {
     }
     
     func forgotPassword() {
-        
+        Router.shared.goToScreen(withRoute: .forgotPassword)
     }
     
     func goToSignup() {
