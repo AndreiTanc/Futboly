@@ -12,52 +12,64 @@ struct TutorialView: View {
     
     var body: some View {
         ZStack {
-            FutbolyGreenBackground()
+            imageView.ignoresSafeArea(edges: .top)
             content
-        }.navigationBarHidden(true)
+        }
+    }
+    
+    var imageView: some View {
+        VStack {
+            Image((TutorialStep(rawValue: pageNumber) ?? .pickPlayers).imageName)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .animation(.spring(), value: pageNumber)
+            Spacer()
+        }
     }
     
     var content: some View {
-        VStack(spacing: 30) {
-            Text("FUTBOLY").font(.system(size: 30)).fontWeight(.bold).foregroundColor(.white).padding(.top, 20)
-            
-            tutorialStepsCarouselView
-            
-            Button("How to play") {
-                // action
-            }.padding(.horizontal).padding(.vertical, 3)
-            .background(Color.white)
-            .foregroundColor(.futbolyDarkBlue)
-            .clipShape(Capsule())
-            
+        VStack {
             Spacer()
-            
-            Button {
-                Router.shared.goToScreen(withRoute: .login)
-            } label: {
-                Text("Let's play!").frame(maxWidth: .infinity)
-            }.buttonStyle(RoundedDarkBlueButton())
-        }.padding()
+            cardView
+                .background(.white)
+                .clipShape(.rect(topLeadingRadius: 30, topTrailingRadius: 30))
+        }
     }
     
-    var tutorialStepsCarouselView: some View {
+    var cardView: some View {
         VStack {
-            TabView(selection: $pageNumber) {
-                ForEach((0..<TutorialStepView.TutorialStep.allCases.count), id: \.self) { index in
-                    TutorialStepView(tutorialStep: .init(rawValue: index) ?? .pickPlayers)
-                }
-            }
-            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
-            
             HStack(spacing: 5) {
-                ForEach((0..<TutorialStepView.TutorialStep.allCases.count), id: \.self) { index in
+                ForEach((0..<TutorialStep.allCases.count), id: \.self) { index in
                     Capsule()
                         .fill(index == pageNumber ? Color.futbolyDarkBlue : Color.futbolyDarkBlue.opacity(0.5))
                         .frame(width: index == pageNumber ? 30 : 10, height: 10)
                         .animation(.spring(), value: pageNumber)
                 }
+            }.padding(.top, 30)
+            
+            TabView(selection: $pageNumber) {
+                ForEach((0..<TutorialStep.allCases.count), id: \.self) { index in
+                    TutorialStepView(tutorialStep: .init(rawValue: index) ?? .pickPlayers)
+                }
             }
-        }
+            .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never)).frame(height: 200)
+            
+            buttonsView
+        }.padding(.horizontal, 20).padding(.bottom)
+    }
+    
+    var buttonsView: some View {
+        HStack {
+            Button("How to play") {
+                #warning("Action must be implemented")
+            }.buttonStyle(RoundedWhiteButton())
+            
+            Spacer()
+            
+            Button("Let's start!") {
+                Router.shared.goToScreen(withRoute: .login)
+            }.buttonStyle(RoundedBlackButton())
+        }.padding(.horizontal, 8)
     }
 }
 

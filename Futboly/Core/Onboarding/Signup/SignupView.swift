@@ -9,12 +9,13 @@ import SwiftUI
 
 struct SignupView: View {
     @ObservedObject private(set) var viewModel = SignupViewModel()
+    @FocusState private var focusedField: ImageTextField.TextFieldType?
     
     var body: some View {
         ZStack {
             FutbolyGreenBackground()
-            content
-        }
+            ScrollView { content }
+        }.onTapGesture(perform: hideKeyboard)
     }
     
     var content: some View {
@@ -44,10 +45,10 @@ struct SignupView: View {
     
     var signupForm: some View {
         VStack(spacing: 20) {
-            ImageTextField(type: .email, text: $viewModel.email)
-            ImageTextField(type: .password, text: $viewModel.password)
-            ImageTextField(type: .confirmPassword, text: $viewModel.confirmedPassword)
-            ImageTextField(type: .teamName, text: $viewModel.teamName)
+            ImageTextField(type: .email, focusedField: $focusedField, text: $viewModel.email)
+            ImageTextField(type: .password, focusedField: $focusedField, text: $viewModel.password)
+            ImageTextField(type: .confirmPassword, focusedField: $focusedField, text: $viewModel.confirmedPassword)
+            ImageTextField(type: .teamName, focusedField: $focusedField, text: $viewModel.teamName, submitLabel: .done)
             
             Button {
                 viewModel.signup()
@@ -55,6 +56,18 @@ struct SignupView: View {
                 Text("Sign Up").frame(maxWidth: .infinity)
             }.buttonStyle(RoundedBlueButton())
             
+        }
+        .onSubmit {
+            switch focusedField {
+            case .email:
+                focusedField = .password
+            case .password:
+                focusedField = .confirmPassword
+            case .confirmPassword:
+                focusedField = .teamName
+            default:
+                break
+            }
         }
     }
 }

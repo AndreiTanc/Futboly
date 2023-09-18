@@ -9,12 +9,14 @@ import SwiftUI
 
 struct LoginView: View {
     @ObservedObject private(set) var viewModel = LoginViewModel()
+    @FocusState private var focusedField: ImageTextField.TextFieldType?
     
     var body: some View {
         ZStack {
             FutbolyGreenBackground()
             content
         }.navigationBarHidden(true)
+        .onTapGesture(perform: hideKeyboard)
     }
     
     var content: some View {
@@ -40,8 +42,8 @@ struct LoginView: View {
     
     var loginForm: some View {
         VStack(spacing: 20) {
-            ImageTextField(type: .email, text: $viewModel.email)
-            ImageTextField(type: .password, text: $viewModel.password)
+            ImageTextField(type: .email, focusedField: $focusedField, text: $viewModel.email)
+            ImageTextField(type: .password, focusedField: $focusedField, text: $viewModel.password, submitLabel: .done)
             
             Button {
                 viewModel.login()
@@ -53,6 +55,14 @@ struct LoginView: View {
                 viewModel.forgotPassword()
             } label: {
                 Text("Forgot password?").foregroundColor(.white)
+            }
+        }
+        .onSubmit {
+            switch focusedField {
+            case .email:
+                focusedField = .password
+            default:
+                break
             }
         }
     }

@@ -32,3 +32,35 @@ struct RoundedDarkBlueButton: ButtonStyle {
             .clipShape(Capsule())
     }
 }
+
+struct RoundedBlackButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding()
+            .frame(height: 50)
+            .padding(.horizontal)
+            .background(Color.black)
+            .foregroundStyle(.white)
+            .fontWeight(.bold)
+            .font(.system(size: 16))
+            .clipShape(Capsule())
+    }
+}
+
+struct RoundedWhiteButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding()
+            .frame(height: 50)
+            .padding(.horizontal)
+            .background(Color.white)
+            .foregroundStyle(.black)
+            .fontWeight(.bold)
+            .font(.system(size: 16))
+            .clipShape(Capsule())
+            .overlay(
+                RoundedRectangle(cornerRadius: 25)
+                    .stroke(Color.gray.opacity(0.3), lineWidth: 1)
+            )
+    }
+}

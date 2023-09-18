@@ -15,7 +15,9 @@
 		FC4526E02A599610004567D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC4526DF2A599610004567D1 /* GoogleService-Info.plist */; };
 		FC4526E22A5998DB004567D1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E12A5998DB004567D1 /* Router.swift */; };
 		FC4526E42A59993B004567D1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E32A59993B004567D1 /* LoginView.swift */; };
+		FC9851872AB8AA6200F15711 /* TutorialStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9851862AB8AA6200F15711 /* TutorialStep.swift */; };
 		FCA7C3D02A90BDD3006DC9F4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7C3CF2A90BDD3006DC9F4 /* LoginViewModel.swift */; };
+		FCB7A18C2A9CCDB10077D3A5 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB7A18B2A9CCDB10077D3A5 /* View+Extension.swift */; };
 		FCBC494E2A93AABE0027A4D9 /* Color+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBC494D2A93AABE0027A4D9 /* Color+Colors.swift */; };
 		FCBC49502A948BDF0027A4D9 /* ImageTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBC494F2A948BDF0027A4D9 /* ImageTextField.swift */; };
 		FCD981552A589CF8001FC643 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD981542A589CF8001FC643 /* AppDelegate.swift */; };
@@ -41,7 +43,9 @@
 		FC4526DF2A599610004567D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FC4526E12A5998DB004567D1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		FC4526E32A59993B004567D1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		FC9851862AB8AA6200F15711 /* TutorialStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialStep.swift; sourceTree = "<group>"; };
 		FCA7C3CF2A90BDD3006DC9F4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		FCB7A18B2A9CCDB10077D3A5 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		FCBC494D2A93AABE0027A4D9 /* Color+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Colors.swift"; sourceTree = "<group>"; };
 		FCBC494F2A948BDF0027A4D9 /* ImageTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTextField.swift; sourceTree = "<group>"; };
 		FCD981512A589CF8001FC643 /* Futboly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Futboly.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				FCDE38012A9764010047B19B /* TutorialView.swift */,
+				FC9851862AB8AA6200F15711 /* TutorialStep.swift */,
 				FCDE38032A97654E0047B19B /* Views */,
 			);
 			path = Tutorial;
@@ -157,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				FCBC494D2A93AABE0027A4D9 /* Color+Colors.swift */,
+				FCB7A18B2A9CCDB10077D3A5 /* View+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -299,6 +305,7 @@
 				FCDE37F72A96270F0047B19B /* SocialLoginButton.swift in Sources */,
 				FCDE37F12A95F5A70047B19B /* Constants+ColorName.swift in Sources */,
 				FCDE37F32A95F5C00047B19B /* Constants+ImageName.swift in Sources */,
+				FC9851872AB8AA6200F15711 /* TutorialStep.swift in Sources */,
 				FCDE38052A97655D0047B19B /* TutorialStepView.swift in Sources */,
 				FC4526E42A59993B004567D1 /* LoginView.swift in Sources */,
 				FCDE37FE2A96987D0047B19B /* SignupViewModel.swift in Sources */,
@@ -307,6 +314,7 @@
 				FCDE37FC2A9698720047B19B /* SignupView.swift in Sources */,
 				FCD981572A589CF8001FC643 /* SceneDelegate.swift in Sources */,
 				FC18AB832A98AD9A00ACFE75 /* ForgotPasswordView.swift in Sources */,
+				FCB7A18C2A9CCDB10077D3A5 /* View+Extension.swift in Sources */,
 				FC18AB812A98AA3700ACFE75 /* FutbolyVault.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
