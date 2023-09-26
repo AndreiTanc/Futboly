@@ -7,32 +7,6 @@
 
 import SwiftUI
 
-struct RoundedBlueButton: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .padding()
-            .frame(height: 50)
-            .background(Color.futbolyBlue)
-            .foregroundStyle(.white)
-            .fontWeight(.bold)
-            .font(.system(size: 20))
-            .clipShape(Capsule())
-    }
-}
-
-struct RoundedDarkBlueButton: ButtonStyle {
-    func makeBody(configuration: Configuration) -> some View {
-        configuration.label
-            .padding()
-            .frame(height: 50)
-            .background(Color.futbolyDarkBlue)
-            .foregroundStyle(.white)
-            .fontWeight(.bold)
-            .font(.system(size: 20))
-            .clipShape(Capsule())
-    }
-}
-
 struct RoundedBlackButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label

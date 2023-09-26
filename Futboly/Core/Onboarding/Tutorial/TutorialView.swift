@@ -41,7 +41,7 @@ struct TutorialView: View {
             HStack(spacing: 5) {
                 ForEach((0..<TutorialStep.allCases.count), id: \.self) { index in
                     Capsule()
-                        .fill(index == pageNumber ? Color.futbolyDarkBlue : Color.futbolyDarkBlue.opacity(0.5))
+                        .fill(index == pageNumber ? Color.black : Color.black.opacity(0.5))
                         .frame(width: index == pageNumber ? 30 : 10, height: 10)
                         .animation(.spring(), value: pageNumber)
                 }
@@ -67,7 +67,7 @@ struct TutorialView: View {
             Spacer()
             
             Button("Let's start!") {
-                Router.shared.goToScreen(withRoute: .login)
+                Router.shared.goToScreen(withRoute: .register)
             }.buttonStyle(RoundedBlackButton())
         }.padding(.horizontal, 8)
     }

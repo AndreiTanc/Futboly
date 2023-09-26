@@ -14,20 +14,24 @@ struct RegisterView: View {
     @Namespace private var namespace2
     
     var body: some View {
-        ScrollView {
-            VStack(alignment: .center, spacing: 30) {
-                Spacer()
-                headerView
-                Spacer()
-                
-                onboardingTypeSwitcher.frame(maxWidth: .infinity)
-                formView
-                signButton
-                Spacer()
-                
-                SocialLoginView()
-            }.padding(.horizontal).padding(.bottom)
-        }
+        VStack(alignment: .center, spacing: 30) {
+            Spacer()
+            headerView
+            Spacer()
+            
+            onboardingTypeSwitcher.frame(maxWidth: .infinity)
+            formView
+            signButton
+            
+            if viewModel.currentOnboardingType == .signIn {
+                forgotPasswordButton
+                    .foregroundStyle(Color.black)
+                    .padding(.top, -20)
+            }
+            
+            Spacer()
+            SocialLoginView()
+        }.padding(.horizontal).padding(.bottom)
     }
     
     var headerView: some View {
@@ -80,6 +84,16 @@ struct RegisterView: View {
                 break
             }
         }
+    }
+    
+    var forgotPasswordButton: some View {
+        Button {
+            Router.shared.goToScreen(withRoute: .forgotPassword)
+        } label: {
+            Text("Forgot password?")
+                .font(.system(size: 16))
+        }.padding()
+
     }
     
     var signButton: some View {
