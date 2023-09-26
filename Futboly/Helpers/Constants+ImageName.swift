@@ -8,6 +8,8 @@
 import Foundation
 
 enum ImageName: String {
+    case futboly = "futboly"
+    
     case password = "password"
     case email = "email"
     case profile = "profile"
@@ -19,4 +21,8 @@ enum ImageName: String {
     case tutorialCheckScore = "tutorial_check_score"
     case tutorialPickPlayers = "tutorial_pick_players"
     case tutorialProperShoot = "tutorial_proper_shoot"
+    
+    case onboardingIllustration = "onboarding_illustration"
+    
+    case close = "close"
 }

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Futboly.png",
+      "filename" : "Close.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Futboly@2x.png",
+      "filename" : "Close@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Futboly@3x.png",
+      "filename" : "Close@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -1,49 +1,62 @@
 //
-//  ImageTextField.swift
+//  OnboardingTextField.swift
 //  Futboly
 //
-//  Created by Andrei Tanc on 22.08.2023.
+//  Created by Andrei Tanc on 19.09.2023.
 //
 
 import SwiftUI
 
-struct ImageTextField: View {
+struct OnboardingTextField: View {
     var type: TextFieldType
-    var focusedField: FocusState<TextFieldType?>.Binding
     @Binding var text: String
+    
+    var focusedField: FocusState<TextFieldType?>.Binding
     var submitLabel: SubmitLabel = .next
     
     var body: some View {
-        HStack(spacing: 15) {
-            Image(type.imageName)
-            TextField(type.placeholder, text: $text)
-        }
+        HStack {
+            VStack(alignment: .leading, spacing: 2) {
+                Text(type.name).font(.system(size: 14)).foregroundStyle(.gray)
+                if type == .password {
+                    SecureField("Please enter your \(type.name.lowercased())...", text: $text)
+                        .autocorrectionDisabled()
+                } else {
+                    TextField("Please enter your \(type.name.lowercased())...", text: $text)
+                        .autocorrectionDisabled()
+                }
+            }
+            
+            if !text.isEmpty {
+                Button {
+                    text = ""
+                } label: {
+                    Image(ImageName.close.rawValue)
+                }
+            }
+            
+        }.padding(10)
+        .background(Color.lightGray)
+        .clipShape(.rect(cornerRadius: 15))
         .focused(focusedField, equals: type)
         .textContentType(type.textContentType)
         .keyboardType(type.keyboardType)
         .submitLabel(submitLabel)
-        .padding()
-        .background(Color.white)
-        .frame(height: 50)
-        .cornerRadius(25)
     }
 }
 
-extension ImageTextField {
+extension OnboardingTextField {
     enum TextFieldType: Hashable {
         case email
         case password
-        case confirmPassword
         case teamName
         
-        var placeholder: String {
+        var name: String {
             switch self {
             case .email:
                 return "Email"
             case .password:
                 return "Password"
-            case .confirmPassword:
-                return "Confirm password"
             case .teamName:
                 return "Team name"
             }
@@ -53,7 +66,7 @@ extension ImageTextField {
             switch self {
             case .email:
                 return ImageName.email.rawValue
-            case .password, .confirmPassword:
+            case .password:
                 return ImageName.password.rawValue
             case .teamName:
                 return ImageName.profile.rawValue
@@ -64,7 +77,7 @@ extension ImageTextField {
             switch self {
             case .email:
                 return .emailAddress
-            case .password, .confirmPassword:
+            case .password:
                 return .password
             case .teamName:
                 return .nickname

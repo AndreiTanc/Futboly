@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "google_logo.png",
+      "filename" : "flat-color-icons_google.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "google_logo@2x.png",
+      "filename" : "flat-color-icons_google@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "google_logo@3x.png",
+      "filename" : "flat-color-icons_google@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -64,3 +64,27 @@ struct RoundedWhiteButton: ButtonStyle {
             )
     }
 }
+
+struct OnboardingSelectedTypeButton: ButtonStyle {
+    var isSelected: Bool
+    
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding(13)
+            .foregroundStyle(isSelected ? Color.black : .gray)
+            .font(.system(size: 18, weight: .semibold))
+            .frame(maxWidth: .infinity)
+            .background(isSelected ? Color.white : .clear)
+            .clipShape(.rect(cornerRadius: 15))
+            .shadow(color: .gray.opacity(isSelected ? 0.4 : 0), radius: 2, x: 1, y: 5)
+    }
+}
+
+struct OnboardingUnselectedTypeButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .foregroundStyle(Color.gray)
+            .font(.system(size: 18, weight: .semibold))
+            .frame(maxWidth: .infinity)
+    }
+}

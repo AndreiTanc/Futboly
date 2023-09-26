@@ -11,9 +11,9 @@ struct SocialLoginView: View {
     var body: some View {
         VStack(spacing: 30) {
             HStack(spacing: 20) {
-                Rectangle().frame(height: 2).foregroundColor(.white)
-                Text("or connect with").layoutPriority(1).fontWeight(.semibold).foregroundColor(.white)
-                Rectangle().frame(height: 2).foregroundColor(.white)
+                Rectangle().frame(height: 2).foregroundColor(.lightGray)
+                Text("or connect with").layoutPriority(1).foregroundColor(.gray)
+                Rectangle().frame(height: 2).foregroundColor(.lightGray)
             }
             
             HStack(spacing: 35) {

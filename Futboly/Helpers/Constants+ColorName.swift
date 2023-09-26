@@ -12,4 +12,5 @@ enum ColorName: String {
     case upperBackgroundGradient = "upper_background_gradient"
     case futbolyBlue = "futboly_blue"
     case futbolyDarkBlue = "futboly_dark_blue"
+    case lightGray = "light_gray"
 }
