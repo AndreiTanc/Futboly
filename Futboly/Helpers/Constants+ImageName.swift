@@ -18,9 +18,9 @@ enum ImageName: String {
     case facebookLogo = "facebook_logo"
     case googleLogo = "google_logo"
     
-    case tutorialCheckScore = "tutorial_check_score"
-    case tutorialPickPlayers = "tutorial_pick_players"
-    case tutorialProperShoot = "tutorial_proper_shoot"
+    case introCheckScore = "tutorial_check_score"
+    case introPickPlayers = "tutorial_pick_players"
+    case introProperShoot = "tutorial_proper_shoot"
     
     case onboardingIllustration = "onboarding_illustration"
     

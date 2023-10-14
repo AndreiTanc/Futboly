@@ -11,15 +11,15 @@ import SwiftUI
 
 enum RouterRoutes {
     case register
-    case tutorial
+    case intro
     case forgotPassword
     
     var view: any View {
         switch self {
         case .register:
             return RegisterView()
-        case .tutorial:
-            return TutorialView()
+        case .intro:
+            return IntroView()
         case .forgotPassword:
             return ForgotPasswordView()
         }
@@ -47,7 +47,7 @@ final class Router {
         var firstScreen: UIViewController
         
         if FutbolyVault.shared.isFirstRun ?? true {
-            firstScreen = instantiateScreen(withRoute: .tutorial)
+            firstScreen = instantiateScreen(withRoute: .intro)
             FutbolyVault.shared.isFirstRun = false
         } else {
             firstScreen = instantiateScreen(withRoute: .register)

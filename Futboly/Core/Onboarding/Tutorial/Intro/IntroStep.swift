@@ -1,5 +1,5 @@
 //
-//  TutorialStep.swift
+//  IntroStep.swift
 //  Futboly
 //
 //  Created by Andrei Tanc on 18.09.2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum TutorialStep: Int, CaseIterable {
+enum IntroStep: Int, CaseIterable {
     case pickPlayers
     case properShoot
     case checkScore
@@ -15,11 +15,11 @@ enum TutorialStep: Int, CaseIterable {
     var imageName: String {
         switch self {
         case .pickPlayers:
-            return ImageName.tutorialPickPlayers.rawValue
+            return ImageName.introPickPlayers.rawValue
         case .properShoot:
-            return ImageName.tutorialProperShoot.rawValue
+            return ImageName.introProperShoot.rawValue
         case .checkScore:
-            return ImageName.tutorialCheckScore.rawValue
+            return ImageName.introCheckScore.rawValue
         }
     }
     

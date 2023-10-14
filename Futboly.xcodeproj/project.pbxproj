@@ -15,7 +15,7 @@
 		FC4526E02A599610004567D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC4526DF2A599610004567D1 /* GoogleService-Info.plist */; };
 		FC4526E22A5998DB004567D1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E12A5998DB004567D1 /* Router.swift */; };
 		FC4526E42A59993B004567D1 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E32A59993B004567D1 /* RegisterView.swift */; };
-		FC9851872AB8AA6200F15711 /* TutorialStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9851862AB8AA6200F15711 /* TutorialStep.swift */; };
+		FC9851872AB8AA6200F15711 /* IntroStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9851862AB8AA6200F15711 /* IntroStep.swift */; };
 		FC98518E2AB9E8E900F15711 /* OnboardingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC98518D2AB9E8E900F15711 /* OnboardingTextField.swift */; };
 		FCA7C3D02A90BDD3006DC9F4 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7C3CF2A90BDD3006DC9F4 /* RegisterViewModel.swift */; };
 		FCB7A18C2A9CCDB10077D3A5 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB7A18B2A9CCDB10077D3A5 /* View+Extension.swift */; };
@@ -29,8 +29,8 @@
 		FCDE37F52A9624A10047B19B /* SocialLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE37F42A9624A10047B19B /* SocialLoginView.swift */; };
 		FCDE37F72A96270F0047B19B /* SocialLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE37F62A96270F0047B19B /* SocialLoginButton.swift */; };
 		FCDE37FA2A962A080047B19B /* FutbolyButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE37F92A962A080047B19B /* FutbolyButtons.swift */; };
-		FCDE38022A9764010047B19B /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE38012A9764010047B19B /* TutorialView.swift */; };
-		FCDE38052A97655D0047B19B /* TutorialStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE38042A97655D0047B19B /* TutorialStepView.swift */; };
+		FCDE38022A9764010047B19B /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE38012A9764010047B19B /* IntroView.swift */; };
+		FCDE38052A97655D0047B19B /* IntroStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE38042A97655D0047B19B /* IntroStepView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +40,7 @@
 		FC4526DF2A599610004567D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FC4526E12A5998DB004567D1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		FC4526E32A59993B004567D1 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
-		FC9851862AB8AA6200F15711 /* TutorialStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialStep.swift; sourceTree = "<group>"; };
+		FC9851862AB8AA6200F15711 /* IntroStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroStep.swift; sourceTree = "<group>"; };
 		FC98518D2AB9E8E900F15711 /* OnboardingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTextField.swift; sourceTree = "<group>"; };
 		FCA7C3CF2A90BDD3006DC9F4 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
 		FCB7A18B2A9CCDB10077D3A5 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
@@ -56,8 +56,8 @@
 		FCDE37F42A9624A10047B19B /* SocialLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginView.swift; sourceTree = "<group>"; };
 		FCDE37F62A96270F0047B19B /* SocialLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginButton.swift; sourceTree = "<group>"; };
 		FCDE37F92A962A080047B19B /* FutbolyButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutbolyButtons.swift; sourceTree = "<group>"; };
-		FCDE38012A9764010047B19B /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
-		FCDE38042A97655D0047B19B /* TutorialStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialStepView.swift; sourceTree = "<group>"; };
+		FCDE38012A9764010047B19B /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
+		FCDE38042A97655D0047B19B /* IntroStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroStepView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +73,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC2801CA2ADAC74600114F7B /* HowToPlay */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HowToPlay;
+			sourceTree = "<group>";
+		};
+		FC2801CB2ADAC88100114F7B /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				FCDE38012A9764010047B19B /* IntroView.swift */,
+				FC9851862AB8AA6200F15711 /* IntroStep.swift */,
+				FCDE38032A97654E0047B19B /* Views */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
 		FCA7C3C92A90BC10006DC9F4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,9 +130,8 @@
 		FCA7C3CE2A90BCF8006DC9F4 /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
-				FCDE38012A9764010047B19B /* TutorialView.swift */,
-				FC9851862AB8AA6200F15711 /* TutorialStep.swift */,
-				FCDE38032A97654E0047B19B /* Views */,
+				FC2801CB2ADAC88100114F7B /* Intro */,
+				FC2801CA2ADAC74600114F7B /* HowToPlay */,
 			);
 			path = Tutorial;
 			sourceTree = "<group>";
@@ -194,7 +210,7 @@
 		FCDE38032A97654E0047B19B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				FCDE38042A97655D0047B19B /* TutorialStepView.swift */,
+				FCDE38042A97655D0047B19B /* IntroStepView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -287,10 +303,10 @@
 				FCDE37F12A95F5A70047B19B /* Constants+ColorName.swift in Sources */,
 				FCDE37F32A95F5C00047B19B /* Constants+ImageName.swift in Sources */,
 				FC98518E2AB9E8E900F15711 /* OnboardingTextField.swift in Sources */,
-				FC9851872AB8AA6200F15711 /* TutorialStep.swift in Sources */,
-				FCDE38052A97655D0047B19B /* TutorialStepView.swift in Sources */,
+				FC9851872AB8AA6200F15711 /* IntroStep.swift in Sources */,
+				FCDE38052A97655D0047B19B /* IntroStepView.swift in Sources */,
 				FC4526E42A59993B004567D1 /* RegisterView.swift in Sources */,
-				FCDE38022A9764010047B19B /* TutorialView.swift in Sources */,
+				FCDE38022A9764010047B19B /* IntroView.swift in Sources */,
 				FCA7C3D02A90BDD3006DC9F4 /* RegisterViewModel.swift in Sources */,
 				FCD981572A589CF8001FC643 /* SceneDelegate.swift in Sources */,
 				FC18AB832A98AD9A00ACFE75 /* ForgotPasswordView.swift in Sources */,

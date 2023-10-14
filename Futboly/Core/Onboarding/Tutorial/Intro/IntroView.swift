@@ -1,5 +1,5 @@
 //
-//  TutorialView.swift
+//  IntroView.swift
 //  Futboly
 //
 //  Created by Andrei Tanc on 24.08.2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TutorialView: View {
+struct IntroView: View {
     @State var pageNumber: Int = 0
     
     var body: some View {
@@ -19,7 +19,7 @@ struct TutorialView: View {
     
     var imageView: some View {
         VStack {
-            Image((TutorialStep(rawValue: pageNumber) ?? .pickPlayers).imageName)
+            Image((IntroStep(rawValue: pageNumber) ?? .pickPlayers).imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .animation(.spring(), value: pageNumber)
@@ -39,7 +39,7 @@ struct TutorialView: View {
     var cardView: some View {
         VStack {
             HStack(spacing: 5) {
-                ForEach((0..<TutorialStep.allCases.count), id: \.self) { index in
+                ForEach((0..<IntroStep.allCases.count), id: \.self) { index in
                     Capsule()
                         .fill(index == pageNumber ? Color.black : Color.black.opacity(0.5))
                         .frame(width: index == pageNumber ? 30 : 10, height: 10)
@@ -48,8 +48,8 @@ struct TutorialView: View {
             }.padding(.top, 30)
             
             TabView(selection: $pageNumber) {
-                ForEach((0..<TutorialStep.allCases.count), id: \.self) { index in
-                    TutorialStepView(tutorialStep: .init(rawValue: index) ?? .pickPlayers)
+                ForEach((0..<IntroStep.allCases.count), id: \.self) { index in
+                    IntroStepView(introStep: .init(rawValue: index) ?? .pickPlayers)
                 }
             }
             .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never)).frame(height: 200)
@@ -73,8 +73,8 @@ struct TutorialView: View {
     }
 }
 
-struct TutorialView_Previews: PreviewProvider {
+struct IntroView_Previews: PreviewProvider {
     static var previews: some View {
-        TutorialView()
+        IntroView()
     }
 }
