@@ -61,7 +61,7 @@ struct IntroView: View {
     var buttonsView: some View {
         HStack {
             Button("How to play") {
-                #warning("Action must be implemented")
+                Router.shared.goToScreen(withRoute: .howToPlay)
             }.buttonStyle(RoundedWhiteButton())
             
             Spacer()

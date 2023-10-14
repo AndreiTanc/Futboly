@@ -12,6 +12,8 @@
 		FC18AB7F2A98A9E300ACFE75 /* UserDefaultPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC18AB7E2A98A9E300ACFE75 /* UserDefaultPropertyWrapper.swift */; };
 		FC18AB812A98AA3700ACFE75 /* FutbolyVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC18AB802A98AA3700ACFE75 /* FutbolyVault.swift */; };
 		FC18AB832A98AD9A00ACFE75 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC18AB822A98AD9A00ACFE75 /* ForgotPasswordView.swift */; };
+		FC2801CF2ADAC8D800114F7B /* HowToPlayIntroductoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2801CE2ADAC8D800114F7B /* HowToPlayIntroductoryView.swift */; };
+		FC2801D12ADACB9300114F7B /* FutbolyAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2801D02ADACB9300114F7B /* FutbolyAlert.swift */; };
 		FC4526E02A599610004567D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC4526DF2A599610004567D1 /* GoogleService-Info.plist */; };
 		FC4526E22A5998DB004567D1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E12A5998DB004567D1 /* Router.swift */; };
 		FC4526E42A59993B004567D1 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E32A59993B004567D1 /* RegisterView.swift */; };
@@ -37,6 +39,8 @@
 		FC18AB7E2A98A9E300ACFE75 /* UserDefaultPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultPropertyWrapper.swift; sourceTree = "<group>"; };
 		FC18AB802A98AA3700ACFE75 /* FutbolyVault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutbolyVault.swift; sourceTree = "<group>"; };
 		FC18AB822A98AD9A00ACFE75 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		FC2801CE2ADAC8D800114F7B /* HowToPlayIntroductoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayIntroductoryView.swift; sourceTree = "<group>"; };
+		FC2801D02ADACB9300114F7B /* FutbolyAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutbolyAlert.swift; sourceTree = "<group>"; };
 		FC4526DF2A599610004567D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FC4526E12A5998DB004567D1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		FC4526E32A59993B004567D1 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -76,6 +80,7 @@
 		FC2801CA2ADAC74600114F7B /* HowToPlay */ = {
 			isa = PBXGroup;
 			children = (
+				FC2801CE2ADAC8D800114F7B /* HowToPlayIntroductoryView.swift */,
 			);
 			path = HowToPlay;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 				FCDE37F22A95F5C00047B19B /* Constants+ImageName.swift */,
 				FC18AB7E2A98A9E300ACFE75 /* UserDefaultPropertyWrapper.swift */,
 				FC18AB802A98AA3700ACFE75 /* FutbolyVault.swift */,
+				FC2801D02ADACB9300114F7B /* FutbolyAlert.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -303,7 +309,9 @@
 				FCDE37F12A95F5A70047B19B /* Constants+ColorName.swift in Sources */,
 				FCDE37F32A95F5C00047B19B /* Constants+ImageName.swift in Sources */,
 				FC98518E2AB9E8E900F15711 /* OnboardingTextField.swift in Sources */,
+				FC2801CF2ADAC8D800114F7B /* HowToPlayIntroductoryView.swift in Sources */,
 				FC9851872AB8AA6200F15711 /* IntroStep.swift in Sources */,
+				FC2801D12ADACB9300114F7B /* FutbolyAlert.swift in Sources */,
 				FCDE38052A97655D0047B19B /* IntroStepView.swift in Sources */,
 				FC4526E42A59993B004567D1 /* RegisterView.swift in Sources */,
 				FCDE38022A9764010047B19B /* IntroView.swift in Sources */,

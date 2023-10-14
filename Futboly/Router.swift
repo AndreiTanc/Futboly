@@ -12,6 +12,7 @@ import SwiftUI
 enum RouterRoutes {
     case register
     case intro
+    case howToPlay
     case forgotPassword
     
     var view: any View {
@@ -20,6 +21,8 @@ enum RouterRoutes {
             return RegisterView()
         case .intro:
             return IntroView()
+        case .howToPlay:
+            return HowToPlayIntroductoryView()
         case .forgotPassword:
             return ForgotPasswordView()
         }
@@ -46,12 +49,12 @@ final class Router {
     func instantiateFirstScreen() -> UIViewController {
         var firstScreen: UIViewController
         
-        if FutbolyVault.shared.isFirstRun ?? true {
+//        if FutbolyVault.shared.isFirstRun ?? true {
             firstScreen = instantiateScreen(withRoute: .intro)
-            FutbolyVault.shared.isFirstRun = false
-        } else {
-            firstScreen = instantiateScreen(withRoute: .register)
-        }
+//            FutbolyVault.shared.isFirstRun = false
+//        } else {
+//            firstScreen = instantiateScreen(withRoute: .register)
+//        }
         
         navigationController = .init(rootViewController: firstScreen)
         navigationController.navigationBar.isHidden = true
