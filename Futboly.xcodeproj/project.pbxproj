@@ -22,6 +22,12 @@
 		FC4526E02A599610004567D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC4526DF2A599610004567D1 /* GoogleService-Info.plist */; };
 		FC4526E22A5998DB004567D1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E12A5998DB004567D1 /* Router.swift */; };
 		FC4526E42A59993B004567D1 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E32A59993B004567D1 /* RegisterView.swift */; };
+		FC5C7C492AF02D14004C98EA /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C482AF02D14004C98EA /* MainTabView.swift */; };
+		FC5C7C502AF02E0F004C98EA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C4F2AF02E0F004C98EA /* HomeView.swift */; };
+		FC5C7C522AF02E3B004C98EA /* GamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C512AF02E3B004C98EA /* GamesView.swift */; };
+		FC5C7C542AF02E47004C98EA /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C532AF02E47004C98EA /* LeaderboardView.swift */; };
+		FC5C7C562AF02E50004C98EA /* PlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C552AF02E50004C98EA /* PlayersView.swift */; };
+		FC5C7C582AF02E5B004C98EA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C572AF02E5B004C98EA /* ProfileView.swift */; };
 		FC9851872AB8AA6200F15711 /* IntroStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9851862AB8AA6200F15711 /* IntroStep.swift */; };
 		FC98518E2AB9E8E900F15711 /* OnboardingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC98518D2AB9E8E900F15711 /* OnboardingTextField.swift */; };
 		FCA7C3D02A90BDD3006DC9F4 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7C3CF2A90BDD3006DC9F4 /* RegisterViewModel.swift */; };
@@ -54,6 +60,12 @@
 		FC4526DF2A599610004567D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FC4526E12A5998DB004567D1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		FC4526E32A59993B004567D1 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		FC5C7C482AF02D14004C98EA /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		FC5C7C4F2AF02E0F004C98EA /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FC5C7C512AF02E3B004C98EA /* GamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesView.swift; sourceTree = "<group>"; };
+		FC5C7C532AF02E47004C98EA /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
+		FC5C7C552AF02E50004C98EA /* PlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersView.swift; sourceTree = "<group>"; };
+		FC5C7C572AF02E5B004C98EA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		FC9851862AB8AA6200F15711 /* IntroStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroStep.swift; sourceTree = "<group>"; };
 		FC98518D2AB9E8E900F15711 /* OnboardingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTextField.swift; sourceTree = "<group>"; };
 		FCA7C3CF2A90BDD3006DC9F4 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
@@ -118,11 +130,65 @@
 			path = Tutorial;
 			sourceTree = "<group>";
 		};
+		FC5C7C472AF02CF0004C98EA /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FC5C7C482AF02D14004C98EA /* MainTabView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FC5C7C4A2AF02DAB004C98EA /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				FC5C7C572AF02E5B004C98EA /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		FC5C7C4B2AF02DB7004C98EA /* Games */ = {
+			isa = PBXGroup;
+			children = (
+				FC5C7C512AF02E3B004C98EA /* GamesView.swift */,
+			);
+			path = Games;
+			sourceTree = "<group>";
+		};
+		FC5C7C4C2AF02DBE004C98EA /* Leaderboard */ = {
+			isa = PBXGroup;
+			children = (
+				FC5C7C532AF02E47004C98EA /* LeaderboardView.swift */,
+			);
+			path = Leaderboard;
+			sourceTree = "<group>";
+		};
+		FC5C7C4D2AF02DCB004C98EA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FC5C7C4F2AF02E0F004C98EA /* HomeView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		FC5C7C4E2AF02DE3004C98EA /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				FC5C7C552AF02E50004C98EA /* PlayersView.swift */,
+			);
+			path = Players;
+			sourceTree = "<group>";
+		};
 		FCA7C3C92A90BC10006DC9F4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				FCDE37F82A9629F60047B19B /* Views */,
 				FCA7C3CA2A90BC3C006DC9F4 /* Onboarding */,
+				FC5C7C472AF02CF0004C98EA /* Main */,
+				FC5C7C4D2AF02DCB004C98EA /* Home */,
+				FC5C7C4B2AF02DB7004C98EA /* Games */,
+				FC5C7C4C2AF02DBE004C98EA /* Leaderboard */,
+				FC5C7C4E2AF02DE3004C98EA /* Players */,
+				FC5C7C4A2AF02DAB004C98EA /* Profile */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -332,6 +398,7 @@
 				FCDE37F72A96270F0047B19B /* SocialLoginButton.swift in Sources */,
 				FC2801DC2ADAEA8A00114F7B /* TutorialPointsInfoCell.swift in Sources */,
 				FCDE37F12A95F5A70047B19B /* Constants+ColorName.swift in Sources */,
+				FC5C7C542AF02E47004C98EA /* LeaderboardView.swift in Sources */,
 				FCDE37F32A95F5C00047B19B /* Constants+ImageName.swift in Sources */,
 				FC98518E2AB9E8E900F15711 /* OnboardingTextField.swift in Sources */,
 				FC2801CF2ADAC8D800114F7B /* HowToPlayIntroductoryView.swift in Sources */,
@@ -341,10 +408,15 @@
 				FC4526E42A59993B004567D1 /* RegisterView.swift in Sources */,
 				FC2801DA2ADAE8A300114F7B /* TutorialPointsInformation.swift in Sources */,
 				FCDE38022A9764010047B19B /* IntroView.swift in Sources */,
+				FC5C7C492AF02D14004C98EA /* MainTabView.swift in Sources */,
 				FCA7C3D02A90BDD3006DC9F4 /* RegisterViewModel.swift in Sources */,
+				FC5C7C502AF02E0F004C98EA /* HomeView.swift in Sources */,
+				FC5C7C522AF02E3B004C98EA /* GamesView.swift in Sources */,
+				FC5C7C582AF02E5B004C98EA /* ProfileView.swift in Sources */,
 				FCD981572A589CF8001FC643 /* SceneDelegate.swift in Sources */,
 				FC2801D32ADAD1CD00114F7B /* TutorialView.swift in Sources */,
 				FC2801D72ADAE69300114F7B /* TutorialStepView.swift in Sources */,
+				FC5C7C562AF02E50004C98EA /* PlayersView.swift in Sources */,
 				FC18AB832A98AD9A00ACFE75 /* ForgotPasswordView.swift in Sources */,
 				FCB7A18C2A9CCDB10077D3A5 /* View+Extension.swift in Sources */,
 				FC18AB812A98AA3700ACFE75 /* FutbolyVault.swift in Sources */,

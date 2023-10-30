@@ -47,4 +47,13 @@ enum ImageName: String {
     case leftWhiteArrow = "left_white_arrow"
     
     case close = "close"
+    
+    
+    // Tab Bar
+    
+    case tabHome = "home"
+    case tabProfile = "tab_profile"
+    case tabPlayers = "players"
+    case tabLeaderboard = "leaderboard"
+    case tabGames = "games"
 }
