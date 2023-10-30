@@ -9,7 +9,58 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        Text("Profile")
+        ZStack {
+            Color.lightGray.ignoresSafeArea()
+            Image(.noiseBackground)
+                .resizable()
+                .ignoresSafeArea()
+            content
+        }
+    }
+    
+    var content: some View {
+        VStack {
+            ProfileHeaderView()
+            profileInformationView
+            logoutButton
+            Spacer()
+        }.padding(.horizontal)
+    }
+    
+    var profileInformationView: some View {
+        HStack {
+            Image(.defaultProfile)
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 70, height: 70)
+            
+            VStack(alignment: .leading, spacing: 6) {
+                Text("Team name")
+                    .font(.system(size: 24))
+                Text("256 matches were played")
+                    .font(.system(size: 14))
+                    .foregroundStyle(.gray)
+            }
+            
+            Spacer()
+            
+            Button {
+                // edit action
+            } label: {
+                Image(.edit)
+            }.padding(.trailing)
+        }.padding()
+        .background(.white)
+        .clipShape(.rect(cornerRadius: 32))
+    }
+    
+    var logoutButton: some View {
+        Button {
+            // logout
+        } label: {
+            Text("Logout")
+                .foregroundStyle(.red)
+        }
     }
 }
 
