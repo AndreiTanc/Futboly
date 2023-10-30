@@ -29,7 +29,7 @@ class RegisterViewModel: ObservableObject {
     @Published var teamName: String = ""
     
     func register() {
-        
+        Router.shared.goToScreen(withRoute: .main)
     }
     
     func forgotPassword() {

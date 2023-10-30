@@ -29,6 +29,11 @@
 		FC5C7C562AF02E50004C98EA /* PlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C552AF02E50004C98EA /* PlayersView.swift */; };
 		FC5C7C582AF02E5B004C98EA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C572AF02E5B004C98EA /* ProfileView.swift */; };
 		FC5C7C5B2AF03988004C98EA /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C5A2AF03988004C98EA /* ProfileHeaderView.swift */; };
+		FC5C7C5E2AF04612004C98EA /* ProfileEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C5D2AF04612004C98EA /* ProfileEditView.swift */; };
+		FC5C7C602AF04827004C98EA /* FutbolyBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C5F2AF04827004C98EA /* FutbolyBackButton.swift */; };
+		FC5C7C622AF0496E004C98EA /* ProfileNavHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C612AF0496E004C98EA /* ProfileNavHeaderView.swift */; };
+		FC5C7C642AF04F17004C98EA /* ProfileEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C632AF04F17004C98EA /* ProfileEditViewModel.swift */; };
+		FC5C7C662AF05316004C98EA /* ProfileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C652AF05316004C98EA /* ProfileTextField.swift */; };
 		FC9851872AB8AA6200F15711 /* IntroStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9851862AB8AA6200F15711 /* IntroStep.swift */; };
 		FC98518E2AB9E8E900F15711 /* OnboardingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC98518D2AB9E8E900F15711 /* OnboardingTextField.swift */; };
 		FCA7C3D02A90BDD3006DC9F4 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7C3CF2A90BDD3006DC9F4 /* RegisterViewModel.swift */; };
@@ -68,6 +73,11 @@
 		FC5C7C552AF02E50004C98EA /* PlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersView.swift; sourceTree = "<group>"; };
 		FC5C7C572AF02E5B004C98EA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		FC5C7C5A2AF03988004C98EA /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
+		FC5C7C5D2AF04612004C98EA /* ProfileEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditView.swift; sourceTree = "<group>"; };
+		FC5C7C5F2AF04827004C98EA /* FutbolyBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutbolyBackButton.swift; sourceTree = "<group>"; };
+		FC5C7C612AF0496E004C98EA /* ProfileNavHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavHeaderView.swift; sourceTree = "<group>"; };
+		FC5C7C632AF04F17004C98EA /* ProfileEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditViewModel.swift; sourceTree = "<group>"; };
+		FC5C7C652AF05316004C98EA /* ProfileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTextField.swift; sourceTree = "<group>"; };
 		FC9851862AB8AA6200F15711 /* IntroStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroStep.swift; sourceTree = "<group>"; };
 		FC98518D2AB9E8E900F15711 /* OnboardingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTextField.swift; sourceTree = "<group>"; };
 		FCA7C3CF2A90BDD3006DC9F4 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
@@ -144,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				FC5C7C572AF02E5B004C98EA /* ProfileView.swift */,
+				FC5C7C5C2AF04609004C98EA /* ProfileEdit */,
 				FC5C7C592AF0397E004C98EA /* Views */,
 			);
 			path = Profile;
@@ -185,8 +196,19 @@
 			isa = PBXGroup;
 			children = (
 				FC5C7C5A2AF03988004C98EA /* ProfileHeaderView.swift */,
+				FC5C7C612AF0496E004C98EA /* ProfileNavHeaderView.swift */,
+				FC5C7C652AF05316004C98EA /* ProfileTextField.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		FC5C7C5C2AF04609004C98EA /* ProfileEdit */ = {
+			isa = PBXGroup;
+			children = (
+				FC5C7C5D2AF04612004C98EA /* ProfileEditView.swift */,
+				FC5C7C632AF04F17004C98EA /* ProfileEditViewModel.swift */,
+			);
+			path = ProfileEdit;
 			sourceTree = "<group>";
 		};
 		FCA7C3C92A90BC10006DC9F4 /* Core */ = {
@@ -309,6 +331,7 @@
 			isa = PBXGroup;
 			children = (
 				FCDE37F92A962A080047B19B /* FutbolyButtons.swift */,
+				FC5C7C5F2AF04827004C98EA /* FutbolyBackButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -399,8 +422,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC5C7C5E2AF04612004C98EA /* ProfileEditView.swift in Sources */,
 				FC2801D52ADAD35600114F7B /* TutorialStep.swift in Sources */,
 				FCDE37F52A9624A10047B19B /* SocialLoginView.swift in Sources */,
+				FC5C7C622AF0496E004C98EA /* ProfileNavHeaderView.swift in Sources */,
 				FC4526E22A5998DB004567D1 /* Router.swift in Sources */,
 				FC18AB7F2A98A9E300ACFE75 /* UserDefaultPropertyWrapper.swift in Sources */,
 				FCDE37FA2A962A080047B19B /* FutbolyButtons.swift in Sources */,
@@ -408,6 +433,8 @@
 				FCBC494E2A93AABE0027A4D9 /* Color+Colors.swift in Sources */,
 				FCDE37F72A96270F0047B19B /* SocialLoginButton.swift in Sources */,
 				FC2801DC2ADAEA8A00114F7B /* TutorialPointsInfoCell.swift in Sources */,
+				FC5C7C662AF05316004C98EA /* ProfileTextField.swift in Sources */,
+				FC5C7C642AF04F17004C98EA /* ProfileEditViewModel.swift in Sources */,
 				FCDE37F12A95F5A70047B19B /* Constants+ColorName.swift in Sources */,
 				FC5C7C542AF02E47004C98EA /* LeaderboardView.swift in Sources */,
 				FCDE37F32A95F5C00047B19B /* Constants+ImageName.swift in Sources */,
@@ -429,6 +456,7 @@
 				FC2801D32ADAD1CD00114F7B /* TutorialView.swift in Sources */,
 				FC2801D72ADAE69300114F7B /* TutorialStepView.swift in Sources */,
 				FC5C7C562AF02E50004C98EA /* PlayersView.swift in Sources */,
+				FC5C7C602AF04827004C98EA /* FutbolyBackButton.swift in Sources */,
 				FC18AB832A98AD9A00ACFE75 /* ForgotPasswordView.swift in Sources */,
 				FCB7A18C2A9CCDB10077D3A5 /* View+Extension.swift in Sources */,
 				FC18AB812A98AA3700ACFE75 /* FutbolyVault.swift in Sources */,

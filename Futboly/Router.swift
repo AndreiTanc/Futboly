@@ -15,6 +15,8 @@ enum RouterRoutes {
     case howToPlay
     case tutorial
     case forgotPassword
+    case profileEdit
+    case main
     
     var view: any View {
         switch self {
@@ -28,6 +30,10 @@ enum RouterRoutes {
             return TutorialView()
         case .forgotPassword:
             return ForgotPasswordView()
+        case .profileEdit:
+            return ProfileEditView()
+        case .main:
+            return MainTabView()
         }
     }
 }

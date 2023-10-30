@@ -19,7 +19,7 @@ struct ProfileView: View {
     }
     
     var content: some View {
-        VStack {
+        VStack(spacing: 20) {
             ProfileHeaderView()
             profileInformationView
             logoutButton
@@ -45,7 +45,7 @@ struct ProfileView: View {
             Spacer()
             
             Button {
-                // edit action
+                Router.shared.goToScreen(withRoute: .profileEdit)
             } label: {
                 Image(.edit)
             }.padding(.trailing)
