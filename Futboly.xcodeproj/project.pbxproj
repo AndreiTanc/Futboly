@@ -9,22 +9,55 @@
 /* Begin PBXBuildFile section */
 		FC16C9282A598E89003FD891 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FC16C9272A598E89003FD891 /* FirebaseAnalytics */; };
 		FC16C92A2A598E89003FD891 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FC16C9292A598E89003FD891 /* FirebaseCrashlytics */; };
+		FC18AB7F2A98A9E300ACFE75 /* UserDefaultPropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC18AB7E2A98A9E300ACFE75 /* UserDefaultPropertyWrapper.swift */; };
+		FC18AB812A98AA3700ACFE75 /* FutbolyVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC18AB802A98AA3700ACFE75 /* FutbolyVault.swift */; };
+		FC18AB832A98AD9A00ACFE75 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC18AB822A98AD9A00ACFE75 /* ForgotPasswordView.swift */; };
+		FC2801CF2ADAC8D800114F7B /* HowToPlayIntroductoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2801CE2ADAC8D800114F7B /* HowToPlayIntroductoryView.swift */; };
+		FC2801D12ADACB9300114F7B /* FutbolyAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2801D02ADACB9300114F7B /* FutbolyAlert.swift */; };
+		FC2801D32ADAD1CD00114F7B /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2801D22ADAD1CD00114F7B /* TutorialView.swift */; };
+		FC2801D52ADAD35600114F7B /* TutorialStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2801D42ADAD35600114F7B /* TutorialStep.swift */; };
+		FC2801D72ADAE69300114F7B /* TutorialStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2801D62ADAE69300114F7B /* TutorialStepView.swift */; };
+		FC2801DA2ADAE8A300114F7B /* TutorialPointsInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2801D92ADAE8A300114F7B /* TutorialPointsInformation.swift */; };
+		FC2801DC2ADAEA8A00114F7B /* TutorialPointsInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2801DB2ADAEA8A00114F7B /* TutorialPointsInfoCell.swift */; };
 		FC4526E02A599610004567D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC4526DF2A599610004567D1 /* GoogleService-Info.plist */; };
 		FC4526E22A5998DB004567D1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E12A5998DB004567D1 /* Router.swift */; };
-		FC4526E42A59993B004567D1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E32A59993B004567D1 /* LoginView.swift */; };
-		FCA7C3D02A90BDD3006DC9F4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7C3CF2A90BDD3006DC9F4 /* LoginViewModel.swift */; };
+		FC4526E42A59993B004567D1 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E32A59993B004567D1 /* RegisterView.swift */; };
+		FC9851872AB8AA6200F15711 /* IntroStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9851862AB8AA6200F15711 /* IntroStep.swift */; };
+		FC98518E2AB9E8E900F15711 /* OnboardingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC98518D2AB9E8E900F15711 /* OnboardingTextField.swift */; };
+		FCA7C3D02A90BDD3006DC9F4 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7C3CF2A90BDD3006DC9F4 /* RegisterViewModel.swift */; };
+		FCB7A18C2A9CCDB10077D3A5 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB7A18B2A9CCDB10077D3A5 /* View+Extension.swift */; };
 		FCBC494E2A93AABE0027A4D9 /* Color+Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBC494D2A93AABE0027A4D9 /* Color+Colors.swift */; };
 		FCD981552A589CF8001FC643 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD981542A589CF8001FC643 /* AppDelegate.swift */; };
 		FCD981572A589CF8001FC643 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD981562A589CF8001FC643 /* SceneDelegate.swift */; };
 		FCD9815E2A589CF9001FC643 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCD9815D2A589CF9001FC643 /* Assets.xcassets */; };
 		FCD981612A589CF9001FC643 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCD9815F2A589CF9001FC643 /* LaunchScreen.storyboard */; };
+		FCDE37F12A95F5A70047B19B /* Constants+ColorName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE37F02A95F5A70047B19B /* Constants+ColorName.swift */; };
+		FCDE37F32A95F5C00047B19B /* Constants+ImageName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE37F22A95F5C00047B19B /* Constants+ImageName.swift */; };
+		FCDE37F52A9624A10047B19B /* SocialLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE37F42A9624A10047B19B /* SocialLoginView.swift */; };
+		FCDE37F72A96270F0047B19B /* SocialLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE37F62A96270F0047B19B /* SocialLoginButton.swift */; };
+		FCDE37FA2A962A080047B19B /* FutbolyButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE37F92A962A080047B19B /* FutbolyButtons.swift */; };
+		FCDE38022A9764010047B19B /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE38012A9764010047B19B /* IntroView.swift */; };
+		FCDE38052A97655D0047B19B /* IntroStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE38042A97655D0047B19B /* IntroStepView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC18AB7E2A98A9E300ACFE75 /* UserDefaultPropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultPropertyWrapper.swift; sourceTree = "<group>"; };
+		FC18AB802A98AA3700ACFE75 /* FutbolyVault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutbolyVault.swift; sourceTree = "<group>"; };
+		FC18AB822A98AD9A00ACFE75 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		FC2801CE2ADAC8D800114F7B /* HowToPlayIntroductoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayIntroductoryView.swift; sourceTree = "<group>"; };
+		FC2801D02ADACB9300114F7B /* FutbolyAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutbolyAlert.swift; sourceTree = "<group>"; };
+		FC2801D22ADAD1CD00114F7B /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
+		FC2801D42ADAD35600114F7B /* TutorialStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialStep.swift; sourceTree = "<group>"; };
+		FC2801D62ADAE69300114F7B /* TutorialStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialStepView.swift; sourceTree = "<group>"; };
+		FC2801D92ADAE8A300114F7B /* TutorialPointsInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPointsInformation.swift; sourceTree = "<group>"; };
+		FC2801DB2ADAEA8A00114F7B /* TutorialPointsInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPointsInfoCell.swift; sourceTree = "<group>"; };
 		FC4526DF2A599610004567D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FC4526E12A5998DB004567D1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		FC4526E32A59993B004567D1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		FCA7C3CF2A90BDD3006DC9F4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		FC4526E32A59993B004567D1 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		FC9851862AB8AA6200F15711 /* IntroStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroStep.swift; sourceTree = "<group>"; };
+		FC98518D2AB9E8E900F15711 /* OnboardingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTextField.swift; sourceTree = "<group>"; };
+		FCA7C3CF2A90BDD3006DC9F4 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		FCB7A18B2A9CCDB10077D3A5 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		FCBC494D2A93AABE0027A4D9 /* Color+Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Colors.swift"; sourceTree = "<group>"; };
 		FCD981512A589CF8001FC643 /* Futboly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Futboly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD981542A589CF8001FC643 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +65,13 @@
 		FCD9815D2A589CF9001FC643 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCD981602A589CF9001FC643 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCD981622A589CFA001FC643 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCDE37F02A95F5A70047B19B /* Constants+ColorName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+ColorName.swift"; sourceTree = "<group>"; };
+		FCDE37F22A95F5C00047B19B /* Constants+ImageName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Constants+ImageName.swift"; sourceTree = "<group>"; };
+		FCDE37F42A9624A10047B19B /* SocialLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginView.swift; sourceTree = "<group>"; };
+		FCDE37F62A96270F0047B19B /* SocialLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginButton.swift; sourceTree = "<group>"; };
+		FCDE37F92A962A080047B19B /* FutbolyButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutbolyButtons.swift; sourceTree = "<group>"; };
+		FCDE38012A9764010047B19B /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
+		FCDE38042A97655D0047B19B /* IntroStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroStepView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,9 +87,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC2801CA2ADAC74600114F7B /* HowToPlay */ = {
+			isa = PBXGroup;
+			children = (
+				FC2801CE2ADAC8D800114F7B /* HowToPlayIntroductoryView.swift */,
+				FC2801D82ADAE75000114F7B /* Tutorial */,
+			);
+			path = HowToPlay;
+			sourceTree = "<group>";
+		};
+		FC2801CB2ADAC88100114F7B /* Intro */ = {
+			isa = PBXGroup;
+			children = (
+				FCDE38012A9764010047B19B /* IntroView.swift */,
+				FC9851862AB8AA6200F15711 /* IntroStep.swift */,
+				FCDE38032A97654E0047B19B /* Views */,
+			);
+			path = Intro;
+			sourceTree = "<group>";
+		};
+		FC2801D82ADAE75000114F7B /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				FC2801D22ADAD1CD00114F7B /* TutorialView.swift */,
+				FC2801D62ADAE69300114F7B /* TutorialStepView.swift */,
+				FC2801DB2ADAEA8A00114F7B /* TutorialPointsInfoCell.swift */,
+				FC2801D92ADAE8A300114F7B /* TutorialPointsInformation.swift */,
+				FC2801D42ADAD35600114F7B /* TutorialStep.swift */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
 		FCA7C3C92A90BC10006DC9F4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				FCDE37F82A9629F60047B19B /* Views */,
 				FCA7C3CA2A90BC3C006DC9F4 /* Onboarding */,
 			);
 			path = Core;
@@ -59,9 +131,9 @@
 			isa = PBXGroup;
 			children = (
 				FCA7C3CB2A90BC70006DC9F4 /* Login */,
-				FCA7C3CC2A90BC89006DC9F4 /* Signup */,
 				FCA7C3CD2A90BC9E006DC9F4 /* ForgotPassword */,
 				FCA7C3CE2A90BCF8006DC9F4 /* Tutorial */,
+				FCA7C3D12A9359BD006DC9F4 /* Views */,
 			);
 			path = Onboarding;
 			sourceTree = "<group>";
@@ -69,23 +141,16 @@
 		FCA7C3CB2A90BC70006DC9F4 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				FC4526E32A59993B004567D1 /* LoginView.swift */,
-				FCA7C3CF2A90BDD3006DC9F4 /* LoginViewModel.swift */,
-				FCA7C3D12A9359BD006DC9F4 /* Views */,
+				FC4526E32A59993B004567D1 /* RegisterView.swift */,
+				FCA7C3CF2A90BDD3006DC9F4 /* RegisterViewModel.swift */,
 			);
 			path = Login;
-			sourceTree = "<group>";
-		};
-		FCA7C3CC2A90BC89006DC9F4 /* Signup */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Signup;
 			sourceTree = "<group>";
 		};
 		FCA7C3CD2A90BC9E006DC9F4 /* ForgotPassword */ = {
 			isa = PBXGroup;
 			children = (
+				FC18AB822A98AD9A00ACFE75 /* ForgotPasswordView.swift */,
 			);
 			path = ForgotPassword;
 			sourceTree = "<group>";
@@ -93,6 +158,8 @@
 		FCA7C3CE2A90BCF8006DC9F4 /* Tutorial */ = {
 			isa = PBXGroup;
 			children = (
+				FC2801CB2ADAC88100114F7B /* Intro */,
+				FC2801CA2ADAC74600114F7B /* HowToPlay */,
 			);
 			path = Tutorial;
 			sourceTree = "<group>";
@@ -100,6 +167,9 @@
 		FCA7C3D12A9359BD006DC9F4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FC98518D2AB9E8E900F15711 /* OnboardingTextField.swift */,
+				FCDE37F42A9624A10047B19B /* SocialLoginView.swift */,
+				FCDE37F62A96270F0047B19B /* SocialLoginButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -107,6 +177,11 @@
 		FCBC49492A93AA470027A4D9 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				FCDE37F02A95F5A70047B19B /* Constants+ColorName.swift */,
+				FCDE37F22A95F5C00047B19B /* Constants+ImageName.swift */,
+				FC18AB7E2A98A9E300ACFE75 /* UserDefaultPropertyWrapper.swift */,
+				FC18AB802A98AA3700ACFE75 /* FutbolyVault.swift */,
+				FC2801D02ADACB9300114F7B /* FutbolyAlert.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -115,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				FCBC494D2A93AABE0027A4D9 /* Color+Colors.swift */,
+				FCB7A18B2A9CCDB10077D3A5 /* View+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -152,6 +228,22 @@
 			path = Futboly;
 			sourceTree = "<group>";
 		};
+		FCDE37F82A9629F60047B19B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FCDE37F92A962A080047B19B /* FutbolyButtons.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FCDE38032A97654E0047B19B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FCDE38042A97655D0047B19B /* IntroStepView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,7 +254,6 @@
 				FCD9814D2A589CF8001FC643 /* Sources */,
 				FCD9814E2A589CF8001FC643 /* Frameworks */,
 				FCD9814F2A589CF8001FC643 /* Resources */,
-				FCF368532A65811D00D0AE69 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -226,37 +317,37 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		FCF368532A65811D00D0AE69 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\nif which swiftlint > /dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, install via 'brew install swiftlint'\"\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		FCD9814D2A589CF8001FC643 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC2801D52ADAD35600114F7B /* TutorialStep.swift in Sources */,
+				FCDE37F52A9624A10047B19B /* SocialLoginView.swift in Sources */,
 				FC4526E22A5998DB004567D1 /* Router.swift in Sources */,
+				FC18AB7F2A98A9E300ACFE75 /* UserDefaultPropertyWrapper.swift in Sources */,
+				FCDE37FA2A962A080047B19B /* FutbolyButtons.swift in Sources */,
 				FCD981552A589CF8001FC643 /* AppDelegate.swift in Sources */,
 				FCBC494E2A93AABE0027A4D9 /* Color+Colors.swift in Sources */,
-				FC4526E42A59993B004567D1 /* LoginView.swift in Sources */,
-				FCA7C3D02A90BDD3006DC9F4 /* LoginViewModel.swift in Sources */,
+				FCDE37F72A96270F0047B19B /* SocialLoginButton.swift in Sources */,
+				FC2801DC2ADAEA8A00114F7B /* TutorialPointsInfoCell.swift in Sources */,
+				FCDE37F12A95F5A70047B19B /* Constants+ColorName.swift in Sources */,
+				FCDE37F32A95F5C00047B19B /* Constants+ImageName.swift in Sources */,
+				FC98518E2AB9E8E900F15711 /* OnboardingTextField.swift in Sources */,
+				FC2801CF2ADAC8D800114F7B /* HowToPlayIntroductoryView.swift in Sources */,
+				FC9851872AB8AA6200F15711 /* IntroStep.swift in Sources */,
+				FC2801D12ADACB9300114F7B /* FutbolyAlert.swift in Sources */,
+				FCDE38052A97655D0047B19B /* IntroStepView.swift in Sources */,
+				FC4526E42A59993B004567D1 /* RegisterView.swift in Sources */,
+				FC2801DA2ADAE8A300114F7B /* TutorialPointsInformation.swift in Sources */,
+				FCDE38022A9764010047B19B /* IntroView.swift in Sources */,
+				FCA7C3D02A90BDD3006DC9F4 /* RegisterViewModel.swift in Sources */,
 				FCD981572A589CF8001FC643 /* SceneDelegate.swift in Sources */,
+				FC2801D32ADAD1CD00114F7B /* TutorialView.swift in Sources */,
+				FC2801D72ADAE69300114F7B /* TutorialStepView.swift in Sources */,
+				FC18AB832A98AD9A00ACFE75 /* ForgotPasswordView.swift in Sources */,
+				FCB7A18C2A9CCDB10077D3A5 /* View+Extension.swift in Sources */,
+				FC18AB812A98AA3700ACFE75 /* FutbolyVault.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
