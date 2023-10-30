@@ -13,6 +13,7 @@ enum RouterRoutes {
     case register
     case intro
     case howToPlay
+    case tutorial
     case forgotPassword
     
     var view: any View {
@@ -23,6 +24,8 @@ enum RouterRoutes {
             return IntroView()
         case .howToPlay:
             return HowToPlayIntroductoryView()
+        case .tutorial:
+            return TutorialView()
         case .forgotPassword:
             return ForgotPasswordView()
         }

@@ -19,7 +19,7 @@ struct HowToPlayIntroductoryView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             
             FutbolyAlert(description: alertDescription, buttonTitle: "Continue") {
-                // push tutorial
+                Router.shared.goToScreen(withRoute: .tutorial)
             }
         }
     }

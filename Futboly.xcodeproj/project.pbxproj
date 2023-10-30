@@ -14,6 +14,11 @@
 		FC18AB832A98AD9A00ACFE75 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC18AB822A98AD9A00ACFE75 /* ForgotPasswordView.swift */; };
 		FC2801CF2ADAC8D800114F7B /* HowToPlayIntroductoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2801CE2ADAC8D800114F7B /* HowToPlayIntroductoryView.swift */; };
 		FC2801D12ADACB9300114F7B /* FutbolyAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2801D02ADACB9300114F7B /* FutbolyAlert.swift */; };
+		FC2801D32ADAD1CD00114F7B /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2801D22ADAD1CD00114F7B /* TutorialView.swift */; };
+		FC2801D52ADAD35600114F7B /* TutorialStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2801D42ADAD35600114F7B /* TutorialStep.swift */; };
+		FC2801D72ADAE69300114F7B /* TutorialStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2801D62ADAE69300114F7B /* TutorialStepView.swift */; };
+		FC2801DA2ADAE8A300114F7B /* TutorialPointsInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2801D92ADAE8A300114F7B /* TutorialPointsInformation.swift */; };
+		FC2801DC2ADAEA8A00114F7B /* TutorialPointsInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2801DB2ADAEA8A00114F7B /* TutorialPointsInfoCell.swift */; };
 		FC4526E02A599610004567D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC4526DF2A599610004567D1 /* GoogleService-Info.plist */; };
 		FC4526E22A5998DB004567D1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E12A5998DB004567D1 /* Router.swift */; };
 		FC4526E42A59993B004567D1 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E32A59993B004567D1 /* RegisterView.swift */; };
@@ -41,6 +46,11 @@
 		FC18AB822A98AD9A00ACFE75 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		FC2801CE2ADAC8D800114F7B /* HowToPlayIntroductoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayIntroductoryView.swift; sourceTree = "<group>"; };
 		FC2801D02ADACB9300114F7B /* FutbolyAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutbolyAlert.swift; sourceTree = "<group>"; };
+		FC2801D22ADAD1CD00114F7B /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
+		FC2801D42ADAD35600114F7B /* TutorialStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialStep.swift; sourceTree = "<group>"; };
+		FC2801D62ADAE69300114F7B /* TutorialStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialStepView.swift; sourceTree = "<group>"; };
+		FC2801D92ADAE8A300114F7B /* TutorialPointsInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPointsInformation.swift; sourceTree = "<group>"; };
+		FC2801DB2ADAEA8A00114F7B /* TutorialPointsInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPointsInfoCell.swift; sourceTree = "<group>"; };
 		FC4526DF2A599610004567D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FC4526E12A5998DB004567D1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		FC4526E32A59993B004567D1 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -81,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				FC2801CE2ADAC8D800114F7B /* HowToPlayIntroductoryView.swift */,
+				FC2801D82ADAE75000114F7B /* Tutorial */,
 			);
 			path = HowToPlay;
 			sourceTree = "<group>";
@@ -93,6 +104,18 @@
 				FCDE38032A97654E0047B19B /* Views */,
 			);
 			path = Intro;
+			sourceTree = "<group>";
+		};
+		FC2801D82ADAE75000114F7B /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				FC2801D22ADAD1CD00114F7B /* TutorialView.swift */,
+				FC2801D62ADAE69300114F7B /* TutorialStepView.swift */,
+				FC2801DB2ADAEA8A00114F7B /* TutorialPointsInfoCell.swift */,
+				FC2801D92ADAE8A300114F7B /* TutorialPointsInformation.swift */,
+				FC2801D42ADAD35600114F7B /* TutorialStep.swift */,
+			);
+			path = Tutorial;
 			sourceTree = "<group>";
 		};
 		FCA7C3C92A90BC10006DC9F4 /* Core */ = {
@@ -299,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC2801D52ADAD35600114F7B /* TutorialStep.swift in Sources */,
 				FCDE37F52A9624A10047B19B /* SocialLoginView.swift in Sources */,
 				FC4526E22A5998DB004567D1 /* Router.swift in Sources */,
 				FC18AB7F2A98A9E300ACFE75 /* UserDefaultPropertyWrapper.swift in Sources */,
@@ -306,6 +330,7 @@
 				FCD981552A589CF8001FC643 /* AppDelegate.swift in Sources */,
 				FCBC494E2A93AABE0027A4D9 /* Color+Colors.swift in Sources */,
 				FCDE37F72A96270F0047B19B /* SocialLoginButton.swift in Sources */,
+				FC2801DC2ADAEA8A00114F7B /* TutorialPointsInfoCell.swift in Sources */,
 				FCDE37F12A95F5A70047B19B /* Constants+ColorName.swift in Sources */,
 				FCDE37F32A95F5C00047B19B /* Constants+ImageName.swift in Sources */,
 				FC98518E2AB9E8E900F15711 /* OnboardingTextField.swift in Sources */,
@@ -314,9 +339,12 @@
 				FC2801D12ADACB9300114F7B /* FutbolyAlert.swift in Sources */,
 				FCDE38052A97655D0047B19B /* IntroStepView.swift in Sources */,
 				FC4526E42A59993B004567D1 /* RegisterView.swift in Sources */,
+				FC2801DA2ADAE8A300114F7B /* TutorialPointsInformation.swift in Sources */,
 				FCDE38022A9764010047B19B /* IntroView.swift in Sources */,
 				FCA7C3D02A90BDD3006DC9F4 /* RegisterViewModel.swift in Sources */,
 				FCD981572A589CF8001FC643 /* SceneDelegate.swift in Sources */,
+				FC2801D32ADAD1CD00114F7B /* TutorialView.swift in Sources */,
+				FC2801D72ADAE69300114F7B /* TutorialStepView.swift in Sources */,
 				FC18AB832A98AD9A00ACFE75 /* ForgotPasswordView.swift in Sources */,
 				FCB7A18C2A9CCDB10077D3A5 /* View+Extension.swift in Sources */,
 				FC18AB812A98AA3700ACFE75 /* FutbolyVault.swift in Sources */,

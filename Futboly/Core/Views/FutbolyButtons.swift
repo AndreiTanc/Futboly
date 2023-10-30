@@ -62,3 +62,12 @@ struct OnboardingUnselectedTypeButton: ButtonStyle {
             .frame(maxWidth: .infinity)
     }
 }
+
+struct TutorialStepButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .frame(width: 56, height: 56)
+            .background(Color.futbolyPink)
+            .clipShape(.circle)
+    }
+}
