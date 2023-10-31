@@ -50,6 +50,9 @@
 		FCDE37FA2A962A080047B19B /* FutbolyButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE37F92A962A080047B19B /* FutbolyButtons.swift */; };
 		FCDE38022A9764010047B19B /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE38012A9764010047B19B /* IntroView.swift */; };
 		FCDE38052A97655D0047B19B /* IntroStepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDE38042A97655D0047B19B /* IntroStepView.swift */; };
+		FCF9A52E2AF107840019E8B2 /* FriendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF9A52D2AF107840019E8B2 /* FriendsView.swift */; };
+		FCF9A5302AF10A140019E8B2 /* FriendRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF9A52F2AF10A140019E8B2 /* FriendRowView.swift */; };
+		FCF9A5322AF10FB00019E8B2 /* FriendsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF9A5312AF10FB00019E8B2 /* FriendsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +99,9 @@
 		FCDE37F92A962A080047B19B /* FutbolyButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutbolyButtons.swift; sourceTree = "<group>"; };
 		FCDE38012A9764010047B19B /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		FCDE38042A97655D0047B19B /* IntroStepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroStepView.swift; sourceTree = "<group>"; };
+		FCF9A52D2AF107840019E8B2 /* FriendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsView.swift; sourceTree = "<group>"; };
+		FCF9A52F2AF10A140019E8B2 /* FriendRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRowView.swift; sourceTree = "<group>"; };
+		FCF9A5312AF10FB00019E8B2 /* FriendsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +228,7 @@
 				FC5C7C4C2AF02DBE004C98EA /* Leaderboard */,
 				FC5C7C4E2AF02DE3004C98EA /* Players */,
 				FC5C7C4A2AF02DAB004C98EA /* Profile */,
+				FCF9A52C2AF1075E0019E8B2 /* Friends */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -344,6 +351,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		FCF9A52C2AF1075E0019E8B2 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				FCF9A52D2AF107840019E8B2 /* FriendsView.swift */,
+				FCF9A5312AF10FB00019E8B2 /* FriendsViewModel.swift */,
+				FCF9A52F2AF10A140019E8B2 /* FriendRowView.swift */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -431,9 +448,11 @@
 				FCDE37FA2A962A080047B19B /* FutbolyButtons.swift in Sources */,
 				FCD981552A589CF8001FC643 /* AppDelegate.swift in Sources */,
 				FCBC494E2A93AABE0027A4D9 /* Color+Colors.swift in Sources */,
+				FCF9A5302AF10A140019E8B2 /* FriendRowView.swift in Sources */,
 				FCDE37F72A96270F0047B19B /* SocialLoginButton.swift in Sources */,
 				FC2801DC2ADAEA8A00114F7B /* TutorialPointsInfoCell.swift in Sources */,
 				FC5C7C662AF05316004C98EA /* ProfileTextField.swift in Sources */,
+				FCF9A52E2AF107840019E8B2 /* FriendsView.swift in Sources */,
 				FC5C7C642AF04F17004C98EA /* ProfileEditViewModel.swift in Sources */,
 				FCDE37F12A95F5A70047B19B /* Constants+ColorName.swift in Sources */,
 				FC5C7C542AF02E47004C98EA /* LeaderboardView.swift in Sources */,
@@ -456,6 +475,7 @@
 				FC2801D32ADAD1CD00114F7B /* TutorialView.swift in Sources */,
 				FC2801D72ADAE69300114F7B /* TutorialStepView.swift in Sources */,
 				FC5C7C562AF02E50004C98EA /* PlayersView.swift in Sources */,
+				FCF9A5322AF10FB00019E8B2 /* FriendsViewModel.swift in Sources */,
 				FC5C7C602AF04827004C98EA /* FutbolyBackButton.swift in Sources */,
 				FC18AB832A98AD9A00ACFE75 /* ForgotPasswordView.swift in Sources */,
 				FCB7A18C2A9CCDB10077D3A5 /* View+Extension.swift in Sources */,
