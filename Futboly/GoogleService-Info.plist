@@ -2,22 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CLIENT_ID</key>
-	<string>449980660277-bb43an0sv9f44h7p2o7eq7blm8i5du6n.apps.googleusercontent.com</string>
-	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.449980660277-bb43an0sv9f44h7p2o7eq7blm8i5du6n</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDhYHFVDsibQXp2XRMhfj_ASeoiYPll_-A</string>
+	<string>AIzaSyAdkIY-no00s104JN2RKX58Q23IAw64XoU</string>
 	<key>GCM_SENDER_ID</key>
-	<string>449980660277</string>
+	<string>497286720241</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.Futboly.Futboly</string>
 	<key>PROJECT_ID</key>
-	<string>futboly-6b61b</string>
+	<string>futboly-b86f6</string>
 	<key>STORAGE_BUCKET</key>
-	<string>futboly-6b61b.appspot.com</string>
+	<string>futboly-b86f6.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:449980660277:ios:61a0894ad0eba8c2b74f7c</string>
+	<string>1:497286720241:ios:7c5eda9064074ddcea1750</string>
 </dict>
 </plist>
