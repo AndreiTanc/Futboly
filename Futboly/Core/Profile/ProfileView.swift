@@ -22,6 +22,7 @@ struct ProfileView: View {
         VStack(spacing: 20) {
             ProfileHeaderView()
             profileInformationView
+            profileOptionsView
             logoutButton
             Spacer()
         }.padding(.horizontal)
@@ -49,6 +50,25 @@ struct ProfileView: View {
             } label: {
                 Image(.edit)
             }.padding(.trailing)
+        }.padding()
+        .background(.white)
+        .clipShape(.rect(cornerRadius: 32))
+    }
+    
+    var profileOptionsView: some View {
+        VStack {
+            HStack {
+                Image(.eyeProfile).padding().background(Color.lightGray).clipShape(.circle)
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("My Friends")
+                    Text("Challange your friends to a duel").font(.system(size: 15)).opacity(0.7)
+                }
+                Spacer()
+                Image(.leftBlackSign).rotationEffect(.degrees(180))
+            }.onTapGesture {
+                Router.shared.goToScreen(withRoute: .friends)
+            }
+            
         }.padding()
         .background(.white)
         .clipShape(.rect(cornerRadius: 32))

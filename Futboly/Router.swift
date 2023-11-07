@@ -17,6 +17,7 @@ enum RouterRoutes {
     case forgotPassword
     case profileEdit
     case main
+    case friends
     
     var view: any View {
         switch self {
@@ -34,6 +35,8 @@ enum RouterRoutes {
             return ProfileEditView()
         case .main:
             return MainTabView()
+        case .friends:
+            return FriendsView()
         }
     }
 }
