@@ -30,7 +30,11 @@ struct RegisterView: View {
             }
             
             Spacer()
-            SocialLoginView()
+            SocialLoginView(
+                facebookAction: viewModel.facebookLogin,
+                googleAction: viewModel.googleLogin,
+                appleAction: viewModel.appleLogin
+            )
         }.padding(.horizontal).padding(.bottom)
         .alert(viewModel.registerError.rawValue, isPresented: $viewModel.shouldPresentAlert) {
             Button("OK", role: .cancel) { }

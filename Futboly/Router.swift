@@ -46,6 +46,10 @@ final class Router {
     static var shared = Router()
     private init() {}
     
+    var topViewController: UIViewController? {
+        navigationController.topViewController
+    }
+    
     func pushViewController(_ viewController: UIViewController, animated: Bool = true) {
         navigationController.pushViewController(viewController, animated: animated)
     }
@@ -56,6 +60,11 @@ final class Router {
     
     func goToScreen(withRoute route: RouterRoutes) {
         pushViewController(instantiateScreen(withRoute: route))
+    }
+    
+    func reloadFlowFromRegister() {
+        let registerVC = instantiateScreen(withRoute: .register)
+        navigationController.setViewControllers([registerVC], animated: true)
     }
     
     func instantiateFirstScreen() -> UIViewController {
@@ -77,11 +86,6 @@ final class Router {
         navigationController.setNavigationBarHidden(true, animated: false)
         
         return navigationController
-    }
-    
-    func reloadFlowFromRegister() {
-        let registerVC = instantiateScreen(withRoute: .register)
-        navigationController.setViewControllers([registerVC], animated: true)
     }
     
     private func instantiateScreen(withRoute route: RouterRoutes) -> UIViewController {

@@ -38,6 +38,18 @@ class RegisterViewModel: ObservableObject {
         }
     }
     
+    func facebookLogin() {
+        
+    }
+    
+    func googleLogin() {
+        AuthManager.shared.performGoogleAccountSignIn(completion: loginDidOccur(_:))
+    }
+    
+    func appleLogin() {
+        
+    }
+    
     func loginDidOccur(_ error: Error?) {
         if let error {
             registerError = .PoorConnection

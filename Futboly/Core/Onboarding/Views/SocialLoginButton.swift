@@ -9,11 +9,11 @@ import SwiftUI
 
 struct SocialLoginButton: View {
     var imageName: String
-    var completion: () -> Void
+    var action: () -> Void
     
     var body: some View {
         Button {
-            completion()
+            action()
         } label: {
             Image(imageName)
         }
@@ -22,6 +22,6 @@ struct SocialLoginButton: View {
 
 struct SocialLoginButton_Previews: PreviewProvider {
     static var previews: some View {
-        SocialLoginButton(imageName: ImageName.facebookLogo.rawValue, completion: {})
+        SocialLoginButton(imageName: ImageName.facebookLogo.rawValue, action: {})
     }
 }
