@@ -32,6 +32,9 @@
 		FC2C4EBB2AFE694F0036C0F0 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = FC2C4EBA2AFE694F0036C0F0 /* GoogleSignIn */; };
 		FC2C4EBD2AFE694F0036C0F0 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = FC2C4EBC2AFE694F0036C0F0 /* GoogleSignInSwift */; };
 		FC2C4EBF2AFE69720036C0F0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC2C4EBE2AFE69720036C0F0 /* GoogleService-Info.plist */; };
+		FC2C4EC22AFE7F740036C0F0 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = FC2C4EC12AFE7F740036C0F0 /* FacebookCore */; };
+		FC2C4EC42AFE7F740036C0F0 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = FC2C4EC32AFE7F740036C0F0 /* FacebookLogin */; };
+		FC2C4EC72AFE89D90036C0F0 /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = FC2C4EC62AFE89D90036C0F0 /* ProgressHUD */; };
 		FC4526E22A5998DB004567D1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E12A5998DB004567D1 /* Router.swift */; };
 		FC4526E42A59993B004567D1 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E32A59993B004567D1 /* RegisterView.swift */; };
 		FC5C7C492AF02D14004C98EA /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C482AF02D14004C98EA /* MainTabView.swift */; };
@@ -125,7 +128,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC2C4EC42AFE7F740036C0F0 /* FacebookLogin in Frameworks */,
 				FC16C9282A598E89003FD891 /* FirebaseAnalytics in Frameworks */,
+				FC2C4EC22AFE7F740036C0F0 /* FacebookCore in Frameworks */,
+				FC2C4EC72AFE89D90036C0F0 /* ProgressHUD in Frameworks */,
 				FC0A74EA2AFA956000FB06B7 /* FirebaseFirestoreSwift in Frameworks */,
 				FC16C92A2A598E89003FD891 /* FirebaseCrashlytics in Frameworks */,
 				FC2C4EBB2AFE694F0036C0F0 /* GoogleSignIn in Frameworks */,
@@ -430,6 +436,9 @@
 				FC0A74FF2AFA956000FB06B7 /* FirebaseStorage */,
 				FC2C4EBA2AFE694F0036C0F0 /* GoogleSignIn */,
 				FC2C4EBC2AFE694F0036C0F0 /* GoogleSignInSwift */,
+				FC2C4EC12AFE7F740036C0F0 /* FacebookCore */,
+				FC2C4EC32AFE7F740036C0F0 /* FacebookLogin */,
+				FC2C4EC62AFE89D90036C0F0 /* ProgressHUD */,
 			);
 			productName = Futboly;
 			productReference = FCD981512A589CF8001FC643 /* Futboly.app */;
@@ -462,6 +471,8 @@
 			packageReferences = (
 				FC16C9262A598E89003FD891 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				FC2C4EB92AFE694F0036C0F0 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				FC2C4EC02AFE7F740036C0F0 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+				FC2C4EC52AFE89D90036C0F0 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
 			);
 			productRefGroup = FCD981522A589CF8001FC643 /* Products */;
 			projectDirPath = "";
@@ -758,6 +769,22 @@
 				minimumVersion = 7.0.0;
 			};
 		};
+		FC2C4EC02AFE7F740036C0F0 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.1.0;
+			};
+		};
+		FC2C4EC52AFE89D90036C0F0 /* XCRemoteSwiftPackageReference "ProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/relatedcode/ProgressHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -820,6 +847,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FC2C4EB92AFE694F0036C0F0 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
+		};
+		FC2C4EC12AFE7F740036C0F0 /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC2C4EC02AFE7F740036C0F0 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		FC2C4EC32AFE7F740036C0F0 /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC2C4EC02AFE7F740036C0F0 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+		FC2C4EC62AFE89D90036C0F0 /* ProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC2C4EC52AFE89D90036C0F0 /* XCRemoteSwiftPackageReference "ProgressHUD" */;
+			productName = ProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

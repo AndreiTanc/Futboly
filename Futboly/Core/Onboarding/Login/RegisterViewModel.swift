@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseAuth
+import ProgressHUD
 
 class RegisterViewModel: ObservableObject {
     @Published var currentOnboardingType: OnboardingType = .signIn
@@ -39,7 +40,7 @@ class RegisterViewModel: ObservableObject {
     }
     
     func facebookLogin() {
-        
+        AuthManager.shared.performFacebookAccountSignIn(completion: loginDidOccur(_:))
     }
     
     func googleLogin() {
@@ -52,6 +53,8 @@ class RegisterViewModel: ObservableObject {
     
     func loginDidOccur(_ error: Error?) {
         if let error {
+            #warning("Should change to log later")
+            print(error)
             registerError = .PoorConnection
             return
         }

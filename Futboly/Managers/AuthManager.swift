@@ -6,9 +6,13 @@
 //
 
 import Foundation
+import ProgressHUD
 import FirebaseCore
 import FirebaseAuth
+
 import GoogleSignIn
+
+import FBSDKLoginKit
 
 class AuthManager {
     static var shared: AuthManager = AuthManager()
@@ -65,8 +69,30 @@ class AuthManager {
         }
     }
     
+    // MARK: - Sign in with Facebook Account
+    
+    func performFacebookAccountSignIn(completion: @escaping (Error?) -> Void) {
+        guard let viewController = Router.shared.topViewController else { return }
+        
+        // The following config is also stored in the project's .plist
+        Settings.shared.appID = "285070427834230"
+        Settings.shared.displayName = "Futboly"
+        
+        // Create a Facebook `LoginManager` instance
+        ProgressHUD.animate()
+        let loginManager = LoginManager()
+        loginManager.logIn(permissions: ["email"], from: viewController) { [weak self] result, error in
+            if let error { completion(error); ProgressHUD.dismiss(); return }
+            guard let accessToken = AccessToken.current else { ProgressHUD.dismiss(); return }
+            
+            let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
+            self?.signIn(authCredential: credential, completion: completion)
+        }
+    }
+    
     private func signIn(authCredential: AuthCredential, completion: @escaping (Error?) -> Void) {
         Auth.auth().signIn(with: authCredential) { result, error in
+            ProgressHUD.dismiss()
             guard error == nil else { completion(error); return }
             completion(nil)
         }
