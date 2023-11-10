@@ -32,6 +32,9 @@ struct RegisterView: View {
             Spacer()
             SocialLoginView()
         }.padding(.horizontal).padding(.bottom)
+        .alert(viewModel.registerError.rawValue, isPresented: $viewModel.shouldPresentAlert) {
+            Button("OK", role: .cancel) { }
+        }
     }
     
     var headerView: some View {

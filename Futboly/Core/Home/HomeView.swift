@@ -6,10 +6,19 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct HomeView: View {
     var body: some View {
-        Text("Home")
+        Button("logout") {
+            let firebaseAuth = Auth.auth()
+            do {
+                try firebaseAuth.signOut()
+                Router.shared.reloadFlowFromRegister()
+            } catch let signOutError as NSError {
+                print("Error signing out: %@", signOutError)
+            }
+        }
     }
 }
 

@@ -61,18 +61,27 @@ final class Router {
     func instantiateFirstScreen() -> UIViewController {
         var firstScreen: UIViewController
         
-//        if FutbolyVault.shared.isFirstRun ?? true {
+        if FutbolyVault.shared.isFirstRun ?? true {
             firstScreen = instantiateScreen(withRoute: .intro)
-//            FutbolyVault.shared.isFirstRun = false
-//        } else {
-//            firstScreen = instantiateScreen(withRoute: .register)
-//        }
+            FutbolyVault.shared.isFirstRun = false
+        } else {
+            if AuthManager.shared.isUserAuthenticated {
+                firstScreen = instantiateScreen(withRoute: .main)
+            } else {
+                firstScreen = instantiateScreen(withRoute: .register)
+            }
+        }
         
         navigationController = .init(rootViewController: firstScreen)
         navigationController.navigationBar.isHidden = true
         navigationController.setNavigationBarHidden(true, animated: false)
         
         return navigationController
+    }
+    
+    func reloadFlowFromRegister() {
+        let registerVC = instantiateScreen(withRoute: .register)
+        navigationController.setViewControllers([registerVC], animated: true)
     }
     
     private func instantiateScreen(withRoute route: RouterRoutes) -> UIViewController {
