@@ -30,13 +30,14 @@ struct ProfileView: View {
     
     var profileInformationView: some View {
         HStack {
-            Image(.defaultProfile)
+            Image(uiImage: FutbolyVault.shared.userProfileImage)
                 .resizable()
-                .aspectRatio(contentMode: .fill)
                 .frame(width: 70, height: 70)
+                .clipShape(.rect(cornerRadius: 25))
+                .aspectRatio(contentMode: .fill)
             
             VStack(alignment: .leading, spacing: 6) {
-                Text("Team name")
+                Text(FutbolyVault.shared.user.teamName)
                     .font(.system(size: 24))
                 Text("256 matches were played")
                     .font(.system(size: 14))

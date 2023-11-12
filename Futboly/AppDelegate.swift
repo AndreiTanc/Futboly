@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             didFinishLaunchingWithOptions: launchOptions
         )
         
+        FirestoreManager.shared.start()
+        
         return true
     }
     

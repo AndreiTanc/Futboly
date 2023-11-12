@@ -14,6 +14,7 @@ struct HomeView: View {
             let firebaseAuth = Auth.auth()
             do {
                 try firebaseAuth.signOut()
+                FutbolyVault.shared.reset()
                 Router.shared.reloadFlowFromRegister()
             } catch let signOutError as NSError {
                 print("Error signing out: %@", signOutError)

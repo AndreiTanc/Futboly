@@ -30,10 +30,11 @@ struct ProfileEditView: View {
     
     var profilePhotoEditView: some View {
         HStack(spacing: 15) {
-            Image(.defaultProfile)
+            Image(uiImage: viewModel.selectedImage ?? UIImage(named: "default_profile_image") ?? UIImage())
                 .resizable()
-                .aspectRatio(contentMode: .fill)
                 .frame(width: 70, height: 70)
+                .clipShape(.rect(cornerRadius: 25))
+                .aspectRatio(contentMode: .fill)
             
             PhotosPicker(selection: $viewModel.imageSelection, matching: .images) {
                 Text("Change Photo").foregroundStyle(.black).fontWeight(.semibold)

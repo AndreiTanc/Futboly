@@ -11,7 +11,7 @@ struct ProfileHeaderView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 5) {
-                Text("Team Name")
+                Text(FutbolyVault.shared.user.teamName)
                     .font(.system(size: 28, weight: .semibold))
                 
                 HStack(spacing: 0) {
@@ -29,10 +29,11 @@ struct ProfileHeaderView: View {
             }
             
             Spacer()
-            Image(.defaultProfile)
+            Image(uiImage: FutbolyVault.shared.userProfileImage)
                 .resizable()
-                .aspectRatio(contentMode: .fill)
                 .frame(width: 48, height: 48)
+                .clipShape(.rect(cornerRadius: 20))
+                .aspectRatio(contentMode: .fill)
         }
     }
 }

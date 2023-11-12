@@ -35,6 +35,10 @@
 		FC2C4EC22AFE7F740036C0F0 /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = FC2C4EC12AFE7F740036C0F0 /* FacebookCore */; };
 		FC2C4EC42AFE7F740036C0F0 /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = FC2C4EC32AFE7F740036C0F0 /* FacebookLogin */; };
 		FC2C4EC72AFE89D90036C0F0 /* ProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = FC2C4EC62AFE89D90036C0F0 /* ProgressHUD */; };
+		FC2C4EC92AFED1740036C0F0 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C4EC82AFED1740036C0F0 /* FirestoreManager.swift */; };
+		FC2C4ECC2AFED1AA0036C0F0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C4ECB2AFED1AA0036C0F0 /* User.swift */; };
+		FC2C4ECE2AFF76440036C0F0 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C4ECD2AFF76440036C0F0 /* StorageManager.swift */; };
+		FC2C4ED22B016A0F0036C0F0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C4ED12B016A0F0036C0F0 /* HomeViewModel.swift */; };
 		FC4526E22A5998DB004567D1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E12A5998DB004567D1 /* Router.swift */; };
 		FC4526E42A59993B004567D1 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E32A59993B004567D1 /* RegisterView.swift */; };
 		FC5C7C492AF02D14004C98EA /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C482AF02D14004C98EA /* MainTabView.swift */; };
@@ -84,6 +88,10 @@
 		FC2801D92ADAE8A300114F7B /* TutorialPointsInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPointsInformation.swift; sourceTree = "<group>"; };
 		FC2801DB2ADAEA8A00114F7B /* TutorialPointsInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPointsInfoCell.swift; sourceTree = "<group>"; };
 		FC2C4EBE2AFE69720036C0F0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FC2C4EC82AFED1740036C0F0 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
+		FC2C4ECB2AFED1AA0036C0F0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FC2C4ECD2AFF76440036C0F0 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		FC2C4ED12B016A0F0036C0F0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		FC4526E12A5998DB004567D1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		FC4526E32A59993B004567D1 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		FC5C7C482AF02D14004C98EA /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -186,8 +194,18 @@
 			isa = PBXGroup;
 			children = (
 				FCC441D92AFE313200B2699B /* AuthManager.swift */,
+				FC2C4EC82AFED1740036C0F0 /* FirestoreManager.swift */,
+				FC2C4ECD2AFF76440036C0F0 /* StorageManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		FC2C4ECA2AFED1960036C0F0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FC2C4ECB2AFED1AA0036C0F0 /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		FC5C7C472AF02CF0004C98EA /* Main */ = {
@@ -228,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				FC5C7C4F2AF02E0F004C98EA /* HomeView.swift */,
+				FC2C4ED12B016A0F0036C0F0 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -368,6 +387,7 @@
 				FC4526E12A5998DB004567D1 /* Router.swift */,
 				FCBC494C2A93AAA30027A4D9 /* Extensions */,
 				FCBC49492A93AA470027A4D9 /* Helpers */,
+				FC2C4ECA2AFED1960036C0F0 /* Models */,
 				FC2C4EB82AFE673D0036C0F0 /* Managers */,
 				FCA7C3C92A90BC10006DC9F4 /* Core */,
 				FCD9815D2A589CF9001FC643 /* Assets.xcassets */,
@@ -524,6 +544,7 @@
 				FC5C7C5B2AF03988004C98EA /* ProfileHeaderView.swift in Sources */,
 				FC2801CF2ADAC8D800114F7B /* HowToPlayIntroductoryView.swift in Sources */,
 				FC9851872AB8AA6200F15711 /* IntroStep.swift in Sources */,
+				FC2C4ECC2AFED1AA0036C0F0 /* User.swift in Sources */,
 				FC2801D12ADACB9300114F7B /* FutbolyAlert.swift in Sources */,
 				FCDE38052A97655D0047B19B /* IntroStepView.swift in Sources */,
 				FC4526E42A59993B004567D1 /* RegisterView.swift in Sources */,
@@ -542,8 +563,11 @@
 				FCF9A5322AF10FB00019E8B2 /* FriendsViewModel.swift in Sources */,
 				FC5C7C602AF04827004C98EA /* FutbolyBackButton.swift in Sources */,
 				FC18AB832A98AD9A00ACFE75 /* ForgotPasswordView.swift in Sources */,
+				FC2C4ED22B016A0F0036C0F0 /* HomeViewModel.swift in Sources */,
 				FCB7A18C2A9CCDB10077D3A5 /* View+Extension.swift in Sources */,
 				FC18AB812A98AA3700ACFE75 /* FutbolyVault.swift in Sources */,
+				FC2C4EC92AFED1740036C0F0 /* FirestoreManager.swift in Sources */,
+				FC2C4ECE2AFF76440036C0F0 /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

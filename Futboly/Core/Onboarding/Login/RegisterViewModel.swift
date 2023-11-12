@@ -31,34 +31,47 @@ class RegisterViewModel: ObservableObject {
         guard isValidPassword() else { registerError = .InvalidPassword; return }
         if currentOnboardingType == .signUp && !isValidTeamName() { registerError = .InvalidTeamName; return }
         
+        ProgressHUD.animate()
         switch currentOnboardingType {
         case .signIn: 
-            AuthManager.shared.signin(with: email, password: password, completion: loginDidOccur(_:))
+            AuthManager.shared.signin(with: email, password: password, completion: loginDidOccur(_:_:))
         case .signUp:
-            AuthManager.shared.signup(email: email, password: password, teamName: teamName, completion: loginDidOccur(_:))
+            AuthManager.shared.signup(email: email, password: password, teamName: teamName, completion: loginDidOccur(_:_:))
         }
     }
     
     func facebookLogin() {
-        AuthManager.shared.performFacebookAccountSignIn(completion: loginDidOccur(_:))
+        AuthManager.shared.performFacebookAccountSignIn(completion: loginDidOccur(_:_:))
     }
     
     func googleLogin() {
-        AuthManager.shared.performGoogleAccountSignIn(completion: loginDidOccur(_:))
+        AuthManager.shared.performGoogleAccountSignIn(completion: loginDidOccur(_:_:))
     }
     
     func appleLogin() {
-        
+        #warning("Must do after we have apple account")
     }
     
-    func loginDidOccur(_ error: Error?) {
+    func loginDidOccur(_ error: Error?, _ email: String? = nil) {
         if let error {
             #warning("Should change to log later")
             print(error)
             registerError = .PoorConnection
             return
         }
+        if let email { saveAccount(withEmail: email); return }
+        ProgressHUD.dismiss()
         Router.shared.goToScreen(withRoute: .main)
+    }
+    
+    private func saveAccount(withEmail email: String) {
+        guard let userId = Auth.auth().currentUser?.uid else { return }
+        
+        let user = User(id: userId, email: email, teamName: teamName)
+        FirestoreManager.shared.saveUser(user) {
+            ProgressHUD.dismiss()
+            Router.shared.goToScreen(withRoute: .main)
+        }
     }
     
     func forgotPassword() {

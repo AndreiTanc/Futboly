@@ -8,12 +8,15 @@
 import Foundation
 import SwiftUI
 import PhotosUI
+import ProgressHUD
 
 class ProfileEditViewModel: ObservableObject {
-    @Published var teamName: String = ""
+    var vault: FutbolyVault = FutbolyVault.shared
+    
+    @Published var teamName: String = FutbolyVault.shared.user.teamName
     @Published var phoneNumber: String = ""
     
-    @Published var selectedImage: UIImage? = nil
+    @Published var selectedImage: UIImage? = FutbolyVault.shared.userProfileImage
     @Published var imageSelection: PhotosPickerItem? = nil {
         didSet {
             setImage(from: imageSelection)
@@ -26,7 +29,9 @@ class ProfileEditViewModel: ObservableObject {
         Task {
             if let data = try? await selection.loadTransferable(type: Data.self) {
                 if let uiImage = UIImage(data: data) {
-                    selectedImage = uiImage
+                    DispatchQueue.main.async {
+                        self.selectedImage = uiImage
+                    }
                     return
                 }
             }
@@ -34,6 +39,10 @@ class ProfileEditViewModel: ObservableObject {
     }
     
     func save() {
-        
+        guard let selectedImage else { return }
+        ProgressHUD.animate()
+        StorageManager.shared.saveProfileImage(selectedImage) {
+            ProgressHUD.dismiss()
+        }
     }
 }
