@@ -6,8 +6,11 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct ProfileView: View {
+    @ObservedObject private(set) var vault: FutbolyVault = FutbolyVault.shared
+
     var body: some View {
         ZStack {
             Color.lightGray.ignoresSafeArea()
@@ -30,14 +33,14 @@ struct ProfileView: View {
     
     var profileInformationView: some View {
         HStack {
-            Image(uiImage: FutbolyVault.shared.userProfileImage)
+            Image(uiImage: vault.userProfileImage)
                 .resizable()
                 .frame(width: 70, height: 70)
                 .clipShape(.rect(cornerRadius: 25))
                 .aspectRatio(contentMode: .fill)
             
             VStack(alignment: .leading, spacing: 6) {
-                Text(FutbolyVault.shared.user.teamName)
+                Text(vault.user.teamName)
                     .font(.system(size: 24))
                 Text("256 matches were played")
                     .font(.system(size: 14))
@@ -77,7 +80,13 @@ struct ProfileView: View {
     
     var logoutButton: some View {
         Button {
-            // logout
+            do {
+                try Auth.auth().signOut()
+                FutbolyVault.shared.reset()
+                Router.shared.reloadFlowFromRegister()
+            } catch let signOutError as NSError {
+                print("Error signing out: %@", signOutError)
+            }
         } label: {
             Text("Logout")
                 .foregroundStyle(.red)

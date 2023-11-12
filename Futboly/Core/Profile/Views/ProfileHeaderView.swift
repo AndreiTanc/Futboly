@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct ProfileHeaderView: View {
+    @ObservedObject private(set) var vault: FutbolyVault = FutbolyVault.shared
+    
     var body: some View {
         HStack {
             VStack(alignment: .leading, spacing: 5) {
-                Text(FutbolyVault.shared.user.teamName)
+                Text(vault.user.teamName)
                     .font(.system(size: 28, weight: .semibold))
                 
                 HStack(spacing: 0) {
@@ -29,7 +31,7 @@ struct ProfileHeaderView: View {
             }
             
             Spacer()
-            Image(uiImage: FutbolyVault.shared.userProfileImage)
+            Image(uiImage: vault.userProfileImage)
                 .resizable()
                 .frame(width: 48, height: 48)
                 .clipShape(.rect(cornerRadius: 20))

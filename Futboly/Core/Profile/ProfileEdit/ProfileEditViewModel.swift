@@ -11,7 +11,7 @@ import PhotosUI
 import ProgressHUD
 
 class ProfileEditViewModel: ObservableObject {
-    var vault: FutbolyVault = FutbolyVault.shared
+    @ObservedObject private(set) var vault: FutbolyVault = FutbolyVault.shared
     
     @Published var teamName: String = FutbolyVault.shared.user.teamName
     @Published var phoneNumber: String = ""
