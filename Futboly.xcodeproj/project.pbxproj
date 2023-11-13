@@ -41,6 +41,7 @@
 		FC2C4ED22B016A0F0036C0F0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C4ED12B016A0F0036C0F0 /* HomeViewModel.swift */; };
 		FC2C4ED52B0202710036C0F0 /* RewardAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C4ED42B0202710036C0F0 /* RewardAlertView.swift */; };
 		FC2C4ED72B02399D0036C0F0 /* ClearBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C4ED62B02399D0036C0F0 /* ClearBackground.swift */; };
+		FC2C4EDA2B024CE00036C0F0 /* ConfettiSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FC2C4ED92B024CE00036C0F0 /* ConfettiSwiftUI */; };
 		FC4526E22A5998DB004567D1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E12A5998DB004567D1 /* Router.swift */; };
 		FC4526E42A59993B004567D1 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E32A59993B004567D1 /* RegisterView.swift */; };
 		FC5C7C492AF02D14004C98EA /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C482AF02D14004C98EA /* MainTabView.swift */; };
@@ -140,6 +141,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC2C4EDA2B024CE00036C0F0 /* ConfettiSwiftUI in Frameworks */,
 				FC2C4EC42AFE7F740036C0F0 /* FacebookLogin in Frameworks */,
 				FC16C9282A598E89003FD891 /* FirebaseAnalytics in Frameworks */,
 				FC2C4EC22AFE7F740036C0F0 /* FacebookCore in Frameworks */,
@@ -473,6 +475,7 @@
 				FC2C4EC12AFE7F740036C0F0 /* FacebookCore */,
 				FC2C4EC32AFE7F740036C0F0 /* FacebookLogin */,
 				FC2C4EC62AFE89D90036C0F0 /* ProgressHUD */,
+				FC2C4ED92B024CE00036C0F0 /* ConfettiSwiftUI */,
 			);
 			productName = Futboly;
 			productReference = FCD981512A589CF8001FC643 /* Futboly.app */;
@@ -507,6 +510,7 @@
 				FC2C4EB92AFE694F0036C0F0 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 				FC2C4EC02AFE7F740036C0F0 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 				FC2C4EC52AFE89D90036C0F0 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
+				FC2C4ED82B024CE00036C0F0 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
 			);
 			productRefGroup = FCD981522A589CF8001FC643 /* Products */;
 			projectDirPath = "";
@@ -825,6 +829,14 @@
 				minimumVersion = 14.1.0;
 			};
 		};
+		FC2C4ED82B024CE00036C0F0 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/simibac/ConfettiSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -902,6 +914,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FC2C4EC52AFE89D90036C0F0 /* XCRemoteSwiftPackageReference "ProgressHUD" */;
 			productName = ProgressHUD;
+		};
+		FC2C4ED92B024CE00036C0F0 /* ConfettiSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC2C4ED82B024CE00036C0F0 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
+			productName = ConfettiSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

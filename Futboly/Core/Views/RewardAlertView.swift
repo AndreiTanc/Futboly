@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import ConfettiSwiftUI
 
 struct RewardAlertView: View {
     var dismissAction: () -> Void
+    @State private var confettiCounter: Int = 0
     
     var body: some View {
         ZStack {
@@ -26,14 +28,17 @@ struct RewardAlertView: View {
                     dismissAction()
                 }.buttonStyle(RoundedBlackButton())
             }
-            .padding().padding(.top, 30)
+            .padding(20).padding(.top, 20)
             .background(Color.white)
             .clipShape(.rect(cornerRadius: 20))
             .overlay(
                 overlayEnergyView
             )
             .padding()
-        }.background(.clear)
+        }
+        .background(.clear)
+        .confettiCannon(counter: $confettiCounter, num: 200)
+        .onAppear { confettiCounter += 1 }
     }
     
     var overlayEnergyView: some View {
