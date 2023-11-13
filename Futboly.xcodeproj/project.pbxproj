@@ -39,6 +39,8 @@
 		FC2C4ECC2AFED1AA0036C0F0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C4ECB2AFED1AA0036C0F0 /* User.swift */; };
 		FC2C4ECE2AFF76440036C0F0 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C4ECD2AFF76440036C0F0 /* StorageManager.swift */; };
 		FC2C4ED22B016A0F0036C0F0 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C4ED12B016A0F0036C0F0 /* HomeViewModel.swift */; };
+		FC2C4ED52B0202710036C0F0 /* RewardAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C4ED42B0202710036C0F0 /* RewardAlertView.swift */; };
+		FC2C4ED72B02399D0036C0F0 /* ClearBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2C4ED62B02399D0036C0F0 /* ClearBackground.swift */; };
 		FC4526E22A5998DB004567D1 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E12A5998DB004567D1 /* Router.swift */; };
 		FC4526E42A59993B004567D1 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4526E32A59993B004567D1 /* RegisterView.swift */; };
 		FC5C7C492AF02D14004C98EA /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C482AF02D14004C98EA /* MainTabView.swift */; };
@@ -92,6 +94,8 @@
 		FC2C4ECB2AFED1AA0036C0F0 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FC2C4ECD2AFF76440036C0F0 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		FC2C4ED12B016A0F0036C0F0 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		FC2C4ED42B0202710036C0F0 /* RewardAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardAlertView.swift; sourceTree = "<group>"; };
+		FC2C4ED62B02399D0036C0F0 /* ClearBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearBackground.swift; sourceTree = "<group>"; };
 		FC4526E12A5998DB004567D1 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		FC4526E32A59993B004567D1 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
 		FC5C7C482AF02D14004C98EA /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -208,6 +212,13 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		FC2C4ED32B0176730036C0F0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		FC5C7C472AF02CF0004C98EA /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -247,6 +258,7 @@
 			children = (
 				FC5C7C4F2AF02E0F004C98EA /* HomeView.swift */,
 				FC2C4ED12B016A0F0036C0F0 /* HomeViewModel.swift */,
+				FC2C4ED32B0176730036C0F0 /* Views */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -403,6 +415,8 @@
 			children = (
 				FCDE37F92A962A080047B19B /* FutbolyButtons.swift */,
 				FC5C7C5F2AF04827004C98EA /* FutbolyBackButton.swift */,
+				FC2C4ED42B0202710036C0F0 /* RewardAlertView.swift */,
+				FC2C4ED62B02399D0036C0F0 /* ClearBackground.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -545,6 +559,7 @@
 				FC2801CF2ADAC8D800114F7B /* HowToPlayIntroductoryView.swift in Sources */,
 				FC9851872AB8AA6200F15711 /* IntroStep.swift in Sources */,
 				FC2C4ECC2AFED1AA0036C0F0 /* User.swift in Sources */,
+				FC2C4ED52B0202710036C0F0 /* RewardAlertView.swift in Sources */,
 				FC2801D12ADACB9300114F7B /* FutbolyAlert.swift in Sources */,
 				FCDE38052A97655D0047B19B /* IntroStepView.swift in Sources */,
 				FC4526E42A59993B004567D1 /* RegisterView.swift in Sources */,
@@ -560,6 +575,7 @@
 				FC2801D32ADAD1CD00114F7B /* TutorialView.swift in Sources */,
 				FC2801D72ADAE69300114F7B /* TutorialStepView.swift in Sources */,
 				FC5C7C562AF02E50004C98EA /* PlayersView.swift in Sources */,
+				FC2C4ED72B02399D0036C0F0 /* ClearBackground.swift in Sources */,
 				FCF9A5322AF10FB00019E8B2 /* FriendsViewModel.swift in Sources */,
 				FC5C7C602AF04827004C98EA /* FutbolyBackButton.swift in Sources */,
 				FC18AB832A98AD9A00ACFE75 /* ForgotPasswordView.swift in Sources */,

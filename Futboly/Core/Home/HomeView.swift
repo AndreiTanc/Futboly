@@ -9,11 +9,22 @@ import SwiftUI
 import FirebaseAuth
 
 struct HomeView: View {
+    @ObservedObject private(set) var viewModel: HomeViewModel = HomeViewModel()
+    
     var body: some View {
         VStack(spacing: 20) {
             ProfileHeaderView()
+            Button("Present alert") {
+                viewModel.shouldPresentRewardAlert = true
+            }
             Spacer()
-        }.padding(.horizontal)
+        }
+        .padding(.horizontal)
+        .fullScreenCover(isPresented: $viewModel.shouldPresentRewardAlert) {
+            RewardAlertView(dismissAction: {
+                viewModel.shouldPresentRewardAlert = false
+            }).background(ClearBackground())
+        }
     }
 }
 

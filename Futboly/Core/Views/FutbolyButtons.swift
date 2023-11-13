@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct RoundedBlackButton: ButtonStyle {
+    var height: CGFloat = 50
+    
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .padding()
-            .frame(height: 50)
+            .frame(height: height)
             .padding(.horizontal)
             .background(Color.black)
             .foregroundStyle(.white)
