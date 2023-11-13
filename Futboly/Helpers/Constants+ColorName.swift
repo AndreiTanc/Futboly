@@ -12,4 +12,6 @@ enum ColorName: String {
     case pink = "pink"
     case darkPurple = "dark_purple"
     case darkPurpleLighter = "dark_purple_lighter"
+    case lightBlue = "light_blue"
+    case lightYellow = "light_yellow"
 }

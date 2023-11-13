@@ -8,8 +8,30 @@
 import SwiftUI
 
 struct PlayersView: View {
+    let columns = [GridItem(.flexible()), GridItem(.flexible())]
+    let cellSpacing: CGFloat = 6
+    
     var body: some View {
-        Text("Players")
+        VStack {
+            ProfileHeaderView()
+            playersGrid
+            Spacer()
+        }.padding(.horizontal)
+    }
+    
+    var playersGrid: some View {
+        GeometryReader { geo in
+            
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: cellSpacing) {
+                    ForEach(0...7, id: \.self) { _ in
+                        let cellWidth = (geo.size.width - cellSpacing) / 2
+                        PlayerCellView()
+                            .frame(width: cellWidth, height: cellWidth)
+                    }
+                }
+            }.scrollIndicators(.hidden)
+        }
     }
 }
 
