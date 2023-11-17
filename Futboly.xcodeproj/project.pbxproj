@@ -23,6 +23,9 @@
 		FC18AB812A98AA3700ACFE75 /* FutbolyVault.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC18AB802A98AA3700ACFE75 /* FutbolyVault.swift */; };
 		FC18AB832A98AD9A00ACFE75 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC18AB822A98AD9A00ACFE75 /* ForgotPasswordView.swift */; };
 		FC25D4112B02656200B85786 /* PlayerCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25D4102B02656200B85786 /* PlayerCellView.swift */; };
+		FC25D4192B02AADB00B85786 /* FriendsScreenType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25D4182B02AADB00B85786 /* FriendsScreenType.swift */; };
+		FC25D41D2B02AB9700B85786 /* FriendsHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25D41C2B02AB9700B85786 /* FriendsHeaderView.swift */; };
+		FC25D41F2B02C19D00B85786 /* FriendRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC25D41E2B02C19D00B85786 /* FriendRequest.swift */; };
 		FC2801CF2ADAC8D800114F7B /* HowToPlayIntroductoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2801CE2ADAC8D800114F7B /* HowToPlayIntroductoryView.swift */; };
 		FC2801D12ADACB9300114F7B /* FutbolyAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2801D02ADACB9300114F7B /* FutbolyAlert.swift */; };
 		FC2801D32ADAD1CD00114F7B /* TutorialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2801D22ADAD1CD00114F7B /* TutorialView.swift */; };
@@ -57,6 +60,8 @@
 		FC5C7C622AF0496E004C98EA /* ProfileNavHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C612AF0496E004C98EA /* ProfileNavHeaderView.swift */; };
 		FC5C7C642AF04F17004C98EA /* ProfileEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C632AF04F17004C98EA /* ProfileEditViewModel.swift */; };
 		FC5C7C662AF05316004C98EA /* ProfileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C652AF05316004C98EA /* ProfileTextField.swift */; };
+		FC8C25AC2B06A34F00E80082 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FC8C25AB2B06A34F00E80082 /* Kingfisher */; };
+		FC8C25B12B07524B00E80082 /* FriendRequestRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C25B02B07524B00E80082 /* FriendRequestRowView.swift */; };
 		FC9851872AB8AA6200F15711 /* IntroStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9851862AB8AA6200F15711 /* IntroStep.swift */; };
 		FC98518E2AB9E8E900F15711 /* OnboardingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC98518D2AB9E8E900F15711 /* OnboardingTextField.swift */; };
 		FCA7C3D02A90BDD3006DC9F4 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7C3CF2A90BDD3006DC9F4 /* RegisterViewModel.swift */; };
@@ -85,6 +90,9 @@
 		FC18AB802A98AA3700ACFE75 /* FutbolyVault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutbolyVault.swift; sourceTree = "<group>"; };
 		FC18AB822A98AD9A00ACFE75 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		FC25D4102B02656200B85786 /* PlayerCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCellView.swift; sourceTree = "<group>"; };
+		FC25D4182B02AADB00B85786 /* FriendsScreenType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsScreenType.swift; sourceTree = "<group>"; };
+		FC25D41C2B02AB9700B85786 /* FriendsHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsHeaderView.swift; sourceTree = "<group>"; };
+		FC25D41E2B02C19D00B85786 /* FriendRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequest.swift; sourceTree = "<group>"; };
 		FC2801CE2ADAC8D800114F7B /* HowToPlayIntroductoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToPlayIntroductoryView.swift; sourceTree = "<group>"; };
 		FC2801D02ADACB9300114F7B /* FutbolyAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutbolyAlert.swift; sourceTree = "<group>"; };
 		FC2801D22ADAD1CD00114F7B /* TutorialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialView.swift; sourceTree = "<group>"; };
@@ -113,6 +121,7 @@
 		FC5C7C612AF0496E004C98EA /* ProfileNavHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavHeaderView.swift; sourceTree = "<group>"; };
 		FC5C7C632AF04F17004C98EA /* ProfileEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditViewModel.swift; sourceTree = "<group>"; };
 		FC5C7C652AF05316004C98EA /* ProfileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTextField.swift; sourceTree = "<group>"; };
+		FC8C25B02B07524B00E80082 /* FriendRequestRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestRowView.swift; sourceTree = "<group>"; };
 		FC9851862AB8AA6200F15711 /* IntroStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroStep.swift; sourceTree = "<group>"; };
 		FC98518D2AB9E8E900F15711 /* OnboardingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTextField.swift; sourceTree = "<group>"; };
 		FCA7C3CF2A90BDD3006DC9F4 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
@@ -160,6 +169,7 @@
 				FC0A74FA2AFA956000FB06B7 /* FirebasePerformance in Frameworks */,
 				FC0A74D22AFA956000FB06B7 /* FirebaseAnalyticsSwift in Frameworks */,
 				FC0A75002AFA956000FB06B7 /* FirebaseStorage in Frameworks */,
+				FC8C25AC2B06A34F00E80082 /* Kingfisher in Frameworks */,
 				FC0A74DC2AFA956000FB06B7 /* FirebaseAuthCombine-Community in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				FC2C4ECB2AFED1AA0036C0F0 /* User.swift */,
+				FC25D41E2B02C19D00B85786 /* FriendRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -293,6 +304,16 @@
 				FC5C7C632AF04F17004C98EA /* ProfileEditViewModel.swift */,
 			);
 			path = ProfileEdit;
+			sourceTree = "<group>";
+		};
+		FC86E40B2B07B5780067D320 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FC25D41C2B02AB9700B85786 /* FriendsHeaderView.swift */,
+				FCF9A52F2AF10A140019E8B2 /* FriendRowView.swift */,
+				FC8C25B02B07524B00E80082 /* FriendRequestRowView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		FCA7C3C92A90BC10006DC9F4 /* Core */ = {
@@ -439,7 +460,8 @@
 			children = (
 				FCF9A52D2AF107840019E8B2 /* FriendsView.swift */,
 				FCF9A5312AF10FB00019E8B2 /* FriendsViewModel.swift */,
-				FCF9A52F2AF10A140019E8B2 /* FriendRowView.swift */,
+				FC25D4182B02AADB00B85786 /* FriendsScreenType.swift */,
+				FC86E40B2B07B5780067D320 /* Views */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -479,6 +501,7 @@
 				FC2C4EC32AFE7F740036C0F0 /* FacebookLogin */,
 				FC2C4EC62AFE89D90036C0F0 /* ProgressHUD */,
 				FC2C4ED92B024CE00036C0F0 /* ConfettiSwiftUI */,
+				FC8C25AB2B06A34F00E80082 /* Kingfisher */,
 			);
 			productName = Futboly;
 			productReference = FCD981512A589CF8001FC643 /* Futboly.app */;
@@ -514,6 +537,7 @@
 				FC2C4EC02AFE7F740036C0F0 /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
 				FC2C4EC52AFE89D90036C0F0 /* XCRemoteSwiftPackageReference "ProgressHUD" */,
 				FC2C4ED82B024CE00036C0F0 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */,
+				FC8C25AA2B06A34E00E80082 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = FCD981522A589CF8001FC643 /* Products */;
 			projectDirPath = "";
@@ -549,12 +573,14 @@
 				FC5C7C622AF0496E004C98EA /* ProfileNavHeaderView.swift in Sources */,
 				FC4526E22A5998DB004567D1 /* Router.swift in Sources */,
 				FC18AB7F2A98A9E300ACFE75 /* UserDefaultPropertyWrapper.swift in Sources */,
+				FC25D4192B02AADB00B85786 /* FriendsScreenType.swift in Sources */,
 				FCDE37FA2A962A080047B19B /* FutbolyButtons.swift in Sources */,
 				FCD981552A589CF8001FC643 /* AppDelegate.swift in Sources */,
 				FCBC494E2A93AABE0027A4D9 /* Color+Colors.swift in Sources */,
 				FCF9A5302AF10A140019E8B2 /* FriendRowView.swift in Sources */,
 				FCDE37F72A96270F0047B19B /* SocialLoginButton.swift in Sources */,
 				FC2801DC2ADAEA8A00114F7B /* TutorialPointsInfoCell.swift in Sources */,
+				FC25D41D2B02AB9700B85786 /* FriendsHeaderView.swift in Sources */,
 				FC5C7C662AF05316004C98EA /* ProfileTextField.swift in Sources */,
 				FCF9A52E2AF107840019E8B2 /* FriendsView.swift in Sources */,
 				FC5C7C642AF04F17004C98EA /* ProfileEditViewModel.swift in Sources */,
@@ -573,12 +599,14 @@
 				FC2801DA2ADAE8A300114F7B /* TutorialPointsInformation.swift in Sources */,
 				FC25D4112B02656200B85786 /* PlayerCellView.swift in Sources */,
 				FCDE38022A9764010047B19B /* IntroView.swift in Sources */,
+				FC8C25B12B07524B00E80082 /* FriendRequestRowView.swift in Sources */,
 				FC5C7C492AF02D14004C98EA /* MainTabView.swift in Sources */,
 				FCA7C3D02A90BDD3006DC9F4 /* RegisterViewModel.swift in Sources */,
 				FC5C7C502AF02E0F004C98EA /* HomeView.swift in Sources */,
 				FC5C7C522AF02E3B004C98EA /* GamesView.swift in Sources */,
 				FCC441DC2AFE49FC00B2699B /* OnboardingType.swift in Sources */,
 				FC5C7C582AF02E5B004C98EA /* ProfileView.swift in Sources */,
+				FC25D41F2B02C19D00B85786 /* FriendRequest.swift in Sources */,
 				FCD981572A589CF8001FC643 /* SceneDelegate.swift in Sources */,
 				FC2801D32ADAD1CD00114F7B /* TutorialView.swift in Sources */,
 				FC2801D72ADAE69300114F7B /* TutorialStepView.swift in Sources */,
@@ -841,6 +869,14 @@
 				minimumVersion = 1.1.0;
 			};
 		};
+		FC8C25AA2B06A34E00E80082 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -923,6 +959,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FC2C4ED82B024CE00036C0F0 /* XCRemoteSwiftPackageReference "ConfettiSwiftUI" */;
 			productName = ConfettiSwiftUI;
+		};
+		FC8C25AB2B06A34F00E80082 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC8C25AA2B06A34E00E80082 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

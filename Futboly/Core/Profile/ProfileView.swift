@@ -60,7 +60,7 @@ struct ProfileView: View {
     }
     
     var profileOptionsView: some View {
-        VStack {
+        VStack(spacing: 20) {
             HStack {
                 Image(.eyeProfile).padding().background(Color.lightGray).clipShape(.circle)
                 VStack(alignment: .leading, spacing: 4) {
@@ -71,6 +71,18 @@ struct ProfileView: View {
                 Image(.leftBlackSign).rotationEffect(.degrees(180))
             }.onTapGesture {
                 Router.shared.goToScreen(withRoute: .friends)
+            }
+            
+            HStack {
+                Image(.eyeProfile).padding().background(Color.lightGray).clipShape(.circle)
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Friend Requests")
+                    Text("Get to know more people").font(.system(size: 15)).opacity(0.7)
+                }
+                Spacer()
+                Image(.leftBlackSign).rotationEffect(.degrees(180))
+            }.onTapGesture {
+                Router.shared.goToScreen(withRoute: .friendRequests)
             }
             
         }.padding()

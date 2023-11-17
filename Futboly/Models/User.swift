@@ -7,10 +7,12 @@
 
 import Foundation
 
-class User: Codable {
+class User: Codable, Identifiable {
     var id: String
     var email: String
     var teamName: String
+    var bestScore: Int = 0
+    var numberOfWins: Int = 0
     var profileImageURL: String = ""
     
     init(id: String, email: String, teamName: String) {

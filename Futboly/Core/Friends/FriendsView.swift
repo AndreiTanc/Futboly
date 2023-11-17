@@ -8,51 +8,57 @@
 import SwiftUI
 
 struct FriendsView: View {
-    @ObservedObject private(set) var viewModel: FriendsViewModel = FriendsViewModel()
+    @ObservedObject private(set) var viewModel: FriendsViewModel
     
     var body: some View {
         ZStack {
             Color.lightGray.ignoresSafeArea()
-            // should check if friends available, if not, do not display white
-            Color.white.padding(.top, 200).ignoresSafeArea()
-            ScrollView {
-                LazyVStack(spacing: 30) {
-                    headerView
-                    friendsList
+            VStack(spacing: 30) {
+                FriendsHeaderView(friendsScreenType: viewModel.friendsScreenType, inviteFriendAction: viewModel.inviteFriend)
+                
+                if viewModel.friendsScreenType == .friendRequest {
+                    friendRequestsList.padding(.horizontal)
+                } else {
+                    friendsList.padding(.horizontal)
                 }
             }
         }
     }
     
-    var headerView: some View {
-        HStack(alignment: .center) {
-            FutbolyBackButton { Router.shared.popViewController() }
-            Spacer()
-            Spacer()
-            
-            Text("My Friends")
-                .font(.system(size: 28, weight: .semibold))
-            Spacer()
-            
-            Button {
-                viewModel.inviteFriend()
-            } label: {
-                Text("Invite new").foregroundStyle(.black).fontWeight(.medium)
-            }
-        }.padding(.horizontal)
+    var friendsList: some View {
+        ScrollView {
+            LazyVStack(spacing: 15) {
+                ForEach(viewModel.friends, id: \.id) { friend in
+                    FriendRowView(friend: friend, friendType: viewModel.friendsScreenType, isButtonEnabled: viewModel.friendsScreenType == .existing ? true : !viewModel.ownRequestsUserIds.contains(friend.id)) {
+                        if viewModel.friendsScreenType == .new {
+                            print("new friend action")
+                            viewModel.sendFriendRequest(to: friend)
+                        } else {
+                            print("existing friend action")
+                        }
+                    }
+                }
+            }.padding()
+        }.background(.white)
+        .clipShape(.rect(cornerRadius: 24))
     }
     
-    var friendsList: some View {
-        LazyVStack(spacing: 15) {
-            ForEach((1...4), id: \.self) { index in
-                FriendRowView()
-            }
-        }.padding()
-        .background(.white)
+    var friendRequestsList: some View {
+        ScrollView {
+            LazyVStack(spacing: 15) {
+                ForEach(viewModel.friendRequests) { friendRequest in
+                    FriendRequestRowView(
+                        friendRequest: friendRequest,
+                        acceptAction: viewModel.acceptFriendRequest(_:),
+                        declineAction: viewModel.declineFriendRequest(_:)
+                    )
+                }
+            }.padding()
+        }.background(.white)
         .clipShape(.rect(cornerRadius: 24))
     }
 }
 
 #Preview {
-    FriendsView()
+    FriendsView(viewModel: FriendsViewModel(friendsScreenType: .existing))
 }

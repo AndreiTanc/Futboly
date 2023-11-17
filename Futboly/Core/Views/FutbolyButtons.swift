@@ -9,30 +9,38 @@ import SwiftUI
 
 struct RoundedBlackButton: ButtonStyle {
     var height: CGFloat = 50
+    var regularPadding: CGFloat = 15
+    var horizontalPadding: CGFloat = 15
+    var fontSize: CGFloat = 16
     
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .padding()
+            .padding(regularPadding)
             .frame(height: height)
-            .padding(.horizontal)
+            .padding(.horizontal, horizontalPadding)
             .background(Color.black)
             .foregroundStyle(.white)
             .fontWeight(.bold)
-            .font(.system(size: 16))
+            .font(.system(size: fontSize))
             .clipShape(Capsule())
     }
 }
 
 struct RoundedWhiteButton: ButtonStyle {
+    var height: CGFloat = 50
+    var regularPadding: CGFloat = 15
+    var horizontalPadding: CGFloat = 15
+    var fontSize: CGFloat = 16
+    
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
-            .padding()
-            .frame(height: 50)
-            .padding(.horizontal)
+            .padding(regularPadding)
+            .frame(height: height)
+            .padding(.horizontal, horizontalPadding)
             .background(Color.white)
             .foregroundStyle(.black)
             .fontWeight(.bold)
-            .font(.system(size: 16))
+            .font(.system(size: fontSize))
             .clipShape(Capsule())
             .overlay(
                 RoundedRectangle(cornerRadius: 25)

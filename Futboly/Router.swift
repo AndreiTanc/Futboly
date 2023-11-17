@@ -18,6 +18,8 @@ enum RouterRoutes {
     case profileEdit
     case main
     case friends
+    case newFriends
+    case friendRequests
     
     var view: any View {
         switch self {
@@ -36,7 +38,11 @@ enum RouterRoutes {
         case .main:
             return MainTabView()
         case .friends:
-            return FriendsView()
+            return FriendsView(viewModel: FriendsViewModel(friendsScreenType: .existing))
+        case .newFriends:
+            return FriendsView(viewModel: FriendsViewModel(friendsScreenType: .new))
+        case .friendRequests:
+            return FriendsView(viewModel: FriendsViewModel(friendsScreenType: .friendRequest))
         }
     }
 }
