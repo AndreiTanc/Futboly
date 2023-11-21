@@ -60,6 +60,10 @@
 		FC5C7C622AF0496E004C98EA /* ProfileNavHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C612AF0496E004C98EA /* ProfileNavHeaderView.swift */; };
 		FC5C7C642AF04F17004C98EA /* ProfileEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C632AF04F17004C98EA /* ProfileEditViewModel.swift */; };
 		FC5C7C662AF05316004C98EA /* ProfileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C652AF05316004C98EA /* ProfileTextField.swift */; };
+		FC86E4182B0CFD0E0067D320 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86E4172B0CFD0D0067D320 /* ProfileView.swift */; };
+		FC86E41A2B0CFDEC0067D320 /* FutbolyNavHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86E4192B0CFDEC0067D320 /* FutbolyNavHeaderView.swift */; };
+		FC86E41C2B0CFF590067D320 /* FutbolyAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86E41B2B0CFF590067D320 /* FutbolyAsyncImage.swift */; };
+		FC86E41E2B0CFF950067D320 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86E41D2B0CFF950067D320 /* ProfileViewModel.swift */; };
 		FC8C25AC2B06A34F00E80082 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FC8C25AB2B06A34F00E80082 /* Kingfisher */; };
 		FC8C25B12B07524B00E80082 /* FriendRequestRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C25B02B07524B00E80082 /* FriendRequestRowView.swift */; };
 		FC9851872AB8AA6200F15711 /* IntroStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9851862AB8AA6200F15711 /* IntroStep.swift */; };
@@ -121,6 +125,10 @@
 		FC5C7C612AF0496E004C98EA /* ProfileNavHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavHeaderView.swift; sourceTree = "<group>"; };
 		FC5C7C632AF04F17004C98EA /* ProfileEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditViewModel.swift; sourceTree = "<group>"; };
 		FC5C7C652AF05316004C98EA /* ProfileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTextField.swift; sourceTree = "<group>"; };
+		FC86E4172B0CFD0D0067D320 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		FC86E4192B0CFDEC0067D320 /* FutbolyNavHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutbolyNavHeaderView.swift; sourceTree = "<group>"; };
+		FC86E41B2B0CFF590067D320 /* FutbolyAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutbolyAsyncImage.swift; sourceTree = "<group>"; };
+		FC86E41D2B0CFF950067D320 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		FC8C25B02B07524B00E80082 /* FriendRequestRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestRowView.swift; sourceTree = "<group>"; };
 		FC9851862AB8AA6200F15711 /* IntroStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroStep.swift; sourceTree = "<group>"; };
 		FC98518D2AB9E8E900F15711 /* OnboardingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTextField.swift; sourceTree = "<group>"; };
@@ -246,8 +254,6 @@
 			isa = PBXGroup;
 			children = (
 				FC5C7C572AF02E5B004C98EA /* AccountView.swift */,
-				FC5C7C5C2AF04609004C98EA /* ProfileEdit */,
-				FC5C7C592AF0397E004C98EA /* Views */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -302,6 +308,7 @@
 			children = (
 				FC5C7C5D2AF04612004C98EA /* ProfileEditView.swift */,
 				FC5C7C632AF04F17004C98EA /* ProfileEditViewModel.swift */,
+				FC5C7C592AF0397E004C98EA /* Views */,
 			);
 			path = ProfileEdit;
 			sourceTree = "<group>";
@@ -316,6 +323,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		FC86E4162B0CFCBA0067D320 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				FC86E4172B0CFD0D0067D320 /* ProfileView.swift */,
+				FC86E41D2B0CFF950067D320 /* ProfileViewModel.swift */,
+				FC5C7C5C2AF04609004C98EA /* ProfileEdit */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		FCA7C3C92A90BC10006DC9F4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,6 +344,7 @@
 				FC5C7C4C2AF02DBE004C98EA /* Leaderboard */,
 				FC5C7C4E2AF02DE3004C98EA /* Players */,
 				FC5C7C4A2AF02DAB004C98EA /* Account */,
+				FC86E4162B0CFCBA0067D320 /* Profile */,
 				FCF9A52C2AF1075E0019E8B2 /* Friends */,
 			);
 			path = Core;
@@ -388,6 +406,8 @@
 				FC18AB7E2A98A9E300ACFE75 /* UserDefaultPropertyWrapper.swift */,
 				FC18AB802A98AA3700ACFE75 /* FutbolyVault.swift */,
 				FC2801D02ADACB9300114F7B /* FutbolyAlert.swift */,
+				FC86E4192B0CFDEC0067D320 /* FutbolyNavHeaderView.swift */,
+				FC86E41B2B0CFF590067D320 /* FutbolyAsyncImage.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -568,6 +588,7 @@
 			files = (
 				FC5C7C5E2AF04612004C98EA /* ProfileEditView.swift in Sources */,
 				FCC441DA2AFE313200B2699B /* AuthManager.swift in Sources */,
+				FC86E41E2B0CFF950067D320 /* ProfileViewModel.swift in Sources */,
 				FC2801D52ADAD35600114F7B /* TutorialStep.swift in Sources */,
 				FCDE37F52A9624A10047B19B /* SocialLoginView.swift in Sources */,
 				FC5C7C622AF0496E004C98EA /* ProfileNavHeaderView.swift in Sources */,
@@ -580,6 +601,7 @@
 				FCF9A5302AF10A140019E8B2 /* FriendRowView.swift in Sources */,
 				FCDE37F72A96270F0047B19B /* SocialLoginButton.swift in Sources */,
 				FC2801DC2ADAEA8A00114F7B /* TutorialPointsInfoCell.swift in Sources */,
+				FC86E41C2B0CFF590067D320 /* FutbolyAsyncImage.swift in Sources */,
 				FC25D41D2B02AB9700B85786 /* FriendsHeaderView.swift in Sources */,
 				FC5C7C662AF05316004C98EA /* ProfileTextField.swift in Sources */,
 				FCF9A52E2AF107840019E8B2 /* FriendsView.swift in Sources */,
@@ -593,6 +615,7 @@
 				FC9851872AB8AA6200F15711 /* IntroStep.swift in Sources */,
 				FC2C4ECC2AFED1AA0036C0F0 /* User.swift in Sources */,
 				FC2C4ED52B0202710036C0F0 /* RewardAlertView.swift in Sources */,
+				FC86E41A2B0CFDEC0067D320 /* FutbolyNavHeaderView.swift in Sources */,
 				FC2801D12ADACB9300114F7B /* FutbolyAlert.swift in Sources */,
 				FCDE38052A97655D0047B19B /* IntroStepView.swift in Sources */,
 				FC4526E42A59993B004567D1 /* RegisterView.swift in Sources */,
@@ -608,6 +631,7 @@
 				FC5C7C582AF02E5B004C98EA /* AccountView.swift in Sources */,
 				FC25D41F2B02C19D00B85786 /* FriendRequest.swift in Sources */,
 				FCD981572A589CF8001FC643 /* SceneDelegate.swift in Sources */,
+				FC86E4182B0CFD0E0067D320 /* ProfileView.swift in Sources */,
 				FC2801D32ADAD1CD00114F7B /* TutorialView.swift in Sources */,
 				FC2801D72ADAE69300114F7B /* TutorialStepView.swift in Sources */,
 				FC5C7C562AF02E50004C98EA /* PlayersView.swift in Sources */,

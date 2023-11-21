@@ -81,3 +81,16 @@ struct TutorialStepButton: ButtonStyle {
             .clipShape(.circle)
     }
 }
+
+struct PinkRoundedButton: ButtonStyle {
+    var height: CGFloat = 44
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .foregroundStyle(.white)
+            .fontWeight(.semibold)
+            .frame(height: 44)
+            .padding(.horizontal, 20)
+            .background(Color.futbolyPink)
+            .clipShape(.capsule)
+    }
+}

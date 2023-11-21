@@ -57,6 +57,9 @@ struct AccountView: View {
         }.padding()
         .background(.white)
         .clipShape(.rect(cornerRadius: 32))
+        .onTapGesture {
+            Router.shared.goToScreen(withRoute: .profile(vault.user))
+        }
     }
     
     var profileOptionsView: some View {

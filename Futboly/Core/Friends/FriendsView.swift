@@ -36,6 +36,8 @@ struct FriendsView: View {
                         } else {
                             print("existing friend action")
                         }
+                    }.onTapGesture {
+                        Router.shared.goToScreen(withRoute: .profile(friend))
                     }
                 }
             }.padding()

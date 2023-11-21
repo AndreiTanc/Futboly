@@ -15,6 +15,7 @@ enum RouterRoutes {
     case howToPlay
     case tutorial
     case forgotPassword
+    case profile(User)
     case profileEdit
     case main
     case friends
@@ -33,6 +34,8 @@ enum RouterRoutes {
             return TutorialView()
         case .forgotPassword:
             return ForgotPasswordView()
+        case .profile(let user):
+            return ProfileView(viewModel: ProfileViewModel(user: user))
         case .profileEdit:
             return ProfileEditView()
         case .main:

@@ -17,19 +17,7 @@ struct FriendRowView: View {
     
     var body: some View {
         HStack {
-            KFImage(URL(string: friend.profileImageURL))
-                .placeholder {
-                    Image(.defaultProfile)
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 60, height: 60)
-                        .clipShape(.rect(cornerRadius: 18))
-                        .padding(.trailing, 5)
-                }.resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(width: 60, height: 60)
-                .clipShape(.rect(cornerRadius: 18))
-                .padding(.trailing, 5)
+            FutbolyAsyncImage(imageUrlString: friend.profileImageURL)
             
             VStack(alignment: .leading, spacing: 3) {
                 Text(friend.teamName).fontWeight(.semibold)
