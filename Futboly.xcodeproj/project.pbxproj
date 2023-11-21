@@ -53,7 +53,7 @@
 		FC5C7C522AF02E3B004C98EA /* GamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C512AF02E3B004C98EA /* GamesView.swift */; };
 		FC5C7C542AF02E47004C98EA /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C532AF02E47004C98EA /* LeaderboardView.swift */; };
 		FC5C7C562AF02E50004C98EA /* PlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C552AF02E50004C98EA /* PlayersView.swift */; };
-		FC5C7C582AF02E5B004C98EA /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C572AF02E5B004C98EA /* ProfileView.swift */; };
+		FC5C7C582AF02E5B004C98EA /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C572AF02E5B004C98EA /* AccountView.swift */; };
 		FC5C7C5B2AF03988004C98EA /* ProfileHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C5A2AF03988004C98EA /* ProfileHeaderView.swift */; };
 		FC5C7C5E2AF04612004C98EA /* ProfileEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C5D2AF04612004C98EA /* ProfileEditView.swift */; };
 		FC5C7C602AF04827004C98EA /* FutbolyBackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C5F2AF04827004C98EA /* FutbolyBackButton.swift */; };
@@ -114,7 +114,7 @@
 		FC5C7C512AF02E3B004C98EA /* GamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesView.swift; sourceTree = "<group>"; };
 		FC5C7C532AF02E47004C98EA /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
 		FC5C7C552AF02E50004C98EA /* PlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersView.swift; sourceTree = "<group>"; };
-		FC5C7C572AF02E5B004C98EA /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		FC5C7C572AF02E5B004C98EA /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		FC5C7C5A2AF03988004C98EA /* ProfileHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderView.swift; sourceTree = "<group>"; };
 		FC5C7C5D2AF04612004C98EA /* ProfileEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditView.swift; sourceTree = "<group>"; };
 		FC5C7C5F2AF04827004C98EA /* FutbolyBackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutbolyBackButton.swift; sourceTree = "<group>"; };
@@ -242,14 +242,14 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		FC5C7C4A2AF02DAB004C98EA /* Profile */ = {
+		FC5C7C4A2AF02DAB004C98EA /* Account */ = {
 			isa = PBXGroup;
 			children = (
-				FC5C7C572AF02E5B004C98EA /* ProfileView.swift */,
+				FC5C7C572AF02E5B004C98EA /* AccountView.swift */,
 				FC5C7C5C2AF04609004C98EA /* ProfileEdit */,
 				FC5C7C592AF0397E004C98EA /* Views */,
 			);
-			path = Profile;
+			path = Account;
 			sourceTree = "<group>";
 		};
 		FC5C7C4B2AF02DB7004C98EA /* Games */ = {
@@ -326,7 +326,7 @@
 				FC5C7C4B2AF02DB7004C98EA /* Games */,
 				FC5C7C4C2AF02DBE004C98EA /* Leaderboard */,
 				FC5C7C4E2AF02DE3004C98EA /* Players */,
-				FC5C7C4A2AF02DAB004C98EA /* Profile */,
+				FC5C7C4A2AF02DAB004C98EA /* Account */,
 				FCF9A52C2AF1075E0019E8B2 /* Friends */,
 			);
 			path = Core;
@@ -605,7 +605,7 @@
 				FC5C7C502AF02E0F004C98EA /* HomeView.swift in Sources */,
 				FC5C7C522AF02E3B004C98EA /* GamesView.swift in Sources */,
 				FCC441DC2AFE49FC00B2699B /* OnboardingType.swift in Sources */,
-				FC5C7C582AF02E5B004C98EA /* ProfileView.swift in Sources */,
+				FC5C7C582AF02E5B004C98EA /* AccountView.swift in Sources */,
 				FC25D41F2B02C19D00B85786 /* FriendRequest.swift in Sources */,
 				FCD981572A589CF8001FC643 /* SceneDelegate.swift in Sources */,
 				FC2801D32ADAD1CD00114F7B /* TutorialView.swift in Sources */,

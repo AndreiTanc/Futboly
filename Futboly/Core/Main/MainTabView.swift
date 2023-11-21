@@ -31,7 +31,7 @@ struct MainTabView: View {
                     Image(selectedTab == 3 ? .leaderboardSelected : .leaderboard)
                 }.tag(3)
             
-            ProfileView()
+            AccountView()
                 .tabItem { 
                     Image(selectedTab == 4 ? .tabProfileSelected : .tabProfile)
                 }.tag(4)

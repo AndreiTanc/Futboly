@@ -1,5 +1,5 @@
 //
-//  ProfileView.swift
+//  AccountView.swift
 //  Futboly
 //
 //  Created by Andrei Tanc on 30.10.2023.
@@ -8,7 +8,7 @@
 import SwiftUI
 import FirebaseAuth
 
-struct ProfileView: View {
+struct AccountView: View {
     @ObservedObject private(set) var vault: FutbolyVault = FutbolyVault.shared
 
     var body: some View {
@@ -107,5 +107,5 @@ struct ProfileView: View {
 }
 
 #Preview {
-    ProfileView()
+    AccountView()
 }
