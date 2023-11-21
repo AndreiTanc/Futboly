@@ -68,6 +68,7 @@ class FirestoreManager: ObservableObject {
     }
     
     func getAllUsers(withIds ids: [String], completion: @escaping ([User]) -> Void) {
+        guard !ids.isEmpty else { completion([]); return }
         ProgressHUD.animate()
         database.collection(DatabasePath.user.rawValue)
             .whereField("id", in: ids)
