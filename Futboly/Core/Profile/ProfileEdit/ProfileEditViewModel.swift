@@ -14,6 +14,7 @@ class ProfileEditViewModel: ObservableObject {
     @ObservedObject private(set) var vault: FutbolyVault = FutbolyVault.shared
     
     @Published var teamName: String = FutbolyVault.shared.user.teamName
+    @Published var country: String = FutbolyVault.shared.user.country
     @Published var phoneNumber: String = ""
     
     @Published var selectedImage: UIImage? = FutbolyVault.shared.userProfileImage
@@ -22,6 +23,8 @@ class ProfileEditViewModel: ObservableObject {
             setImage(from: imageSelection)
         }
     }
+    
+    @Published var shouldPresentCountryPicker: Bool = false
     
     private func setImage(from selection: PhotosPickerItem?) {
         guard let selection else { return }
@@ -39,9 +42,26 @@ class ProfileEditViewModel: ObservableObject {
     }
     
     func save() {
-        guard let selectedImage else { return }
+        if let selectedImage {
+            saveImage(selectedImage)
+        }
+        
+        let user = FutbolyVault.shared.user
+        var params: [String: Any] = [:]
+        
+        if teamName != user.teamName {
+            params["teamName"] = teamName
+        }
+        if country != user.country {
+            params["country"] = country
+        }
+        
+        FirestoreManager.shared.updateUser(withParams: params)
+    }
+    
+    func saveImage(_ image: UIImage) {
         ProgressHUD.animate()
-        StorageManager.shared.saveProfileImage(selectedImage) {
+        StorageManager.shared.saveProfileImage(image) {
             ProgressHUD.dismiss()
         }
     }

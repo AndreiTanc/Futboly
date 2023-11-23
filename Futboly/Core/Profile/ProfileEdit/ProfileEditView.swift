@@ -16,6 +16,12 @@ struct ProfileEditView: View {
             Color.lightGray.ignoresSafeArea()
             content
         }.onTapGesture { hideKeyboard() }
+        .sheet(isPresented: $viewModel.shouldPresentCountryPicker) {
+            CountryPicker(
+                shouldPresentCountryPicker: $viewModel.shouldPresentCountryPicker,
+                selectedCountry: $viewModel.country
+            ).presentationDetents([.medium])
+        }
     }
     
     var content: some View {
@@ -54,10 +60,28 @@ struct ProfileEditView: View {
         VStack(alignment: .leading) {
             Text("Team Info")
             ProfileTextField(title: "Team Name", text: $viewModel.teamName)
+            countryPickerView
             
             Text("Contacts")
             ProfileTextField(title: "Phone Number", text: $viewModel.phoneNumber, keyboardType: .phonePad)
         }.padding().background(.white).clipShape(.rect(cornerRadius: 24))
+    }
+    
+    var countryPickerView: some View {
+        HStack {
+            VStack(alignment: .leading, spacing: 2) {
+                Text("Country").font(.system(size: 14)).foregroundStyle(.gray)
+                Text(viewModel.country.isEmpty ? "Please select a country" : viewModel.country)
+                    .multilineTextAlignment(.leading)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .opacity(viewModel.country.isEmpty ? 0.3 : 1)
+            }
+        }.padding(10)
+        .background(Color.lightGray)
+        .clipShape(.rect(cornerRadius: 15))
+        .onTapGesture {
+            viewModel.shouldPresentCountryPicker = true
+        }
     }
     
     var saveButton: some View {

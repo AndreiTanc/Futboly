@@ -49,7 +49,9 @@ class StorageManager {
         guard let url = URL(string: user.profileImageURL) else { return }
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             guard let data = data, error == nil, let image = UIImage(data: data) else { return }
-            FutbolyVault.shared.userProfileImage = image
+            DispatchQueue.main.async {
+                FutbolyVault.shared.userProfileImage = image
+            }
         }
         task.resume()
     }

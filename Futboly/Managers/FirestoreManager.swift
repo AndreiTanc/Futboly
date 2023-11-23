@@ -52,8 +52,10 @@ class FirestoreManager: ObservableObject {
         }
     }
     
-    func updateUser(withParams params: [String: Any]) {
-        database.collection(DatabasePath.user.rawValue).document(userId).updateData(params)
+    func updateUser(withParams params: [String: Any], completion: (() -> Void)? = nil) {
+        database.collection(DatabasePath.user.rawValue).document(userId).updateData(params) { _ in
+            completion?()
+        }
     }
     
     func listenToUserChanges() {

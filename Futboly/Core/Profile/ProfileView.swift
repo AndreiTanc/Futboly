@@ -37,8 +37,8 @@ struct ProfileView: View {
             FutbolyAsyncImage(imageUrlString: viewModel.user.profileImageURL, size: 80)
             Text(viewModel.user.teamName).font(.system(size: 24))
             HStack {
-                // country image
-                Text("USA").font(.system(size: 14)).foregroundStyle(Color.gray)
+                Text(CountryManager.shared.currentUserFlag())
+                Text(viewModel.user.country).font(.system(size: 14)).foregroundStyle(Color.gray)
             }
             HStack(spacing: 3) {
                 Image(.upBlackArrow)

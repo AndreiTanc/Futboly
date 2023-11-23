@@ -68,6 +68,8 @@
 		FC86E4222B0E365B0067D320 /* GameRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86E4212B0E365B0067D320 /* GameRowView.swift */; };
 		FC86E4262B0E37730067D320 /* HomeGamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86E4252B0E37730067D320 /* HomeGamesView.swift */; };
 		FC86E4282B0E37820067D320 /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86E4272B0E37820067D320 /* GameType.swift */; };
+		FC86E4402B0FD12C0067D320 /* CountryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86E43F2B0FD12C0067D320 /* CountryManager.swift */; };
+		FC86E4422B0FD3B80067D320 /* CountryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86E4412B0FD3B80067D320 /* CountryPicker.swift */; };
 		FC8C25AC2B06A34F00E80082 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FC8C25AB2B06A34F00E80082 /* Kingfisher */; };
 		FC8C25B12B07524B00E80082 /* FriendRequestRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C25B02B07524B00E80082 /* FriendRequestRowView.swift */; };
 		FC9851872AB8AA6200F15711 /* IntroStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9851862AB8AA6200F15711 /* IntroStep.swift */; };
@@ -137,6 +139,8 @@
 		FC86E4212B0E365B0067D320 /* GameRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRowView.swift; sourceTree = "<group>"; };
 		FC86E4252B0E37730067D320 /* HomeGamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGamesView.swift; sourceTree = "<group>"; };
 		FC86E4272B0E37820067D320 /* GameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameType.swift; sourceTree = "<group>"; };
+		FC86E43F2B0FD12C0067D320 /* CountryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryManager.swift; sourceTree = "<group>"; };
+		FC86E4412B0FD3B80067D320 /* CountryPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPicker.swift; sourceTree = "<group>"; };
 		FC8C25B02B07524B00E80082 /* FriendRequestRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestRowView.swift; sourceTree = "<group>"; };
 		FC9851862AB8AA6200F15711 /* IntroStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroStep.swift; sourceTree = "<group>"; };
 		FC98518D2AB9E8E900F15711 /* OnboardingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTextField.swift; sourceTree = "<group>"; };
@@ -230,6 +234,7 @@
 				FCC441D92AFE313200B2699B /* AuthManager.swift */,
 				FC2C4EC82AFED1740036C0F0 /* FirestoreManager.swift */,
 				FC2C4ECD2AFF76440036C0F0 /* StorageManager.swift */,
+				FC86E43F2B0FD12C0067D320 /* CountryManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -311,6 +316,7 @@
 				FC5C7C5A2AF03988004C98EA /* ProfileHeaderView.swift */,
 				FC5C7C612AF0496E004C98EA /* ProfileNavHeaderView.swift */,
 				FC5C7C652AF05316004C98EA /* ProfileTextField.swift */,
+				FC86E4412B0FD3B80067D320 /* CountryPicker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -598,6 +604,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC86E4422B0FD3B80067D320 /* CountryPicker.swift in Sources */,
 				FC5C7C5E2AF04612004C98EA /* ProfileEditView.swift in Sources */,
 				FCC441DA2AFE313200B2699B /* AuthManager.swift in Sources */,
 				FC86E41E2B0CFF950067D320 /* ProfileViewModel.swift in Sources */,
@@ -639,6 +646,7 @@
 				FCDE38022A9764010047B19B /* IntroView.swift in Sources */,
 				FC8C25B12B07524B00E80082 /* FriendRequestRowView.swift in Sources */,
 				FC5C7C492AF02D14004C98EA /* MainTabView.swift in Sources */,
+				FC86E4402B0FD12C0067D320 /* CountryManager.swift in Sources */,
 				FCA7C3D02A90BDD3006DC9F4 /* RegisterViewModel.swift in Sources */,
 				FC5C7C502AF02E0F004C98EA /* HomeView.swift in Sources */,
 				FC5C7C522AF02E3B004C98EA /* GamesView.swift in Sources */,
