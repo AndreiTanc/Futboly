@@ -64,6 +64,10 @@
 		FC86E41A2B0CFDEC0067D320 /* FutbolyNavHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86E4192B0CFDEC0067D320 /* FutbolyNavHeaderView.swift */; };
 		FC86E41C2B0CFF590067D320 /* FutbolyAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86E41B2B0CFF590067D320 /* FutbolyAsyncImage.swift */; };
 		FC86E41E2B0CFF950067D320 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86E41D2B0CFF950067D320 /* ProfileViewModel.swift */; };
+		FC86E4202B0D05320067D320 /* JoinGameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86E41F2B0D05320067D320 /* JoinGameButton.swift */; };
+		FC86E4222B0E365B0067D320 /* GameRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86E4212B0E365B0067D320 /* GameRowView.swift */; };
+		FC86E4262B0E37730067D320 /* HomeGamesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86E4252B0E37730067D320 /* HomeGamesView.swift */; };
+		FC86E4282B0E37820067D320 /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86E4272B0E37820067D320 /* GameType.swift */; };
 		FC8C25AC2B06A34F00E80082 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FC8C25AB2B06A34F00E80082 /* Kingfisher */; };
 		FC8C25B12B07524B00E80082 /* FriendRequestRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C25B02B07524B00E80082 /* FriendRequestRowView.swift */; };
 		FC9851872AB8AA6200F15711 /* IntroStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9851862AB8AA6200F15711 /* IntroStep.swift */; };
@@ -129,6 +133,10 @@
 		FC86E4192B0CFDEC0067D320 /* FutbolyNavHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutbolyNavHeaderView.swift; sourceTree = "<group>"; };
 		FC86E41B2B0CFF590067D320 /* FutbolyAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutbolyAsyncImage.swift; sourceTree = "<group>"; };
 		FC86E41D2B0CFF950067D320 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		FC86E41F2B0D05320067D320 /* JoinGameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinGameButton.swift; sourceTree = "<group>"; };
+		FC86E4212B0E365B0067D320 /* GameRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRowView.swift; sourceTree = "<group>"; };
+		FC86E4252B0E37730067D320 /* HomeGamesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGamesView.swift; sourceTree = "<group>"; };
+		FC86E4272B0E37820067D320 /* GameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameType.swift; sourceTree = "<group>"; };
 		FC8C25B02B07524B00E80082 /* FriendRequestRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestRowView.swift; sourceTree = "<group>"; };
 		FC9851862AB8AA6200F15711 /* IntroStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroStep.swift; sourceTree = "<group>"; };
 		FC98518D2AB9E8E900F15711 /* OnboardingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTextField.swift; sourceTree = "<group>"; };
@@ -238,6 +246,10 @@
 		FC2C4ED32B0176730036C0F0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FC86E41F2B0D05320067D320 /* JoinGameButton.swift */,
+				FC86E4252B0E37730067D320 /* HomeGamesView.swift */,
+				FC86E4212B0E365B0067D320 /* GameRowView.swift */,
+				FC86E4272B0E37820067D320 /* GameType.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -592,6 +604,7 @@
 				FC2801D52ADAD35600114F7B /* TutorialStep.swift in Sources */,
 				FCDE37F52A9624A10047B19B /* SocialLoginView.swift in Sources */,
 				FC5C7C622AF0496E004C98EA /* ProfileNavHeaderView.swift in Sources */,
+				FC86E4202B0D05320067D320 /* JoinGameButton.swift in Sources */,
 				FC4526E22A5998DB004567D1 /* Router.swift in Sources */,
 				FC18AB7F2A98A9E300ACFE75 /* UserDefaultPropertyWrapper.swift in Sources */,
 				FC25D4192B02AADB00B85786 /* FriendsScreenType.swift in Sources */,
@@ -602,11 +615,13 @@
 				FCDE37F72A96270F0047B19B /* SocialLoginButton.swift in Sources */,
 				FC2801DC2ADAEA8A00114F7B /* TutorialPointsInfoCell.swift in Sources */,
 				FC86E41C2B0CFF590067D320 /* FutbolyAsyncImage.swift in Sources */,
+				FC86E4222B0E365B0067D320 /* GameRowView.swift in Sources */,
 				FC25D41D2B02AB9700B85786 /* FriendsHeaderView.swift in Sources */,
 				FC5C7C662AF05316004C98EA /* ProfileTextField.swift in Sources */,
 				FCF9A52E2AF107840019E8B2 /* FriendsView.swift in Sources */,
 				FC5C7C642AF04F17004C98EA /* ProfileEditViewModel.swift in Sources */,
 				FCDE37F12A95F5A70047B19B /* Constants+ColorName.swift in Sources */,
+				FC86E4282B0E37820067D320 /* GameType.swift in Sources */,
 				FC5C7C542AF02E47004C98EA /* LeaderboardView.swift in Sources */,
 				FCDE37F32A95F5C00047B19B /* Constants+ImageName.swift in Sources */,
 				FC98518E2AB9E8E900F15711 /* OnboardingTextField.swift in Sources */,
@@ -635,6 +650,7 @@
 				FC2801D32ADAD1CD00114F7B /* TutorialView.swift in Sources */,
 				FC2801D72ADAE69300114F7B /* TutorialStepView.swift in Sources */,
 				FC5C7C562AF02E50004C98EA /* PlayersView.swift in Sources */,
+				FC86E4262B0E37730067D320 /* HomeGamesView.swift in Sources */,
 				FC2C4ED72B02399D0036C0F0 /* ClearBackground.swift in Sources */,
 				FCF9A5322AF10FB00019E8B2 /* FriendsViewModel.swift in Sources */,
 				FC5C7C602AF04827004C98EA /* FutbolyBackButton.swift in Sources */,

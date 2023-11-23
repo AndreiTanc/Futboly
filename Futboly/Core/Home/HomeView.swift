@@ -14,9 +14,18 @@ struct HomeView: View {
     var body: some View {
         VStack(spacing: 20) {
             ProfileHeaderView()
-            Button("Present alert") {
-                viewModel.shouldPresentRewardAlert = true
-            }
+            
+            ScrollView {
+                Button("Present alert") {
+                    viewModel.shouldPresentRewardAlert = true
+                }
+                
+                LazyVStack(spacing: 20) {
+                    HomeGamesView(gameType: .daily)
+                    HomeGamesView(gameType: .weekly)
+                }
+            }.scrollIndicators(.never)
+            
             Spacer()
         }
         .padding(.horizontal)
