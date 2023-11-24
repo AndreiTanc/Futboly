@@ -18,6 +18,8 @@ enum DatabasePath: String {
     case ownRequests
     case friendRequest
     case allFriends
+    case game
+    case lobby
 }
 
 class FirestoreManager: ObservableObject {
@@ -245,4 +247,11 @@ class FirestoreManager: ObservableObject {
             completion()
         }
     }
+    
+    // MARK: - GAME
+    
+    func createNewLobby() {
+        
+    }
+    
 }

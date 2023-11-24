@@ -22,7 +22,7 @@ struct HomeGamesView: View {
                 Spacer()
                 
                 JoinGameButton(cost: gameType.cost) {
-                    // action
+                    Router.shared.goToScreen(withRoute: .lobby)
                 }
             }
             

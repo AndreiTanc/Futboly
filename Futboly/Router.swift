@@ -10,17 +10,23 @@ import UIKit
 import SwiftUI
 
 enum RouterRoutes {
+    // Onboarding
     case register
     case intro
     case howToPlay
     case tutorial
     case forgotPassword
+    
+    // Core
+    case main
     case profile(User)
     case profileEdit
-    case main
     case friends
     case newFriends
     case friendRequests
+    
+    // Game
+    case lobby
     
     var view: any View {
         switch self {
@@ -46,6 +52,8 @@ enum RouterRoutes {
             return FriendsView(viewModel: FriendsViewModel(friendsScreenType: .new))
         case .friendRequests:
             return FriendsView(viewModel: FriendsViewModel(friendsScreenType: .friendRequest))
+        case .lobby:
+            return LobbyView(viewModel: GameViewModel())
         }
     }
 }
