@@ -16,6 +16,12 @@ struct FriendsView: View {
             VStack(spacing: 30) {
                 FriendsHeaderView(friendsScreenType: viewModel.friendsScreenType, inviteFriendAction: viewModel.inviteFriend)
                 
+                if viewModel.friendsScreenType != .friendRequest {
+                    FutbolySearchBar(text: $viewModel.searchText) {
+                        viewModel.filterSearchedFriends()
+                    }.padding(.horizontal)
+                }
+                
                 if viewModel.friendsScreenType == .friendRequest {
                     friendRequestsList.padding(.horizontal)
                 } else {
@@ -28,10 +34,9 @@ struct FriendsView: View {
     var friendsList: some View {
         ScrollView {
             LazyVStack(spacing: 15) {
-                ForEach(viewModel.friends, id: \.id) { friend in
+                ForEach(viewModel.searchedFriends, id: \.id) { friend in
                     FriendRowView(friend: friend, friendType: viewModel.friendsScreenType, isButtonEnabled: viewModel.friendsScreenType == .existing ? true : !viewModel.ownRequestsUserIds.contains(friend.id)) {
                         if viewModel.friendsScreenType == .new {
-                            print("new friend action")
                             viewModel.sendFriendRequest(to: friend)
                         } else {
                             print("existing friend action")
@@ -43,6 +48,7 @@ struct FriendsView: View {
             }.padding()
         }.background(.white)
         .clipShape(.rect(cornerRadius: 24))
+        .searchable(text: $viewModel.searchText)
     }
     
     var friendRequestsList: some View {

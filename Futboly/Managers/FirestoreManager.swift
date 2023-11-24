@@ -113,6 +113,8 @@ class FirestoreManager: ObservableObject {
             }
     }
     
+    // MARK: - Friend Requests
+    
     func sendFriendRequest(toUser user: User, completion: @escaping (Error?) -> Void) {
         var requestError: Error?
         let group = DispatchGroup()

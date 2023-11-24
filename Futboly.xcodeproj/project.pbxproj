@@ -70,6 +70,7 @@
 		FC86E4282B0E37820067D320 /* GameType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86E4272B0E37820067D320 /* GameType.swift */; };
 		FC86E4402B0FD12C0067D320 /* CountryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86E43F2B0FD12C0067D320 /* CountryManager.swift */; };
 		FC86E4422B0FD3B80067D320 /* CountryPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86E4412B0FD3B80067D320 /* CountryPicker.swift */; };
+		FC86E4442B10C30E0067D320 /* FutbolySearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86E4432B10C30E0067D320 /* FutbolySearchBar.swift */; };
 		FC8C25AC2B06A34F00E80082 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FC8C25AB2B06A34F00E80082 /* Kingfisher */; };
 		FC8C25B12B07524B00E80082 /* FriendRequestRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C25B02B07524B00E80082 /* FriendRequestRowView.swift */; };
 		FC9851872AB8AA6200F15711 /* IntroStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9851862AB8AA6200F15711 /* IntroStep.swift */; };
@@ -141,6 +142,7 @@
 		FC86E4272B0E37820067D320 /* GameType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameType.swift; sourceTree = "<group>"; };
 		FC86E43F2B0FD12C0067D320 /* CountryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryManager.swift; sourceTree = "<group>"; };
 		FC86E4412B0FD3B80067D320 /* CountryPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPicker.swift; sourceTree = "<group>"; };
+		FC86E4432B10C30E0067D320 /* FutbolySearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutbolySearchBar.swift; sourceTree = "<group>"; };
 		FC8C25B02B07524B00E80082 /* FriendRequestRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestRowView.swift; sourceTree = "<group>"; };
 		FC9851862AB8AA6200F15711 /* IntroStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroStep.swift; sourceTree = "<group>"; };
 		FC98518D2AB9E8E900F15711 /* OnboardingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTextField.swift; sourceTree = "<group>"; };
@@ -337,6 +339,7 @@
 				FC25D41C2B02AB9700B85786 /* FriendsHeaderView.swift */,
 				FCF9A52F2AF10A140019E8B2 /* FriendRowView.swift */,
 				FC8C25B02B07524B00E80082 /* FriendRequestRowView.swift */,
+				FC86E4432B10C30E0067D320 /* FutbolySearchBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -636,6 +639,7 @@
 				FC2801CF2ADAC8D800114F7B /* HowToPlayIntroductoryView.swift in Sources */,
 				FC9851872AB8AA6200F15711 /* IntroStep.swift in Sources */,
 				FC2C4ECC2AFED1AA0036C0F0 /* User.swift in Sources */,
+				FC86E4442B10C30E0067D320 /* FutbolySearchBar.swift in Sources */,
 				FC2C4ED52B0202710036C0F0 /* RewardAlertView.swift in Sources */,
 				FC86E41A2B0CFDEC0067D320 /* FutbolyNavHeaderView.swift in Sources */,
 				FC2801D12ADACB9300114F7B /* FutbolyAlert.swift in Sources */,

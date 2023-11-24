@@ -10,6 +10,8 @@ import ProgressHUD
 
 class FriendsViewModel: ObservableObject {
     @Published var friends: [User] = []
+    @Published var searchedFriends: [User] = []
+    
     @Published var ownRequestsUserIds: [String] = []
     @Published var friendRequestsUserIds: [String] = []
     @Published var friendsUserIds: [String] = []
@@ -17,6 +19,7 @@ class FriendsViewModel: ObservableObject {
     @Published var friendRequests: [FriendRequest] = []
     
     var friendsScreenType: FriendsScreenType
+    @Published var searchText: String = ""
     
     init(friendsScreenType: FriendsScreenType) {
         self.friendsScreenType = friendsScreenType
@@ -33,6 +36,16 @@ class FriendsViewModel: ObservableObject {
     
     func inviteFriend() {
         Router.shared.goToScreen(withRoute: .newFriends)
+    }
+    
+    func filterSearchedFriends() {
+        // If searchText is empty, reload all friends
+        guard !searchText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+            searchedFriends = friends
+            return
+        }
+        // Show only friends that contain the searchText in their teamName OR country
+        searchedFriends = friends.filter({ $0.teamName.lowercased().contains(searchText.lowercased()) || $0.country.lowercased().contains(searchText.lowercased()) })
     }
     
     private func getFriendRequestData() {
@@ -71,12 +84,14 @@ class FriendsViewModel: ObservableObject {
         let exceptUserIds = ownRequestsUserIds + friendRequestsUserIds + friendsUserIds + [FutbolyVault.shared.user.id]
         FirestoreManager.shared.getAllUsers(withoutUserIds: exceptUserIds) { [weak self] users in
             self?.friends = users
+            self?.searchedFriends = users
         }
     }
     
     private func getExistingFriends() {
         FirestoreManager.shared.getAllFriends { [weak self] friends in
             self?.friends = friends
+            self?.searchedFriends = friends
         }
     }
     
