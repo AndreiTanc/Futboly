@@ -8,8 +8,17 @@
 import SwiftUI
 
 struct GamesView: View {
+    @State var selectedOpponentType: OpponentType = .public
+    @State var selectedGameType: GameType = .daily
+    
     var body: some View {
-        Text("Games")
+        VStack(spacing: 20) {
+            ProfileHeaderView()
+            PublicFriendMatchesSwitch(selectedOpponentType: $selectedOpponentType)
+            DailyWeeklySwitch(selectedGameType: $selectedGameType)
+            
+            Spacer()
+        }.padding(.horizontal)
     }
 }
 

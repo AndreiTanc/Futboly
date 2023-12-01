@@ -29,6 +29,15 @@ struct FriendsView: View {
                 }
             }
         }
+        .fullScreenCover(isPresented: $viewModel.shouldPresentCardPopup) {
+            BottomCardPopupView(cardType: .friendlyMatch) {
+                // action
+            } secondButtonAction: {
+                // action
+            } dismiss: {
+                viewModel.shouldPresentCardPopup = false
+            } .background(ClearBackground())
+        }
     }
     
     var friendsList: some View {
@@ -39,7 +48,7 @@ struct FriendsView: View {
                         if viewModel.friendsScreenType == .new {
                             viewModel.sendFriendRequest(to: friend)
                         } else {
-                            print("existing friend action")
+                            viewModel.shouldPresentCardPopup = true
                         }
                     }.onTapGesture {
                         Router.shared.goToScreen(withRoute: .profile(friend))

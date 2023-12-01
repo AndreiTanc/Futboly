@@ -21,6 +21,8 @@ class FriendsViewModel: ObservableObject {
     var friendsScreenType: FriendsScreenType
     @Published var searchText: String = ""
     
+    @Published var shouldPresentCardPopup: Bool = false
+    
     init(friendsScreenType: FriendsScreenType) {
         self.friendsScreenType = friendsScreenType
         

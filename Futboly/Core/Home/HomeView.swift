@@ -21,8 +21,8 @@ struct HomeView: View {
                 }
                 
                 LazyVStack(spacing: 20) {
-                    HomeGamesView(gameType: .daily)
-                    HomeGamesView(gameType: .weekly)
+                    HomeGamesView(gameType: .daily, gameAction: viewModel.presentCardPopup(forGameType:))
+                    HomeGamesView(gameType: .weekly, gameAction: viewModel.presentCardPopup(forGameType:))
                 }
             }.scrollIndicators(.never)
             
@@ -33,6 +33,17 @@ struct HomeView: View {
             RewardAlertView(dismissAction: {
                 viewModel.shouldPresentRewardAlert = false
             }).background(ClearBackground())
+        }
+        .fullScreenCover(item: $viewModel.bottomCardPopupType) { cardType in
+            let gameType: GameType = cardType == .dailyGames ? .daily : .weekly
+            BottomCardPopupView(cardType: cardType) {
+                viewModel.startGame(gameType, withOpponentType: .public)
+            } secondButtonAction: {
+                viewModel.startGame(gameType, withOpponentType: .friends)
+            } dismiss: {
+                viewModel.dismissBottomCard()
+            }
+            .background(ClearBackground())
         }
     }
 }

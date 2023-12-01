@@ -26,7 +26,7 @@ enum RouterRoutes {
     case friendRequests
     
     // Game
-    case lobby
+    case lobby(GameViewModel)
     
     var view: any View {
         switch self {
@@ -52,8 +52,8 @@ enum RouterRoutes {
             return FriendsView(viewModel: FriendsViewModel(friendsScreenType: .new))
         case .friendRequests:
             return FriendsView(viewModel: FriendsViewModel(friendsScreenType: .friendRequest))
-        case .lobby:
-            return LobbyView(viewModel: GameViewModel())
+        case .lobby(let viewModel):
+            return LobbyView(viewModel: viewModel)
         }
     }
 }

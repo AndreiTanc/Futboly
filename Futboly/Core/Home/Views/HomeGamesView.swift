@@ -11,6 +11,8 @@ struct HomeGamesView: View {
     var gameType: GameType
     @State var shouldShowAllGames: Bool = false
     
+    var gameAction: (GameType) -> Void
+    
     var body: some View {
         LazyVStack(spacing: 20) {
             HStack {
@@ -22,7 +24,7 @@ struct HomeGamesView: View {
                 Spacer()
                 
                 JoinGameButton(cost: gameType.cost) {
-                    Router.shared.goToScreen(withRoute: .lobby)
+                    gameAction(gameType)
                 }
             }
             
@@ -57,5 +59,5 @@ struct HomeGamesView: View {
 }
 
 #Preview {
-    HomeGamesView(gameType: .daily)
+    HomeGamesView(gameType: .daily, gameAction: {_ in})
 }

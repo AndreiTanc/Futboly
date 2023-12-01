@@ -19,7 +19,8 @@ enum DatabasePath: String {
     case friendRequest
     case allFriends
     case game
-    case lobby
+    case dailyLobby
+    case weeklyLobby
 }
 
 class FirestoreManager: ObservableObject {
@@ -250,8 +251,62 @@ class FirestoreManager: ObservableObject {
     
     // MARK: - GAME
     
-    func createNewLobby() {
+    func searchLobby(forGame gameType: GameType, completion: @escaping (Lobby?) -> Void) {
+        let path = gameType == .daily ? DatabasePath.dailyLobby.rawValue : DatabasePath.weeklyLobby.rawValue
         
+        database.collection(path).getDocuments { querySnapshot, error in
+            guard let querySnapshot, let snapshot = querySnapshot.documents.first else { completion(nil); return }
+            let lobby = Lobby(fromDict: snapshot.data())
+            completion(lobby)
+        }
     }
     
+    func joinLobby(_ lobby: Lobby, completion: @escaping (Lobby?) -> Void) {
+        var lobby = lobby
+        lobby.players.append(LobbyUser(id: userId, teamName: FutbolyVault.shared.user.teamName, profileImageURL: FutbolyVault.shared.user.profileImageURL))
+        let playersParams: [String: Any] = ["players": lobby.players]
+        
+        guard let gameType = GameType(rawValue: lobby.gameType) else { return }
+        let path = gameType == .daily ? DatabasePath.dailyLobby.rawValue : DatabasePath.weeklyLobby.rawValue
+        
+//        database.collection(path).document(lobby.id).updateData(playersParams) { _ in
+//            completion()
+//        }
+    }
+    
+    func createNewLobby(forGame gameType: GameType, completion: @escaping (Lobby) -> Void) {
+        let user = FutbolyVault.shared.user
+        let currentLobbyUser = LobbyUser(id: userId, teamName: user.teamName, profileImageURL: user.profileImageURL)
+        
+        let lobbyId = UUID().uuidString
+        let newLobby = Lobby(id: lobbyId, gameType: gameType.rawValue, players: [currentLobbyUser])
+        let path = gameType == .daily ? DatabasePath.dailyLobby.rawValue : DatabasePath.weeklyLobby.rawValue
+        
+        try? database.collection(path).document(lobbyId).setData(from: newLobby) { error in
+            // observer for lobby
+            // if current user exits => delete lobby
+        }
+    }
+    
+    func deleteLobby(_ lobby: Lobby, completion: @escaping () -> Void) {
+        guard let gameType = GameType(rawValue: lobby.gameType) else { return }
+        let path = gameType == .daily ? DatabasePath.dailyLobby.rawValue : DatabasePath.weeklyLobby.rawValue
+
+        database.collection(path).document(lobby.id).delete { error in
+            completion()
+        }
+    }
+    
+    func exitLobby(_ lobby: Lobby, completion: @escaping () -> Void) {
+        // remove current user from lobby
+        var lobby = lobby
+        lobby.players.removeAll(where: { $0.id == userId })
+        let playersParams: [String: Any] = ["players": lobby.players]
+        
+        guard let gameType = GameType(rawValue: lobby.gameType) else { return }
+        let path = gameType == .daily ? DatabasePath.dailyLobby.rawValue : DatabasePath.weeklyLobby.rawValue
+        database.collection(path).document(lobby.id).updateData(playersParams) { _ in
+            completion()
+        }
+    }
 }

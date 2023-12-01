@@ -12,6 +12,8 @@ struct RewardAlertView: View {
     var dismissAction: () -> Void
     @State private var confettiCounter: Int = 0
     
+    @State private var backgorundOpacity: Double = 0
+    
     var body: some View {
         ZStack {
             Color.black.opacity(0.7).ignoresSafeArea()
@@ -38,7 +40,17 @@ struct RewardAlertView: View {
         }
         .background(.clear)
         .confettiCannon(counter: $confettiCounter, num: 200)
-        .onAppear { confettiCounter += 1 }
+        .onAppear {
+            confettiCounter += 1
+            withAnimation(.easeInOut(duration: 0.5)) {
+                backgorundOpacity = 0.7
+            }
+        }
+        .onDisappear {
+            withAnimation(.easeInOut(duration: 0.5)) {
+                backgorundOpacity = 0
+            }
+        }
     }
     
     var overlayEnergyView: some View {

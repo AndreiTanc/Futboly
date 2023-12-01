@@ -94,3 +94,13 @@ struct PinkRoundedButton: ButtonStyle {
             .clipShape(.capsule)
     }
 }
+
+struct GrayRoundedButton: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .frame(height: 50).frame(maxWidth: .infinity)
+            .background(Color.lightGray).clipShape(.capsule)
+            .foregroundStyle(Color.black)
+            .fontWeight(.semibold)
+    }
+}

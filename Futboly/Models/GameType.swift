@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-enum GameType {
+enum GameType: String {
     case daily
     case weekly
     
     var title: String {
         switch self {
         case .daily: "Daily Games"
-        case .weekly: "Weekly Games"
+        case .weekly: "Weekend League"
         }
     }
     
@@ -29,6 +29,18 @@ enum GameType {
         switch self {
         case .daily: .lightBlue
         case .weekly: .lightYellow
+        }
+    }
+}
+
+enum OpponentType {
+    case friends
+    case `public`
+    
+    var title: String {
+        switch self {
+        case .friends: "Friends"
+        case .public: "Public"
         }
     }
 }

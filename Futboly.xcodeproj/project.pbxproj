@@ -74,8 +74,12 @@
 		FC86E4482B10D3C10067D320 /* LobbyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86E4472B10D3C10067D320 /* LobbyView.swift */; };
 		FC86E44A2B10D63A0067D320 /* FutbolyContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86E4492B10D63A0067D320 /* FutbolyContainerView.swift */; };
 		FC86E44C2B10D7490067D320 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86E44B2B10D7490067D320 /* GameViewModel.swift */; };
+		FC86E4502B10FBAA0067D320 /* Lobby.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86E44F2B10FBAA0067D320 /* Lobby.swift */; };
 		FC8C25AC2B06A34F00E80082 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FC8C25AB2B06A34F00E80082 /* Kingfisher */; };
 		FC8C25B12B07524B00E80082 /* FriendRequestRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC8C25B02B07524B00E80082 /* FriendRequestRowView.swift */; };
+		FC9338B22B1909B700D04A7B /* DailyWeeklySwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9338B12B1909B700D04A7B /* DailyWeeklySwitch.swift */; };
+		FC9338B42B190EEC00D04A7B /* PublicFriendMatchesSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9338B32B190EEC00D04A7B /* PublicFriendMatchesSwitch.swift */; };
+		FC9338B62B1925E700D04A7B /* BottomCardPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9338B52B1925E700D04A7B /* BottomCardPopupView.swift */; };
 		FC9851872AB8AA6200F15711 /* IntroStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9851862AB8AA6200F15711 /* IntroStep.swift */; };
 		FC98518E2AB9E8E900F15711 /* OnboardingTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC98518D2AB9E8E900F15711 /* OnboardingTextField.swift */; };
 		FCA7C3D02A90BDD3006DC9F4 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA7C3CF2A90BDD3006DC9F4 /* RegisterViewModel.swift */; };
@@ -149,7 +153,11 @@
 		FC86E4472B10D3C10067D320 /* LobbyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyView.swift; sourceTree = "<group>"; };
 		FC86E4492B10D63A0067D320 /* FutbolyContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutbolyContainerView.swift; sourceTree = "<group>"; };
 		FC86E44B2B10D7490067D320 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		FC86E44F2B10FBAA0067D320 /* Lobby.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lobby.swift; sourceTree = "<group>"; };
 		FC8C25B02B07524B00E80082 /* FriendRequestRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestRowView.swift; sourceTree = "<group>"; };
+		FC9338B12B1909B700D04A7B /* DailyWeeklySwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeeklySwitch.swift; sourceTree = "<group>"; };
+		FC9338B32B190EEC00D04A7B /* PublicFriendMatchesSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicFriendMatchesSwitch.swift; sourceTree = "<group>"; };
+		FC9338B52B1925E700D04A7B /* BottomCardPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomCardPopupView.swift; sourceTree = "<group>"; };
 		FC9851862AB8AA6200F15711 /* IntroStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroStep.swift; sourceTree = "<group>"; };
 		FC98518D2AB9E8E900F15711 /* OnboardingTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingTextField.swift; sourceTree = "<group>"; };
 		FCA7C3CF2A90BDD3006DC9F4 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
@@ -252,6 +260,8 @@
 			children = (
 				FC2C4ECB2AFED1AA0036C0F0 /* User.swift */,
 				FC25D41E2B02C19D00B85786 /* FriendRequest.swift */,
+				FC86E44F2B10FBAA0067D320 /* Lobby.swift */,
+				FC86E4272B0E37820067D320 /* GameType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -262,7 +272,6 @@
 				FC86E41F2B0D05320067D320 /* JoinGameButton.swift */,
 				FC86E4252B0E37730067D320 /* HomeGamesView.swift */,
 				FC86E4212B0E365B0067D320 /* GameRowView.swift */,
-				FC86E4272B0E37820067D320 /* GameType.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -507,8 +516,11 @@
 				FCDE37F92A962A080047B19B /* FutbolyButtons.swift */,
 				FC5C7C5F2AF04827004C98EA /* FutbolyBackButton.swift */,
 				FC2C4ED42B0202710036C0F0 /* RewardAlertView.swift */,
+				FC9338B52B1925E700D04A7B /* BottomCardPopupView.swift */,
 				FC2C4ED62B02399D0036C0F0 /* ClearBackground.swift */,
 				FC86E4492B10D63A0067D320 /* FutbolyContainerView.swift */,
+				FC9338B12B1909B700D04A7B /* DailyWeeklySwitch.swift */,
+				FC9338B32B190EEC00D04A7B /* PublicFriendMatchesSwitch.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -634,12 +646,14 @@
 			files = (
 				FC86E4422B0FD3B80067D320 /* CountryPicker.swift in Sources */,
 				FC5C7C5E2AF04612004C98EA /* ProfileEditView.swift in Sources */,
+				FC9338B62B1925E700D04A7B /* BottomCardPopupView.swift in Sources */,
 				FCC441DA2AFE313200B2699B /* AuthManager.swift in Sources */,
 				FC86E41E2B0CFF950067D320 /* ProfileViewModel.swift in Sources */,
 				FC2801D52ADAD35600114F7B /* TutorialStep.swift in Sources */,
 				FCDE37F52A9624A10047B19B /* SocialLoginView.swift in Sources */,
 				FC5C7C622AF0496E004C98EA /* ProfileNavHeaderView.swift in Sources */,
 				FC86E4202B0D05320067D320 /* JoinGameButton.swift in Sources */,
+				FC9338B22B1909B700D04A7B /* DailyWeeklySwitch.swift in Sources */,
 				FC4526E22A5998DB004567D1 /* Router.swift in Sources */,
 				FC18AB7F2A98A9E300ACFE75 /* UserDefaultPropertyWrapper.swift in Sources */,
 				FC25D4192B02AADB00B85786 /* FriendsScreenType.swift in Sources */,
@@ -650,6 +664,7 @@
 				FCF9A5302AF10A140019E8B2 /* FriendRowView.swift in Sources */,
 				FCDE37F72A96270F0047B19B /* SocialLoginButton.swift in Sources */,
 				FC2801DC2ADAEA8A00114F7B /* TutorialPointsInfoCell.swift in Sources */,
+				FC9338B42B190EEC00D04A7B /* PublicFriendMatchesSwitch.swift in Sources */,
 				FC86E41C2B0CFF590067D320 /* FutbolyAsyncImage.swift in Sources */,
 				FC86E4222B0E365B0067D320 /* GameRowView.swift in Sources */,
 				FC25D41D2B02AB9700B85786 /* FriendsHeaderView.swift in Sources */,
@@ -673,6 +688,7 @@
 				FC2801D12ADACB9300114F7B /* FutbolyAlert.swift in Sources */,
 				FCDE38052A97655D0047B19B /* IntroStepView.swift in Sources */,
 				FC4526E42A59993B004567D1 /* RegisterView.swift in Sources */,
+				FC86E4502B10FBAA0067D320 /* Lobby.swift in Sources */,
 				FC2801DA2ADAE8A300114F7B /* TutorialPointsInformation.swift in Sources */,
 				FC25D4112B02656200B85786 /* PlayerCellView.swift in Sources */,
 				FCDE38022A9764010047B19B /* IntroView.swift in Sources */,
