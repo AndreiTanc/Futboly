@@ -8,35 +8,19 @@
 import SwiftUI
 
 struct PlayersView: View {
-    let columns = [GridItem(.flexible()), GridItem(.flexible())]
-    let cellSpacing: CGFloat = 6
-    
     @State var isFavoriteSelected: Bool = false
     @State var selectedGameType: GameType = .daily
+    @State var listViewMode: PlayersList.ListViewMode = .grid
     
     var body: some View {
         VStack(spacing: 20) {
             ProfileHeaderView()
             DailyWeeklySwitch(selectedGameType: $selectedGameType).padding(.vertical, 8)
             playersFilteringHeader
-            playersGrid
+            listViewModeSelectorView
+            PlayersList(viewMode: $listViewMode)
             Spacer()
         }.padding(.horizontal)
-    }
-    
-    var playersGrid: some View {
-        GeometryReader { geo in
-            
-            ScrollView {
-                LazyVGrid(columns: columns, spacing: cellSpacing) {
-                    ForEach(0...7, id: \.self) { _ in
-                        let cellWidth = (geo.size.width - cellSpacing) / 2
-                        PlayerCellView()
-                            .frame(width: cellWidth, height: cellWidth)
-                    }
-                }
-            }.scrollIndicators(.hidden)
-        }
     }
     
     var playersFilteringHeader: some View {
@@ -60,6 +44,25 @@ struct PlayersView: View {
                 
             }
         }.frame(maxWidth: .infinity)
+    }
+    
+    var listViewModeSelectorView: some View {
+        HStack(spacing: 15) {
+            Text("View Mode")
+            Spacer()
+            
+            Button {
+                listViewMode = .grid
+            } label: {
+                Image(listViewMode == .grid ? .gridSelected : .gridUnselected)
+            }
+
+            Button {
+                listViewMode = .list
+            } label: {
+                Image(listViewMode == .list ? .listSelected : .listUnselected)
+            }
+        }
     }
     
     var teamDropdownSelector: some View {
