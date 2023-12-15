@@ -18,38 +18,42 @@ class GameViewModel: ObservableObject {
         self.gameType = gameType
     }
     
-    func searchLobby() {
+    func searchLobby(completion: @escaping (Bool) -> Void) {
         FirestoreManager.shared.searchLobby(forGame: gameType) { [weak self] lobby in
             if let lobby {
                 // If lobby available => Joining it
-                self?.joinLobby(lobby)
+                self?.joinLobby(lobby, completion: completion)
                 return
             }
             
             // If no lobby existing => create your lobby
-            self?.createLobby()
+            self?.createLobby(completion: completion)
         }
     }
     
-    func joinLobby(_ lobby: Lobby) {
+    func joinLobby(_ lobby: Lobby, completion: @escaping (Bool) -> Void) {
         FirestoreManager.shared.joinLobby(lobby) { [weak self] lobby in
             if let lobby {
                 // JOIN this lobby
                 self?.lobby = lobby
                 self?.ownGame = false
+                completion(true)
                 return
             }
             
             // If somehow the lobby is no more => create your lobby
-            self?.createLobby()
+            self?.createLobby(completion: completion)
         }
     }
     
-    func createLobby() {
+    func createLobby(completion: @escaping (Bool) -> Void) {
         FirestoreManager.shared.createNewLobby(forGame: gameType) { [weak self] lobby in
             // Users lobby => if he exists => delete lobby
+            guard let lobby = lobby else { completion(false); return }
+            
             self?.lobby = lobby
             self?.ownGame = true
+            completion(true)
         }
     }
     

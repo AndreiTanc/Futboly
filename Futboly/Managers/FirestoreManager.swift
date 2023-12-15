@@ -264,17 +264,20 @@ class FirestoreManager: ObservableObject {
     func joinLobby(_ lobby: Lobby, completion: @escaping (Lobby?) -> Void) {
         var lobby = lobby
         lobby.players.append(LobbyUser(id: userId, teamName: FutbolyVault.shared.user.teamName, profileImageURL: FutbolyVault.shared.user.profileImageURL))
-        let playersParams: [String: Any] = ["players": lobby.players]
+        let playersParams: [String: Any] = ["players": lobby.players.map({ $0.toDict() })]
         
         guard let gameType = GameType(rawValue: lobby.gameType) else { return }
         let path = gameType == .daily ? DatabasePath.dailyLobby.rawValue : DatabasePath.weeklyLobby.rawValue
         
-//        database.collection(path).document(lobby.id).updateData(playersParams) { _ in
-//            completion()
-//        }
+        database.collection(path).document(lobby.id).updateData(playersParams) { error in
+            if let _ = error {
+                completion(nil)
+            }
+            completion(lobby)
+        }
     }
     
-    func createNewLobby(forGame gameType: GameType, completion: @escaping (Lobby) -> Void) {
+    func createNewLobby(forGame gameType: GameType, completion: @escaping (Lobby?) -> Void) {
         let user = FutbolyVault.shared.user
         let currentLobbyUser = LobbyUser(id: userId, teamName: user.teamName, profileImageURL: user.profileImageURL)
         
@@ -285,6 +288,11 @@ class FirestoreManager: ObservableObject {
         try? database.collection(path).document(lobbyId).setData(from: newLobby) { error in
             // observer for lobby
             // if current user exits => delete lobby
+            
+            if let _ = error {
+                completion(nil)
+            }
+            completion(newLobby)
         }
     }
     

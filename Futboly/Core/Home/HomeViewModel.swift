@@ -20,7 +20,14 @@ class HomeViewModel: ObservableObject {
     
     func startGame(_ gameType: GameType, withOpponentType opponentType: OpponentType) {
         let gameViewModel = GameViewModel(gameType: gameType)
-        Router.shared.goToScreen(withRoute: .lobby(gameViewModel))
+        
+        gameViewModel.searchLobby { successfulyJoinedLobby in
+            if successfulyJoinedLobby {
+                Router.shared.goToScreen(withRoute: .lobby(gameViewModel))
+            } else {
+                // present error at joining a lobby
+            }
+        }
     }
     
     func dismissBottomCard() {
