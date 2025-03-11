@@ -60,6 +60,9 @@
 		FC5C7C622AF0496E004C98EA /* ProfileNavHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C612AF0496E004C98EA /* ProfileNavHeaderView.swift */; };
 		FC5C7C642AF04F17004C98EA /* ProfileEditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C632AF04F17004C98EA /* ProfileEditViewModel.swift */; };
 		FC5C7C662AF05316004C98EA /* ProfileTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5C7C652AF05316004C98EA /* ProfileTextField.swift */; };
+		FC612FF42B30EA3E000CAB7C /* PreGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC612FF32B30EA3E000CAB7C /* PreGameView.swift */; };
+		FC612FF62B30F47B000CAB7C /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC612FF52B30F47B000CAB7C /* Game.swift */; };
+		FC612FF82B321312000CAB7C /* LobbyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC612FF72B321312000CAB7C /* LobbyViewModel.swift */; };
 		FC86E4182B0CFD0E0067D320 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86E4172B0CFD0D0067D320 /* ProfileView.swift */; };
 		FC86E41A2B0CFDEC0067D320 /* FutbolyNavHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86E4192B0CFDEC0067D320 /* FutbolyNavHeaderView.swift */; };
 		FC86E41C2B0CFF590067D320 /* FutbolyAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86E41B2B0CFF590067D320 /* FutbolyAsyncImage.swift */; };
@@ -141,6 +144,9 @@
 		FC5C7C612AF0496E004C98EA /* ProfileNavHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavHeaderView.swift; sourceTree = "<group>"; };
 		FC5C7C632AF04F17004C98EA /* ProfileEditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileEditViewModel.swift; sourceTree = "<group>"; };
 		FC5C7C652AF05316004C98EA /* ProfileTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTextField.swift; sourceTree = "<group>"; };
+		FC612FF32B30EA3E000CAB7C /* PreGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreGameView.swift; sourceTree = "<group>"; };
+		FC612FF52B30F47B000CAB7C /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		FC612FF72B321312000CAB7C /* LobbyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobbyViewModel.swift; sourceTree = "<group>"; };
 		FC86E4172B0CFD0D0067D320 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		FC86E4192B0CFDEC0067D320 /* FutbolyNavHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutbolyNavHeaderView.swift; sourceTree = "<group>"; };
 		FC86E41B2B0CFF590067D320 /* FutbolyAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FutbolyAsyncImage.swift; sourceTree = "<group>"; };
@@ -265,6 +271,7 @@
 				FC2C4ECB2AFED1AA0036C0F0 /* User.swift */,
 				FC25D41E2B02C19D00B85786 /* FriendRequest.swift */,
 				FC86E44F2B10FBAA0067D320 /* Lobby.swift */,
+				FC612FF52B30F47B000CAB7C /* Game.swift */,
 				FC86E4272B0E37820067D320 /* GameType.swift */,
 			);
 			path = Models;
@@ -354,6 +361,14 @@
 			path = ProfileEdit;
 			sourceTree = "<group>";
 		};
+		FC612FF22B30EA32000CAB7C /* PreGame */ = {
+			isa = PBXGroup;
+			children = (
+				FC612FF32B30EA3E000CAB7C /* PreGameView.swift */,
+			);
+			path = PreGame;
+			sourceTree = "<group>";
+		};
 		FC86E40B2B07B5780067D320 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -378,8 +393,10 @@
 		FC86E4452B10D3A70067D320 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				FC612FF72B321312000CAB7C /* LobbyViewModel.swift */,
 				FC86E44B2B10D7490067D320 /* GameViewModel.swift */,
 				FC86E4462B10D3B80067D320 /* Lobby */,
+				FC612FF22B30EA32000CAB7C /* PreGame */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -652,6 +669,7 @@
 			files = (
 				FC86E4422B0FD3B80067D320 /* CountryPicker.swift in Sources */,
 				FC5C7C5E2AF04612004C98EA /* ProfileEditView.swift in Sources */,
+				FC612FF42B30EA3E000CAB7C /* PreGameView.swift in Sources */,
 				FC9338B62B1925E700D04A7B /* BottomCardPopupView.swift in Sources */,
 				FCC441DA2AFE313200B2699B /* AuthManager.swift in Sources */,
 				FC86E41E2B0CFF950067D320 /* ProfileViewModel.swift in Sources */,
@@ -706,6 +724,7 @@
 				FC5C7C502AF02E0F004C98EA /* HomeView.swift in Sources */,
 				FC5C7C522AF02E3B004C98EA /* GamesView.swift in Sources */,
 				FCC441DC2AFE49FC00B2699B /* OnboardingType.swift in Sources */,
+				FC612FF82B321312000CAB7C /* LobbyViewModel.swift in Sources */,
 				FC5C7C582AF02E5B004C98EA /* AccountView.swift in Sources */,
 				FC25D41F2B02C19D00B85786 /* FriendRequest.swift in Sources */,
 				FCD981572A589CF8001FC643 /* SceneDelegate.swift in Sources */,
@@ -720,6 +739,7 @@
 				FC18AB832A98AD9A00ACFE75 /* ForgotPasswordView.swift in Sources */,
 				FC2C4ED22B016A0F0036C0F0 /* HomeViewModel.swift in Sources */,
 				FCB7A18C2A9CCDB10077D3A5 /* View+Extension.swift in Sources */,
+				FC612FF62B30F47B000CAB7C /* Game.swift in Sources */,
 				FC9338BA2B1E429E00D04A7B /* PlayersList.swift in Sources */,
 				FC18AB812A98AA3700ACFE75 /* FutbolyVault.swift in Sources */,
 				FC2C4EC92AFED1740036C0F0 /* FirestoreManager.swift in Sources */,

@@ -35,20 +35,33 @@ struct LobbyUser: Codable {
 
 struct Lobby: Codable {
     var id: String
+    var hostPlayerId: String
+    var creationDate: TimeInterval
     var gameType: String
     var players: [LobbyUser] = []
     
-    init(id: String, gameType: String, players: [LobbyUser]) {
+    init(id: String, hostPlayerId: String, creationDate: TimeInterval, gameType: String, players: [LobbyUser]) {
         self.id = id
+        self.hostPlayerId = hostPlayerId
+        self.creationDate = creationDate
         self.gameType = gameType
         self.players = players
     }
     
     init(fromDict dict: [String: Any]) {
         id = dict["id"] as? String ?? ""
+        hostPlayerId = dict["hostPlayerId"] as? String ?? ""
+        creationDate = dict["creationDate"] as? TimeInterval ?? Date().timeIntervalSince1970
         gameType = dict["gameType"] as? String ?? ""
         if let playerDicts = dict["players"] as? [[String: Any]] {
             players = playerDicts.map({ LobbyUser(fromDict: $0) })
         }
+    }
+    
+    func remainingSeconds() -> Int {
+        let lobbyCreationDate = Date(timeIntervalSince1970: creationDate)
+        let remainaingSeconds = Date().timeIntervalSince(lobbyCreationDate)
+        
+        return Int(remainaingSeconds)
     }
 }

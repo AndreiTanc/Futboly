@@ -19,11 +19,11 @@ class HomeViewModel: ObservableObject {
     }
     
     func startGame(_ gameType: GameType, withOpponentType opponentType: OpponentType) {
-        let gameViewModel = GameViewModel(gameType: gameType)
+        let lobbyViewModel = LobbyViewModel(gameType: gameType)
         
-        gameViewModel.searchLobby { successfulyJoinedLobby in
+        lobbyViewModel.searchLobby { successfulyJoinedLobby in
             if successfulyJoinedLobby {
-                Router.shared.goToScreen(withRoute: .lobby(gameViewModel))
+                Router.shared.goToScreen(withRoute: .lobby(lobbyViewModel))
             } else {
                 // present error at joining a lobby
             }

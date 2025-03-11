@@ -56,4 +56,8 @@ enum ImageName: String {
     case tabPlayers = "players"
     case tabLeaderboard = "leaderboard"
     case tabGames = "games"
+    
+    // Game
+    
+    case preGame = "pre_game"
 }

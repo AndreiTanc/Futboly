@@ -28,6 +28,7 @@ class FirestoreManager: ObservableObject {
     private let database = Firestore.firestore()
     
     private weak var userSnapshotListener: ListenerRegistration?
+    private weak var lobbySnapshotListener: ListenerRegistration?
     
     private var userId: String {
         Auth.auth().currentUser?.uid ?? ""
@@ -39,6 +40,7 @@ class FirestoreManager: ObservableObject {
     
     func stopListening() {
         userSnapshotListener?.remove()
+        lobbySnapshotListener?.remove()
     }
     
     // MARK: - Current User
@@ -282,7 +284,7 @@ class FirestoreManager: ObservableObject {
         let currentLobbyUser = LobbyUser(id: userId, teamName: user.teamName, profileImageURL: user.profileImageURL)
         
         let lobbyId = UUID().uuidString
-        let newLobby = Lobby(id: lobbyId, gameType: gameType.rawValue, players: [currentLobbyUser])
+        let newLobby = Lobby(id: lobbyId, hostPlayerId: currentLobbyUser.id, creationDate: Date().timeIntervalSince1970, gameType: gameType.rawValue, players: [currentLobbyUser])
         let path = gameType == .daily ? DatabasePath.dailyLobby.rawValue : DatabasePath.weeklyLobby.rawValue
         
         try? database.collection(path).document(lobbyId).setData(from: newLobby) { error in
@@ -296,6 +298,25 @@ class FirestoreManager: ObservableObject {
         }
     }
     
+    func exitLobby(_ lobby: Lobby, completion: @escaping () -> Void) {
+        // delete lobby if current user is host
+        if lobby.hostPlayerId == userId {
+            deleteLobby(lobby, completion: completion)
+            return
+        }
+        
+        // remove current user from lobby
+        var lobby = lobby
+        lobby.players.removeAll(where: { $0.id == userId })
+        let playersParams: [String: Any] = ["players": lobby.players.map({ $0.toDict() })]
+        
+        guard let gameType = GameType(rawValue: lobby.gameType) else { return }
+        let path = gameType == .daily ? DatabasePath.dailyLobby.rawValue : DatabasePath.weeklyLobby.rawValue
+        database.collection(path).document(lobby.id).updateData(playersParams) { _ in
+            completion()
+        }
+    }
+    
     func deleteLobby(_ lobby: Lobby, completion: @escaping () -> Void) {
         guard let gameType = GameType(rawValue: lobby.gameType) else { return }
         let path = gameType == .daily ? DatabasePath.dailyLobby.rawValue : DatabasePath.weeklyLobby.rawValue
@@ -305,16 +326,27 @@ class FirestoreManager: ObservableObject {
         }
     }
     
-    func exitLobby(_ lobby: Lobby, completion: @escaping () -> Void) {
-        // remove current user from lobby
-        var lobby = lobby
-        lobby.players.removeAll(where: { $0.id == userId })
-        let playersParams: [String: Any] = ["players": lobby.players]
+    private var lobbySubject = PassthroughSubject<Lobby?, Never>()
+    var didChangeLobbyPublisher: AnyPublisher<Lobby?, Never> {
+        lobbySubject.eraseToAnyPublisher()
+    }
+    
+    func listenToLobbyChanges(_ lobby: Lobby) {
+        guard let path = path(forGameTypeRaw: lobby.gameType) else { return }
         
-        guard let gameType = GameType(rawValue: lobby.gameType) else { return }
-        let path = gameType == .daily ? DatabasePath.dailyLobby.rawValue : DatabasePath.weeklyLobby.rawValue
-        database.collection(path).document(lobby.id).updateData(playersParams) { _ in
-            completion()
-        }
+        lobbySnapshotListener = database.collection(path).document(lobby.id).addSnapshotListener({ [weak self] snapshot, error in
+            guard let snapshot, let lobbyDict = snapshot.data() else { self?.lobbySubject.send(nil); return }
+            let lobby = Lobby(fromDict: lobbyDict)
+            self?.lobbySubject.send(lobby)
+        })
+    }
+    
+    func stopListeningToLobbyChanges() {
+        lobbySnapshotListener = nil
+    }
+    
+    private func path(forGameTypeRaw gameTypeRaw: String) -> String? {
+        guard let gameType = GameType(rawValue: gameTypeRaw) else { return nil }
+        return gameType == .daily ? DatabasePath.dailyLobby.rawValue : DatabasePath.weeklyLobby.rawValue
     }
 }
